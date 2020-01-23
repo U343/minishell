@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu11
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/wanton/fork_test/lib 
+C_INCLUDES = -I/Users/wanton/minishell/lib 
 

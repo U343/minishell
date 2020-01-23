@@ -6,37 +6,44 @@
 #    By: wanton <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/23 13:15:24 by wanton            #+#    #+#              #
-#    Updated: 2020/01/22 15:42:54 by wanton           ###   ########.fr        #
+#    Updated: 2020/01/23 14:32:01 by wanton           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = minishell
 
-LIB_PATH = lib/
+SRC_PATH = ./src/
+LIB_PATH = ./lib/
+OBJ_PATH = ./obj/
+INC_PATH = ./includes/ $(LIB_PATH)
 
-SRC = main.c list_functions.c
+SRC_FILES = main.c list_functions.c
+OBJ_FILES = $(SRC_FILES:.c=.o)
 
 FLAGS = -Wall -Wextra -Werror
 
-OBJ = $(SRC:.c=.o)
+SRC = $(addprefix $(SRC_PATH), $(SRC_FILES))
+OBJ = $(addprefix $(OBJ_PATH), $(OBJ_FILES))
+INC = $(addprefix -I, $(INC_PATH))
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-		@make -C $(LIB_PATH)
-		@gcc $(FLAGS) $(OBJ) -L $(LIB_PATH) -lft -o $(NAME)
+		make -C $(LIB_PATH)
+		gcc $(FLAGS) $(OBJ)  $(INC) -L $(LIB_PATH) -lft -o $(NAME)
 
-./%.o: %.c
-		@gcc $(FLAGS) -c $< -o $@ 
+$(OBJ_PATH)%.o: $(SRC_PATH)%.c
+		mkdir -p $(OBJ_PATH)
+		gcc $(FLAGS)  $(INC) -c $< -o $@ 
 
 clean:
-		@make -C $(LIB_PATH)/ clean
-		@/bin/rm -f $(OBJ) 
+		make -C $(LIB_PATH)/ clean
+		/bin/rm -rf $(OBJ_PATH) 
 
 fclean: clean
-		@make -C $(LIB_PATH)/ fclean
-		@/bin/rm -f $(NAME)
+		make -C $(LIB_PATH)/ fclean
+		/bin/rm -f $(NAME)
 
 re: fclean all 
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re $(NAME)
