@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named fork_test
+# Target rules for targets named minishell
 
 # Build rule for target.
-fork_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 fork_test
-.PHONY : fork_test
+minishell: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 minishell
+.PHONY : minishell
 
 # fast build rule for target.
-fork_test/fast:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/build
-.PHONY : fork_test/fast
+minishell/fast:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/build
+.PHONY : minishell/fast
 
 lib/ft_atoi.o: lib/ft_atoi.c.o
 
@@ -129,7 +129,7 @@ lib/ft_atoi.o: lib/ft_atoi.c.o
 
 # target to build an object file
 lib/ft_atoi.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_atoi.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_atoi.c.o
 .PHONY : lib/ft_atoi.c.o
 
 lib/ft_atoi.i: lib/ft_atoi.c.i
@@ -138,7 +138,7 @@ lib/ft_atoi.i: lib/ft_atoi.c.i
 
 # target to preprocess a source file
 lib/ft_atoi.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_atoi.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_atoi.c.i
 .PHONY : lib/ft_atoi.c.i
 
 lib/ft_atoi.s: lib/ft_atoi.c.s
@@ -147,7 +147,7 @@ lib/ft_atoi.s: lib/ft_atoi.c.s
 
 # target to generate assembly for a file
 lib/ft_atoi.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_atoi.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_atoi.c.s
 .PHONY : lib/ft_atoi.c.s
 
 lib/ft_bzero.o: lib/ft_bzero.c.o
@@ -156,7 +156,7 @@ lib/ft_bzero.o: lib/ft_bzero.c.o
 
 # target to build an object file
 lib/ft_bzero.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_bzero.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_bzero.c.o
 .PHONY : lib/ft_bzero.c.o
 
 lib/ft_bzero.i: lib/ft_bzero.c.i
@@ -165,7 +165,7 @@ lib/ft_bzero.i: lib/ft_bzero.c.i
 
 # target to preprocess a source file
 lib/ft_bzero.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_bzero.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_bzero.c.i
 .PHONY : lib/ft_bzero.c.i
 
 lib/ft_bzero.s: lib/ft_bzero.c.s
@@ -174,7 +174,7 @@ lib/ft_bzero.s: lib/ft_bzero.c.s
 
 # target to generate assembly for a file
 lib/ft_bzero.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_bzero.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_bzero.c.s
 .PHONY : lib/ft_bzero.c.s
 
 lib/ft_isalnum.o: lib/ft_isalnum.c.o
@@ -183,7 +183,7 @@ lib/ft_isalnum.o: lib/ft_isalnum.c.o
 
 # target to build an object file
 lib/ft_isalnum.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_isalnum.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_isalnum.c.o
 .PHONY : lib/ft_isalnum.c.o
 
 lib/ft_isalnum.i: lib/ft_isalnum.c.i
@@ -192,7 +192,7 @@ lib/ft_isalnum.i: lib/ft_isalnum.c.i
 
 # target to preprocess a source file
 lib/ft_isalnum.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_isalnum.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_isalnum.c.i
 .PHONY : lib/ft_isalnum.c.i
 
 lib/ft_isalnum.s: lib/ft_isalnum.c.s
@@ -201,7 +201,7 @@ lib/ft_isalnum.s: lib/ft_isalnum.c.s
 
 # target to generate assembly for a file
 lib/ft_isalnum.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_isalnum.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_isalnum.c.s
 .PHONY : lib/ft_isalnum.c.s
 
 lib/ft_isalpha.o: lib/ft_isalpha.c.o
@@ -210,7 +210,7 @@ lib/ft_isalpha.o: lib/ft_isalpha.c.o
 
 # target to build an object file
 lib/ft_isalpha.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_isalpha.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_isalpha.c.o
 .PHONY : lib/ft_isalpha.c.o
 
 lib/ft_isalpha.i: lib/ft_isalpha.c.i
@@ -219,7 +219,7 @@ lib/ft_isalpha.i: lib/ft_isalpha.c.i
 
 # target to preprocess a source file
 lib/ft_isalpha.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_isalpha.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_isalpha.c.i
 .PHONY : lib/ft_isalpha.c.i
 
 lib/ft_isalpha.s: lib/ft_isalpha.c.s
@@ -228,7 +228,7 @@ lib/ft_isalpha.s: lib/ft_isalpha.c.s
 
 # target to generate assembly for a file
 lib/ft_isalpha.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_isalpha.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_isalpha.c.s
 .PHONY : lib/ft_isalpha.c.s
 
 lib/ft_isascii.o: lib/ft_isascii.c.o
@@ -237,7 +237,7 @@ lib/ft_isascii.o: lib/ft_isascii.c.o
 
 # target to build an object file
 lib/ft_isascii.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_isascii.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_isascii.c.o
 .PHONY : lib/ft_isascii.c.o
 
 lib/ft_isascii.i: lib/ft_isascii.c.i
@@ -246,7 +246,7 @@ lib/ft_isascii.i: lib/ft_isascii.c.i
 
 # target to preprocess a source file
 lib/ft_isascii.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_isascii.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_isascii.c.i
 .PHONY : lib/ft_isascii.c.i
 
 lib/ft_isascii.s: lib/ft_isascii.c.s
@@ -255,7 +255,7 @@ lib/ft_isascii.s: lib/ft_isascii.c.s
 
 # target to generate assembly for a file
 lib/ft_isascii.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_isascii.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_isascii.c.s
 .PHONY : lib/ft_isascii.c.s
 
 lib/ft_isdigit.o: lib/ft_isdigit.c.o
@@ -264,7 +264,7 @@ lib/ft_isdigit.o: lib/ft_isdigit.c.o
 
 # target to build an object file
 lib/ft_isdigit.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_isdigit.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_isdigit.c.o
 .PHONY : lib/ft_isdigit.c.o
 
 lib/ft_isdigit.i: lib/ft_isdigit.c.i
@@ -273,7 +273,7 @@ lib/ft_isdigit.i: lib/ft_isdigit.c.i
 
 # target to preprocess a source file
 lib/ft_isdigit.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_isdigit.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_isdigit.c.i
 .PHONY : lib/ft_isdigit.c.i
 
 lib/ft_isdigit.s: lib/ft_isdigit.c.s
@@ -282,7 +282,7 @@ lib/ft_isdigit.s: lib/ft_isdigit.c.s
 
 # target to generate assembly for a file
 lib/ft_isdigit.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_isdigit.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_isdigit.c.s
 .PHONY : lib/ft_isdigit.c.s
 
 lib/ft_isprint.o: lib/ft_isprint.c.o
@@ -291,7 +291,7 @@ lib/ft_isprint.o: lib/ft_isprint.c.o
 
 # target to build an object file
 lib/ft_isprint.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_isprint.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_isprint.c.o
 .PHONY : lib/ft_isprint.c.o
 
 lib/ft_isprint.i: lib/ft_isprint.c.i
@@ -300,7 +300,7 @@ lib/ft_isprint.i: lib/ft_isprint.c.i
 
 # target to preprocess a source file
 lib/ft_isprint.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_isprint.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_isprint.c.i
 .PHONY : lib/ft_isprint.c.i
 
 lib/ft_isprint.s: lib/ft_isprint.c.s
@@ -309,7 +309,7 @@ lib/ft_isprint.s: lib/ft_isprint.c.s
 
 # target to generate assembly for a file
 lib/ft_isprint.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_isprint.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_isprint.c.s
 .PHONY : lib/ft_isprint.c.s
 
 lib/ft_itoa.o: lib/ft_itoa.c.o
@@ -318,7 +318,7 @@ lib/ft_itoa.o: lib/ft_itoa.c.o
 
 # target to build an object file
 lib/ft_itoa.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_itoa.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_itoa.c.o
 .PHONY : lib/ft_itoa.c.o
 
 lib/ft_itoa.i: lib/ft_itoa.c.i
@@ -327,7 +327,7 @@ lib/ft_itoa.i: lib/ft_itoa.c.i
 
 # target to preprocess a source file
 lib/ft_itoa.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_itoa.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_itoa.c.i
 .PHONY : lib/ft_itoa.c.i
 
 lib/ft_itoa.s: lib/ft_itoa.c.s
@@ -336,7 +336,7 @@ lib/ft_itoa.s: lib/ft_itoa.c.s
 
 # target to generate assembly for a file
 lib/ft_itoa.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_itoa.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_itoa.c.s
 .PHONY : lib/ft_itoa.c.s
 
 lib/ft_lennumber.o: lib/ft_lennumber.c.o
@@ -345,7 +345,7 @@ lib/ft_lennumber.o: lib/ft_lennumber.c.o
 
 # target to build an object file
 lib/ft_lennumber.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lennumber.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lennumber.c.o
 .PHONY : lib/ft_lennumber.c.o
 
 lib/ft_lennumber.i: lib/ft_lennumber.c.i
@@ -354,7 +354,7 @@ lib/ft_lennumber.i: lib/ft_lennumber.c.i
 
 # target to preprocess a source file
 lib/ft_lennumber.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lennumber.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lennumber.c.i
 .PHONY : lib/ft_lennumber.c.i
 
 lib/ft_lennumber.s: lib/ft_lennumber.c.s
@@ -363,7 +363,7 @@ lib/ft_lennumber.s: lib/ft_lennumber.c.s
 
 # target to generate assembly for a file
 lib/ft_lennumber.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lennumber.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lennumber.c.s
 .PHONY : lib/ft_lennumber.c.s
 
 lib/ft_llatoi.o: lib/ft_llatoi.c.o
@@ -372,7 +372,7 @@ lib/ft_llatoi.o: lib/ft_llatoi.c.o
 
 # target to build an object file
 lib/ft_llatoi.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_llatoi.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_llatoi.c.o
 .PHONY : lib/ft_llatoi.c.o
 
 lib/ft_llatoi.i: lib/ft_llatoi.c.i
@@ -381,7 +381,7 @@ lib/ft_llatoi.i: lib/ft_llatoi.c.i
 
 # target to preprocess a source file
 lib/ft_llatoi.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_llatoi.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_llatoi.c.i
 .PHONY : lib/ft_llatoi.c.i
 
 lib/ft_llatoi.s: lib/ft_llatoi.c.s
@@ -390,7 +390,7 @@ lib/ft_llatoi.s: lib/ft_llatoi.c.s
 
 # target to generate assembly for a file
 lib/ft_llatoi.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_llatoi.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_llatoi.c.s
 .PHONY : lib/ft_llatoi.c.s
 
 lib/ft_lst_n.o: lib/ft_lst_n.c.o
@@ -399,7 +399,7 @@ lib/ft_lst_n.o: lib/ft_lst_n.c.o
 
 # target to build an object file
 lib/ft_lst_n.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lst_n.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lst_n.c.o
 .PHONY : lib/ft_lst_n.c.o
 
 lib/ft_lst_n.i: lib/ft_lst_n.c.i
@@ -408,7 +408,7 @@ lib/ft_lst_n.i: lib/ft_lst_n.c.i
 
 # target to preprocess a source file
 lib/ft_lst_n.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lst_n.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lst_n.c.i
 .PHONY : lib/ft_lst_n.c.i
 
 lib/ft_lst_n.s: lib/ft_lst_n.c.s
@@ -417,7 +417,7 @@ lib/ft_lst_n.s: lib/ft_lst_n.c.s
 
 # target to generate assembly for a file
 lib/ft_lst_n.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lst_n.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lst_n.c.s
 .PHONY : lib/ft_lst_n.c.s
 
 lib/ft_lstadd.o: lib/ft_lstadd.c.o
@@ -426,7 +426,7 @@ lib/ft_lstadd.o: lib/ft_lstadd.c.o
 
 # target to build an object file
 lib/ft_lstadd.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lstadd.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstadd.c.o
 .PHONY : lib/ft_lstadd.c.o
 
 lib/ft_lstadd.i: lib/ft_lstadd.c.i
@@ -435,7 +435,7 @@ lib/ft_lstadd.i: lib/ft_lstadd.c.i
 
 # target to preprocess a source file
 lib/ft_lstadd.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lstadd.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstadd.c.i
 .PHONY : lib/ft_lstadd.c.i
 
 lib/ft_lstadd.s: lib/ft_lstadd.c.s
@@ -444,7 +444,7 @@ lib/ft_lstadd.s: lib/ft_lstadd.c.s
 
 # target to generate assembly for a file
 lib/ft_lstadd.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lstadd.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstadd.c.s
 .PHONY : lib/ft_lstadd.c.s
 
 lib/ft_lstaddend.o: lib/ft_lstaddend.c.o
@@ -453,7 +453,7 @@ lib/ft_lstaddend.o: lib/ft_lstaddend.c.o
 
 # target to build an object file
 lib/ft_lstaddend.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lstaddend.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstaddend.c.o
 .PHONY : lib/ft_lstaddend.c.o
 
 lib/ft_lstaddend.i: lib/ft_lstaddend.c.i
@@ -462,7 +462,7 @@ lib/ft_lstaddend.i: lib/ft_lstaddend.c.i
 
 # target to preprocess a source file
 lib/ft_lstaddend.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lstaddend.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstaddend.c.i
 .PHONY : lib/ft_lstaddend.c.i
 
 lib/ft_lstaddend.s: lib/ft_lstaddend.c.s
@@ -471,7 +471,7 @@ lib/ft_lstaddend.s: lib/ft_lstaddend.c.s
 
 # target to generate assembly for a file
 lib/ft_lstaddend.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lstaddend.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstaddend.c.s
 .PHONY : lib/ft_lstaddend.c.s
 
 lib/ft_lstaddn.o: lib/ft_lstaddn.c.o
@@ -480,7 +480,7 @@ lib/ft_lstaddn.o: lib/ft_lstaddn.c.o
 
 # target to build an object file
 lib/ft_lstaddn.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lstaddn.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstaddn.c.o
 .PHONY : lib/ft_lstaddn.c.o
 
 lib/ft_lstaddn.i: lib/ft_lstaddn.c.i
@@ -489,7 +489,7 @@ lib/ft_lstaddn.i: lib/ft_lstaddn.c.i
 
 # target to preprocess a source file
 lib/ft_lstaddn.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lstaddn.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstaddn.c.i
 .PHONY : lib/ft_lstaddn.c.i
 
 lib/ft_lstaddn.s: lib/ft_lstaddn.c.s
@@ -498,7 +498,7 @@ lib/ft_lstaddn.s: lib/ft_lstaddn.c.s
 
 # target to generate assembly for a file
 lib/ft_lstaddn.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lstaddn.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstaddn.c.s
 .PHONY : lib/ft_lstaddn.c.s
 
 lib/ft_lstdel.o: lib/ft_lstdel.c.o
@@ -507,7 +507,7 @@ lib/ft_lstdel.o: lib/ft_lstdel.c.o
 
 # target to build an object file
 lib/ft_lstdel.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lstdel.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstdel.c.o
 .PHONY : lib/ft_lstdel.c.o
 
 lib/ft_lstdel.i: lib/ft_lstdel.c.i
@@ -516,7 +516,7 @@ lib/ft_lstdel.i: lib/ft_lstdel.c.i
 
 # target to preprocess a source file
 lib/ft_lstdel.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lstdel.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstdel.c.i
 .PHONY : lib/ft_lstdel.c.i
 
 lib/ft_lstdel.s: lib/ft_lstdel.c.s
@@ -525,7 +525,7 @@ lib/ft_lstdel.s: lib/ft_lstdel.c.s
 
 # target to generate assembly for a file
 lib/ft_lstdel.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lstdel.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstdel.c.s
 .PHONY : lib/ft_lstdel.c.s
 
 lib/ft_lstdelh.o: lib/ft_lstdelh.c.o
@@ -534,7 +534,7 @@ lib/ft_lstdelh.o: lib/ft_lstdelh.c.o
 
 # target to build an object file
 lib/ft_lstdelh.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lstdelh.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstdelh.c.o
 .PHONY : lib/ft_lstdelh.c.o
 
 lib/ft_lstdelh.i: lib/ft_lstdelh.c.i
@@ -543,7 +543,7 @@ lib/ft_lstdelh.i: lib/ft_lstdelh.c.i
 
 # target to preprocess a source file
 lib/ft_lstdelh.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lstdelh.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstdelh.c.i
 .PHONY : lib/ft_lstdelh.c.i
 
 lib/ft_lstdelh.s: lib/ft_lstdelh.c.s
@@ -552,7 +552,7 @@ lib/ft_lstdelh.s: lib/ft_lstdelh.c.s
 
 # target to generate assembly for a file
 lib/ft_lstdelh.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lstdelh.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstdelh.c.s
 .PHONY : lib/ft_lstdelh.c.s
 
 lib/ft_lstdelone.o: lib/ft_lstdelone.c.o
@@ -561,7 +561,7 @@ lib/ft_lstdelone.o: lib/ft_lstdelone.c.o
 
 # target to build an object file
 lib/ft_lstdelone.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lstdelone.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstdelone.c.o
 .PHONY : lib/ft_lstdelone.c.o
 
 lib/ft_lstdelone.i: lib/ft_lstdelone.c.i
@@ -570,7 +570,7 @@ lib/ft_lstdelone.i: lib/ft_lstdelone.c.i
 
 # target to preprocess a source file
 lib/ft_lstdelone.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lstdelone.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstdelone.c.i
 .PHONY : lib/ft_lstdelone.c.i
 
 lib/ft_lstdelone.s: lib/ft_lstdelone.c.s
@@ -579,7 +579,7 @@ lib/ft_lstdelone.s: lib/ft_lstdelone.c.s
 
 # target to generate assembly for a file
 lib/ft_lstdelone.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lstdelone.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstdelone.c.s
 .PHONY : lib/ft_lstdelone.c.s
 
 lib/ft_lstiter.o: lib/ft_lstiter.c.o
@@ -588,7 +588,7 @@ lib/ft_lstiter.o: lib/ft_lstiter.c.o
 
 # target to build an object file
 lib/ft_lstiter.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lstiter.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstiter.c.o
 .PHONY : lib/ft_lstiter.c.o
 
 lib/ft_lstiter.i: lib/ft_lstiter.c.i
@@ -597,7 +597,7 @@ lib/ft_lstiter.i: lib/ft_lstiter.c.i
 
 # target to preprocess a source file
 lib/ft_lstiter.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lstiter.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstiter.c.i
 .PHONY : lib/ft_lstiter.c.i
 
 lib/ft_lstiter.s: lib/ft_lstiter.c.s
@@ -606,7 +606,7 @@ lib/ft_lstiter.s: lib/ft_lstiter.c.s
 
 # target to generate assembly for a file
 lib/ft_lstiter.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lstiter.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstiter.c.s
 .PHONY : lib/ft_lstiter.c.s
 
 lib/ft_lstmap.o: lib/ft_lstmap.c.o
@@ -615,7 +615,7 @@ lib/ft_lstmap.o: lib/ft_lstmap.c.o
 
 # target to build an object file
 lib/ft_lstmap.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lstmap.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstmap.c.o
 .PHONY : lib/ft_lstmap.c.o
 
 lib/ft_lstmap.i: lib/ft_lstmap.c.i
@@ -624,7 +624,7 @@ lib/ft_lstmap.i: lib/ft_lstmap.c.i
 
 # target to preprocess a source file
 lib/ft_lstmap.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lstmap.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstmap.c.i
 .PHONY : lib/ft_lstmap.c.i
 
 lib/ft_lstmap.s: lib/ft_lstmap.c.s
@@ -633,7 +633,7 @@ lib/ft_lstmap.s: lib/ft_lstmap.c.s
 
 # target to generate assembly for a file
 lib/ft_lstmap.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lstmap.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstmap.c.s
 .PHONY : lib/ft_lstmap.c.s
 
 lib/ft_lstnew.o: lib/ft_lstnew.c.o
@@ -642,7 +642,7 @@ lib/ft_lstnew.o: lib/ft_lstnew.c.o
 
 # target to build an object file
 lib/ft_lstnew.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lstnew.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstnew.c.o
 .PHONY : lib/ft_lstnew.c.o
 
 lib/ft_lstnew.i: lib/ft_lstnew.c.i
@@ -651,7 +651,7 @@ lib/ft_lstnew.i: lib/ft_lstnew.c.i
 
 # target to preprocess a source file
 lib/ft_lstnew.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lstnew.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstnew.c.i
 .PHONY : lib/ft_lstnew.c.i
 
 lib/ft_lstnew.s: lib/ft_lstnew.c.s
@@ -660,7 +660,7 @@ lib/ft_lstnew.s: lib/ft_lstnew.c.s
 
 # target to generate assembly for a file
 lib/ft_lstnew.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lstnew.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstnew.c.s
 .PHONY : lib/ft_lstnew.c.s
 
 lib/ft_lstsize.o: lib/ft_lstsize.c.o
@@ -669,7 +669,7 @@ lib/ft_lstsize.o: lib/ft_lstsize.c.o
 
 # target to build an object file
 lib/ft_lstsize.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lstsize.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstsize.c.o
 .PHONY : lib/ft_lstsize.c.o
 
 lib/ft_lstsize.i: lib/ft_lstsize.c.i
@@ -678,7 +678,7 @@ lib/ft_lstsize.i: lib/ft_lstsize.c.i
 
 # target to preprocess a source file
 lib/ft_lstsize.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lstsize.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstsize.c.i
 .PHONY : lib/ft_lstsize.c.i
 
 lib/ft_lstsize.s: lib/ft_lstsize.c.s
@@ -687,7 +687,7 @@ lib/ft_lstsize.s: lib/ft_lstsize.c.s
 
 # target to generate assembly for a file
 lib/ft_lstsize.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lstsize.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstsize.c.s
 .PHONY : lib/ft_lstsize.c.s
 
 lib/ft_lstswap.o: lib/ft_lstswap.c.o
@@ -696,7 +696,7 @@ lib/ft_lstswap.o: lib/ft_lstswap.c.o
 
 # target to build an object file
 lib/ft_lstswap.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lstswap.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstswap.c.o
 .PHONY : lib/ft_lstswap.c.o
 
 lib/ft_lstswap.i: lib/ft_lstswap.c.i
@@ -705,7 +705,7 @@ lib/ft_lstswap.i: lib/ft_lstswap.c.i
 
 # target to preprocess a source file
 lib/ft_lstswap.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lstswap.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstswap.c.i
 .PHONY : lib/ft_lstswap.c.i
 
 lib/ft_lstswap.s: lib/ft_lstswap.c.s
@@ -714,7 +714,7 @@ lib/ft_lstswap.s: lib/ft_lstswap.c.s
 
 # target to generate assembly for a file
 lib/ft_lstswap.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_lstswap.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstswap.c.s
 .PHONY : lib/ft_lstswap.c.s
 
 lib/ft_memalloc.o: lib/ft_memalloc.c.o
@@ -723,7 +723,7 @@ lib/ft_memalloc.o: lib/ft_memalloc.c.o
 
 # target to build an object file
 lib/ft_memalloc.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_memalloc.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_memalloc.c.o
 .PHONY : lib/ft_memalloc.c.o
 
 lib/ft_memalloc.i: lib/ft_memalloc.c.i
@@ -732,7 +732,7 @@ lib/ft_memalloc.i: lib/ft_memalloc.c.i
 
 # target to preprocess a source file
 lib/ft_memalloc.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_memalloc.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_memalloc.c.i
 .PHONY : lib/ft_memalloc.c.i
 
 lib/ft_memalloc.s: lib/ft_memalloc.c.s
@@ -741,7 +741,7 @@ lib/ft_memalloc.s: lib/ft_memalloc.c.s
 
 # target to generate assembly for a file
 lib/ft_memalloc.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_memalloc.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_memalloc.c.s
 .PHONY : lib/ft_memalloc.c.s
 
 lib/ft_memccpy.o: lib/ft_memccpy.c.o
@@ -750,7 +750,7 @@ lib/ft_memccpy.o: lib/ft_memccpy.c.o
 
 # target to build an object file
 lib/ft_memccpy.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_memccpy.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_memccpy.c.o
 .PHONY : lib/ft_memccpy.c.o
 
 lib/ft_memccpy.i: lib/ft_memccpy.c.i
@@ -759,7 +759,7 @@ lib/ft_memccpy.i: lib/ft_memccpy.c.i
 
 # target to preprocess a source file
 lib/ft_memccpy.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_memccpy.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_memccpy.c.i
 .PHONY : lib/ft_memccpy.c.i
 
 lib/ft_memccpy.s: lib/ft_memccpy.c.s
@@ -768,7 +768,7 @@ lib/ft_memccpy.s: lib/ft_memccpy.c.s
 
 # target to generate assembly for a file
 lib/ft_memccpy.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_memccpy.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_memccpy.c.s
 .PHONY : lib/ft_memccpy.c.s
 
 lib/ft_memchr.o: lib/ft_memchr.c.o
@@ -777,7 +777,7 @@ lib/ft_memchr.o: lib/ft_memchr.c.o
 
 # target to build an object file
 lib/ft_memchr.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_memchr.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_memchr.c.o
 .PHONY : lib/ft_memchr.c.o
 
 lib/ft_memchr.i: lib/ft_memchr.c.i
@@ -786,7 +786,7 @@ lib/ft_memchr.i: lib/ft_memchr.c.i
 
 # target to preprocess a source file
 lib/ft_memchr.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_memchr.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_memchr.c.i
 .PHONY : lib/ft_memchr.c.i
 
 lib/ft_memchr.s: lib/ft_memchr.c.s
@@ -795,7 +795,7 @@ lib/ft_memchr.s: lib/ft_memchr.c.s
 
 # target to generate assembly for a file
 lib/ft_memchr.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_memchr.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_memchr.c.s
 .PHONY : lib/ft_memchr.c.s
 
 lib/ft_memcmp.o: lib/ft_memcmp.c.o
@@ -804,7 +804,7 @@ lib/ft_memcmp.o: lib/ft_memcmp.c.o
 
 # target to build an object file
 lib/ft_memcmp.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_memcmp.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_memcmp.c.o
 .PHONY : lib/ft_memcmp.c.o
 
 lib/ft_memcmp.i: lib/ft_memcmp.c.i
@@ -813,7 +813,7 @@ lib/ft_memcmp.i: lib/ft_memcmp.c.i
 
 # target to preprocess a source file
 lib/ft_memcmp.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_memcmp.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_memcmp.c.i
 .PHONY : lib/ft_memcmp.c.i
 
 lib/ft_memcmp.s: lib/ft_memcmp.c.s
@@ -822,7 +822,7 @@ lib/ft_memcmp.s: lib/ft_memcmp.c.s
 
 # target to generate assembly for a file
 lib/ft_memcmp.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_memcmp.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_memcmp.c.s
 .PHONY : lib/ft_memcmp.c.s
 
 lib/ft_memcpy.o: lib/ft_memcpy.c.o
@@ -831,7 +831,7 @@ lib/ft_memcpy.o: lib/ft_memcpy.c.o
 
 # target to build an object file
 lib/ft_memcpy.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_memcpy.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_memcpy.c.o
 .PHONY : lib/ft_memcpy.c.o
 
 lib/ft_memcpy.i: lib/ft_memcpy.c.i
@@ -840,7 +840,7 @@ lib/ft_memcpy.i: lib/ft_memcpy.c.i
 
 # target to preprocess a source file
 lib/ft_memcpy.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_memcpy.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_memcpy.c.i
 .PHONY : lib/ft_memcpy.c.i
 
 lib/ft_memcpy.s: lib/ft_memcpy.c.s
@@ -849,7 +849,7 @@ lib/ft_memcpy.s: lib/ft_memcpy.c.s
 
 # target to generate assembly for a file
 lib/ft_memcpy.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_memcpy.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_memcpy.c.s
 .PHONY : lib/ft_memcpy.c.s
 
 lib/ft_memdel.o: lib/ft_memdel.c.o
@@ -858,7 +858,7 @@ lib/ft_memdel.o: lib/ft_memdel.c.o
 
 # target to build an object file
 lib/ft_memdel.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_memdel.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_memdel.c.o
 .PHONY : lib/ft_memdel.c.o
 
 lib/ft_memdel.i: lib/ft_memdel.c.i
@@ -867,7 +867,7 @@ lib/ft_memdel.i: lib/ft_memdel.c.i
 
 # target to preprocess a source file
 lib/ft_memdel.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_memdel.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_memdel.c.i
 .PHONY : lib/ft_memdel.c.i
 
 lib/ft_memdel.s: lib/ft_memdel.c.s
@@ -876,7 +876,7 @@ lib/ft_memdel.s: lib/ft_memdel.c.s
 
 # target to generate assembly for a file
 lib/ft_memdel.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_memdel.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_memdel.c.s
 .PHONY : lib/ft_memdel.c.s
 
 lib/ft_memmove.o: lib/ft_memmove.c.o
@@ -885,7 +885,7 @@ lib/ft_memmove.o: lib/ft_memmove.c.o
 
 # target to build an object file
 lib/ft_memmove.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_memmove.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_memmove.c.o
 .PHONY : lib/ft_memmove.c.o
 
 lib/ft_memmove.i: lib/ft_memmove.c.i
@@ -894,7 +894,7 @@ lib/ft_memmove.i: lib/ft_memmove.c.i
 
 # target to preprocess a source file
 lib/ft_memmove.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_memmove.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_memmove.c.i
 .PHONY : lib/ft_memmove.c.i
 
 lib/ft_memmove.s: lib/ft_memmove.c.s
@@ -903,7 +903,7 @@ lib/ft_memmove.s: lib/ft_memmove.c.s
 
 # target to generate assembly for a file
 lib/ft_memmove.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_memmove.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_memmove.c.s
 .PHONY : lib/ft_memmove.c.s
 
 lib/ft_memset.o: lib/ft_memset.c.o
@@ -912,7 +912,7 @@ lib/ft_memset.o: lib/ft_memset.c.o
 
 # target to build an object file
 lib/ft_memset.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_memset.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_memset.c.o
 .PHONY : lib/ft_memset.c.o
 
 lib/ft_memset.i: lib/ft_memset.c.i
@@ -921,7 +921,7 @@ lib/ft_memset.i: lib/ft_memset.c.i
 
 # target to preprocess a source file
 lib/ft_memset.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_memset.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_memset.c.i
 .PHONY : lib/ft_memset.c.i
 
 lib/ft_memset.s: lib/ft_memset.c.s
@@ -930,7 +930,7 @@ lib/ft_memset.s: lib/ft_memset.c.s
 
 # target to generate assembly for a file
 lib/ft_memset.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_memset.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_memset.c.s
 .PHONY : lib/ft_memset.c.s
 
 lib/ft_putchar.o: lib/ft_putchar.c.o
@@ -939,7 +939,7 @@ lib/ft_putchar.o: lib/ft_putchar.c.o
 
 # target to build an object file
 lib/ft_putchar.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_putchar.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_putchar.c.o
 .PHONY : lib/ft_putchar.c.o
 
 lib/ft_putchar.i: lib/ft_putchar.c.i
@@ -948,7 +948,7 @@ lib/ft_putchar.i: lib/ft_putchar.c.i
 
 # target to preprocess a source file
 lib/ft_putchar.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_putchar.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_putchar.c.i
 .PHONY : lib/ft_putchar.c.i
 
 lib/ft_putchar.s: lib/ft_putchar.c.s
@@ -957,7 +957,7 @@ lib/ft_putchar.s: lib/ft_putchar.c.s
 
 # target to generate assembly for a file
 lib/ft_putchar.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_putchar.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_putchar.c.s
 .PHONY : lib/ft_putchar.c.s
 
 lib/ft_putchar_fd.o: lib/ft_putchar_fd.c.o
@@ -966,7 +966,7 @@ lib/ft_putchar_fd.o: lib/ft_putchar_fd.c.o
 
 # target to build an object file
 lib/ft_putchar_fd.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_putchar_fd.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_putchar_fd.c.o
 .PHONY : lib/ft_putchar_fd.c.o
 
 lib/ft_putchar_fd.i: lib/ft_putchar_fd.c.i
@@ -975,7 +975,7 @@ lib/ft_putchar_fd.i: lib/ft_putchar_fd.c.i
 
 # target to preprocess a source file
 lib/ft_putchar_fd.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_putchar_fd.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_putchar_fd.c.i
 .PHONY : lib/ft_putchar_fd.c.i
 
 lib/ft_putchar_fd.s: lib/ft_putchar_fd.c.s
@@ -984,7 +984,7 @@ lib/ft_putchar_fd.s: lib/ft_putchar_fd.c.s
 
 # target to generate assembly for a file
 lib/ft_putchar_fd.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_putchar_fd.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_putchar_fd.c.s
 .PHONY : lib/ft_putchar_fd.c.s
 
 lib/ft_putendl.o: lib/ft_putendl.c.o
@@ -993,7 +993,7 @@ lib/ft_putendl.o: lib/ft_putendl.c.o
 
 # target to build an object file
 lib/ft_putendl.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_putendl.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_putendl.c.o
 .PHONY : lib/ft_putendl.c.o
 
 lib/ft_putendl.i: lib/ft_putendl.c.i
@@ -1002,7 +1002,7 @@ lib/ft_putendl.i: lib/ft_putendl.c.i
 
 # target to preprocess a source file
 lib/ft_putendl.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_putendl.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_putendl.c.i
 .PHONY : lib/ft_putendl.c.i
 
 lib/ft_putendl.s: lib/ft_putendl.c.s
@@ -1011,7 +1011,7 @@ lib/ft_putendl.s: lib/ft_putendl.c.s
 
 # target to generate assembly for a file
 lib/ft_putendl.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_putendl.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_putendl.c.s
 .PHONY : lib/ft_putendl.c.s
 
 lib/ft_putendl_fd.o: lib/ft_putendl_fd.c.o
@@ -1020,7 +1020,7 @@ lib/ft_putendl_fd.o: lib/ft_putendl_fd.c.o
 
 # target to build an object file
 lib/ft_putendl_fd.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_putendl_fd.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_putendl_fd.c.o
 .PHONY : lib/ft_putendl_fd.c.o
 
 lib/ft_putendl_fd.i: lib/ft_putendl_fd.c.i
@@ -1029,7 +1029,7 @@ lib/ft_putendl_fd.i: lib/ft_putendl_fd.c.i
 
 # target to preprocess a source file
 lib/ft_putendl_fd.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_putendl_fd.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_putendl_fd.c.i
 .PHONY : lib/ft_putendl_fd.c.i
 
 lib/ft_putendl_fd.s: lib/ft_putendl_fd.c.s
@@ -1038,7 +1038,7 @@ lib/ft_putendl_fd.s: lib/ft_putendl_fd.c.s
 
 # target to generate assembly for a file
 lib/ft_putendl_fd.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_putendl_fd.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_putendl_fd.c.s
 .PHONY : lib/ft_putendl_fd.c.s
 
 lib/ft_putnbr.o: lib/ft_putnbr.c.o
@@ -1047,7 +1047,7 @@ lib/ft_putnbr.o: lib/ft_putnbr.c.o
 
 # target to build an object file
 lib/ft_putnbr.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_putnbr.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_putnbr.c.o
 .PHONY : lib/ft_putnbr.c.o
 
 lib/ft_putnbr.i: lib/ft_putnbr.c.i
@@ -1056,7 +1056,7 @@ lib/ft_putnbr.i: lib/ft_putnbr.c.i
 
 # target to preprocess a source file
 lib/ft_putnbr.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_putnbr.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_putnbr.c.i
 .PHONY : lib/ft_putnbr.c.i
 
 lib/ft_putnbr.s: lib/ft_putnbr.c.s
@@ -1065,7 +1065,7 @@ lib/ft_putnbr.s: lib/ft_putnbr.c.s
 
 # target to generate assembly for a file
 lib/ft_putnbr.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_putnbr.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_putnbr.c.s
 .PHONY : lib/ft_putnbr.c.s
 
 lib/ft_putnbr_fd.o: lib/ft_putnbr_fd.c.o
@@ -1074,7 +1074,7 @@ lib/ft_putnbr_fd.o: lib/ft_putnbr_fd.c.o
 
 # target to build an object file
 lib/ft_putnbr_fd.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_putnbr_fd.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_putnbr_fd.c.o
 .PHONY : lib/ft_putnbr_fd.c.o
 
 lib/ft_putnbr_fd.i: lib/ft_putnbr_fd.c.i
@@ -1083,7 +1083,7 @@ lib/ft_putnbr_fd.i: lib/ft_putnbr_fd.c.i
 
 # target to preprocess a source file
 lib/ft_putnbr_fd.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_putnbr_fd.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_putnbr_fd.c.i
 .PHONY : lib/ft_putnbr_fd.c.i
 
 lib/ft_putnbr_fd.s: lib/ft_putnbr_fd.c.s
@@ -1092,7 +1092,7 @@ lib/ft_putnbr_fd.s: lib/ft_putnbr_fd.c.s
 
 # target to generate assembly for a file
 lib/ft_putnbr_fd.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_putnbr_fd.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_putnbr_fd.c.s
 .PHONY : lib/ft_putnbr_fd.c.s
 
 lib/ft_putspace.o: lib/ft_putspace.c.o
@@ -1101,7 +1101,7 @@ lib/ft_putspace.o: lib/ft_putspace.c.o
 
 # target to build an object file
 lib/ft_putspace.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_putspace.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_putspace.c.o
 .PHONY : lib/ft_putspace.c.o
 
 lib/ft_putspace.i: lib/ft_putspace.c.i
@@ -1110,7 +1110,7 @@ lib/ft_putspace.i: lib/ft_putspace.c.i
 
 # target to preprocess a source file
 lib/ft_putspace.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_putspace.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_putspace.c.i
 .PHONY : lib/ft_putspace.c.i
 
 lib/ft_putspace.s: lib/ft_putspace.c.s
@@ -1119,7 +1119,7 @@ lib/ft_putspace.s: lib/ft_putspace.c.s
 
 # target to generate assembly for a file
 lib/ft_putspace.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_putspace.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_putspace.c.s
 .PHONY : lib/ft_putspace.c.s
 
 lib/ft_putstr.o: lib/ft_putstr.c.o
@@ -1128,7 +1128,7 @@ lib/ft_putstr.o: lib/ft_putstr.c.o
 
 # target to build an object file
 lib/ft_putstr.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_putstr.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_putstr.c.o
 .PHONY : lib/ft_putstr.c.o
 
 lib/ft_putstr.i: lib/ft_putstr.c.i
@@ -1137,7 +1137,7 @@ lib/ft_putstr.i: lib/ft_putstr.c.i
 
 # target to preprocess a source file
 lib/ft_putstr.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_putstr.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_putstr.c.i
 .PHONY : lib/ft_putstr.c.i
 
 lib/ft_putstr.s: lib/ft_putstr.c.s
@@ -1146,7 +1146,7 @@ lib/ft_putstr.s: lib/ft_putstr.c.s
 
 # target to generate assembly for a file
 lib/ft_putstr.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_putstr.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_putstr.c.s
 .PHONY : lib/ft_putstr.c.s
 
 lib/ft_putstr_fd.o: lib/ft_putstr_fd.c.o
@@ -1155,7 +1155,7 @@ lib/ft_putstr_fd.o: lib/ft_putstr_fd.c.o
 
 # target to build an object file
 lib/ft_putstr_fd.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_putstr_fd.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_putstr_fd.c.o
 .PHONY : lib/ft_putstr_fd.c.o
 
 lib/ft_putstr_fd.i: lib/ft_putstr_fd.c.i
@@ -1164,7 +1164,7 @@ lib/ft_putstr_fd.i: lib/ft_putstr_fd.c.i
 
 # target to preprocess a source file
 lib/ft_putstr_fd.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_putstr_fd.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_putstr_fd.c.i
 .PHONY : lib/ft_putstr_fd.c.i
 
 lib/ft_putstr_fd.s: lib/ft_putstr_fd.c.s
@@ -1173,7 +1173,7 @@ lib/ft_putstr_fd.s: lib/ft_putstr_fd.c.s
 
 # target to generate assembly for a file
 lib/ft_putstr_fd.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_putstr_fd.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_putstr_fd.c.s
 .PHONY : lib/ft_putstr_fd.c.s
 
 lib/ft_strcat.o: lib/ft_strcat.c.o
@@ -1182,7 +1182,7 @@ lib/ft_strcat.o: lib/ft_strcat.c.o
 
 # target to build an object file
 lib/ft_strcat.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strcat.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strcat.c.o
 .PHONY : lib/ft_strcat.c.o
 
 lib/ft_strcat.i: lib/ft_strcat.c.i
@@ -1191,7 +1191,7 @@ lib/ft_strcat.i: lib/ft_strcat.c.i
 
 # target to preprocess a source file
 lib/ft_strcat.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strcat.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strcat.c.i
 .PHONY : lib/ft_strcat.c.i
 
 lib/ft_strcat.s: lib/ft_strcat.c.s
@@ -1200,7 +1200,7 @@ lib/ft_strcat.s: lib/ft_strcat.c.s
 
 # target to generate assembly for a file
 lib/ft_strcat.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strcat.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strcat.c.s
 .PHONY : lib/ft_strcat.c.s
 
 lib/ft_strchr.o: lib/ft_strchr.c.o
@@ -1209,7 +1209,7 @@ lib/ft_strchr.o: lib/ft_strchr.c.o
 
 # target to build an object file
 lib/ft_strchr.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strchr.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strchr.c.o
 .PHONY : lib/ft_strchr.c.o
 
 lib/ft_strchr.i: lib/ft_strchr.c.i
@@ -1218,7 +1218,7 @@ lib/ft_strchr.i: lib/ft_strchr.c.i
 
 # target to preprocess a source file
 lib/ft_strchr.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strchr.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strchr.c.i
 .PHONY : lib/ft_strchr.c.i
 
 lib/ft_strchr.s: lib/ft_strchr.c.s
@@ -1227,7 +1227,7 @@ lib/ft_strchr.s: lib/ft_strchr.c.s
 
 # target to generate assembly for a file
 lib/ft_strchr.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strchr.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strchr.c.s
 .PHONY : lib/ft_strchr.c.s
 
 lib/ft_strclr.o: lib/ft_strclr.c.o
@@ -1236,7 +1236,7 @@ lib/ft_strclr.o: lib/ft_strclr.c.o
 
 # target to build an object file
 lib/ft_strclr.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strclr.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strclr.c.o
 .PHONY : lib/ft_strclr.c.o
 
 lib/ft_strclr.i: lib/ft_strclr.c.i
@@ -1245,7 +1245,7 @@ lib/ft_strclr.i: lib/ft_strclr.c.i
 
 # target to preprocess a source file
 lib/ft_strclr.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strclr.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strclr.c.i
 .PHONY : lib/ft_strclr.c.i
 
 lib/ft_strclr.s: lib/ft_strclr.c.s
@@ -1254,7 +1254,7 @@ lib/ft_strclr.s: lib/ft_strclr.c.s
 
 # target to generate assembly for a file
 lib/ft_strclr.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strclr.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strclr.c.s
 .PHONY : lib/ft_strclr.c.s
 
 lib/ft_strcmp.o: lib/ft_strcmp.c.o
@@ -1263,7 +1263,7 @@ lib/ft_strcmp.o: lib/ft_strcmp.c.o
 
 # target to build an object file
 lib/ft_strcmp.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strcmp.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strcmp.c.o
 .PHONY : lib/ft_strcmp.c.o
 
 lib/ft_strcmp.i: lib/ft_strcmp.c.i
@@ -1272,7 +1272,7 @@ lib/ft_strcmp.i: lib/ft_strcmp.c.i
 
 # target to preprocess a source file
 lib/ft_strcmp.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strcmp.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strcmp.c.i
 .PHONY : lib/ft_strcmp.c.i
 
 lib/ft_strcmp.s: lib/ft_strcmp.c.s
@@ -1281,7 +1281,7 @@ lib/ft_strcmp.s: lib/ft_strcmp.c.s
 
 # target to generate assembly for a file
 lib/ft_strcmp.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strcmp.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strcmp.c.s
 .PHONY : lib/ft_strcmp.c.s
 
 lib/ft_strcpy.o: lib/ft_strcpy.c.o
@@ -1290,7 +1290,7 @@ lib/ft_strcpy.o: lib/ft_strcpy.c.o
 
 # target to build an object file
 lib/ft_strcpy.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strcpy.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strcpy.c.o
 .PHONY : lib/ft_strcpy.c.o
 
 lib/ft_strcpy.i: lib/ft_strcpy.c.i
@@ -1299,7 +1299,7 @@ lib/ft_strcpy.i: lib/ft_strcpy.c.i
 
 # target to preprocess a source file
 lib/ft_strcpy.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strcpy.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strcpy.c.i
 .PHONY : lib/ft_strcpy.c.i
 
 lib/ft_strcpy.s: lib/ft_strcpy.c.s
@@ -1308,7 +1308,7 @@ lib/ft_strcpy.s: lib/ft_strcpy.c.s
 
 # target to generate assembly for a file
 lib/ft_strcpy.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strcpy.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strcpy.c.s
 .PHONY : lib/ft_strcpy.c.s
 
 lib/ft_strdel.o: lib/ft_strdel.c.o
@@ -1317,7 +1317,7 @@ lib/ft_strdel.o: lib/ft_strdel.c.o
 
 # target to build an object file
 lib/ft_strdel.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strdel.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strdel.c.o
 .PHONY : lib/ft_strdel.c.o
 
 lib/ft_strdel.i: lib/ft_strdel.c.i
@@ -1326,7 +1326,7 @@ lib/ft_strdel.i: lib/ft_strdel.c.i
 
 # target to preprocess a source file
 lib/ft_strdel.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strdel.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strdel.c.i
 .PHONY : lib/ft_strdel.c.i
 
 lib/ft_strdel.s: lib/ft_strdel.c.s
@@ -1335,7 +1335,7 @@ lib/ft_strdel.s: lib/ft_strdel.c.s
 
 # target to generate assembly for a file
 lib/ft_strdel.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strdel.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strdel.c.s
 .PHONY : lib/ft_strdel.c.s
 
 lib/ft_strdup.o: lib/ft_strdup.c.o
@@ -1344,7 +1344,7 @@ lib/ft_strdup.o: lib/ft_strdup.c.o
 
 # target to build an object file
 lib/ft_strdup.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strdup.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strdup.c.o
 .PHONY : lib/ft_strdup.c.o
 
 lib/ft_strdup.i: lib/ft_strdup.c.i
@@ -1353,7 +1353,7 @@ lib/ft_strdup.i: lib/ft_strdup.c.i
 
 # target to preprocess a source file
 lib/ft_strdup.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strdup.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strdup.c.i
 .PHONY : lib/ft_strdup.c.i
 
 lib/ft_strdup.s: lib/ft_strdup.c.s
@@ -1362,7 +1362,7 @@ lib/ft_strdup.s: lib/ft_strdup.c.s
 
 # target to generate assembly for a file
 lib/ft_strdup.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strdup.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strdup.c.s
 .PHONY : lib/ft_strdup.c.s
 
 lib/ft_strequ.o: lib/ft_strequ.c.o
@@ -1371,7 +1371,7 @@ lib/ft_strequ.o: lib/ft_strequ.c.o
 
 # target to build an object file
 lib/ft_strequ.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strequ.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strequ.c.o
 .PHONY : lib/ft_strequ.c.o
 
 lib/ft_strequ.i: lib/ft_strequ.c.i
@@ -1380,7 +1380,7 @@ lib/ft_strequ.i: lib/ft_strequ.c.i
 
 # target to preprocess a source file
 lib/ft_strequ.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strequ.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strequ.c.i
 .PHONY : lib/ft_strequ.c.i
 
 lib/ft_strequ.s: lib/ft_strequ.c.s
@@ -1389,7 +1389,7 @@ lib/ft_strequ.s: lib/ft_strequ.c.s
 
 # target to generate assembly for a file
 lib/ft_strequ.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strequ.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strequ.c.s
 .PHONY : lib/ft_strequ.c.s
 
 lib/ft_striter.o: lib/ft_striter.c.o
@@ -1398,7 +1398,7 @@ lib/ft_striter.o: lib/ft_striter.c.o
 
 # target to build an object file
 lib/ft_striter.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_striter.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_striter.c.o
 .PHONY : lib/ft_striter.c.o
 
 lib/ft_striter.i: lib/ft_striter.c.i
@@ -1407,7 +1407,7 @@ lib/ft_striter.i: lib/ft_striter.c.i
 
 # target to preprocess a source file
 lib/ft_striter.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_striter.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_striter.c.i
 .PHONY : lib/ft_striter.c.i
 
 lib/ft_striter.s: lib/ft_striter.c.s
@@ -1416,7 +1416,7 @@ lib/ft_striter.s: lib/ft_striter.c.s
 
 # target to generate assembly for a file
 lib/ft_striter.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_striter.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_striter.c.s
 .PHONY : lib/ft_striter.c.s
 
 lib/ft_striteri.o: lib/ft_striteri.c.o
@@ -1425,7 +1425,7 @@ lib/ft_striteri.o: lib/ft_striteri.c.o
 
 # target to build an object file
 lib/ft_striteri.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_striteri.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_striteri.c.o
 .PHONY : lib/ft_striteri.c.o
 
 lib/ft_striteri.i: lib/ft_striteri.c.i
@@ -1434,7 +1434,7 @@ lib/ft_striteri.i: lib/ft_striteri.c.i
 
 # target to preprocess a source file
 lib/ft_striteri.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_striteri.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_striteri.c.i
 .PHONY : lib/ft_striteri.c.i
 
 lib/ft_striteri.s: lib/ft_striteri.c.s
@@ -1443,7 +1443,7 @@ lib/ft_striteri.s: lib/ft_striteri.c.s
 
 # target to generate assembly for a file
 lib/ft_striteri.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_striteri.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_striteri.c.s
 .PHONY : lib/ft_striteri.c.s
 
 lib/ft_strjoin.o: lib/ft_strjoin.c.o
@@ -1452,7 +1452,7 @@ lib/ft_strjoin.o: lib/ft_strjoin.c.o
 
 # target to build an object file
 lib/ft_strjoin.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strjoin.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strjoin.c.o
 .PHONY : lib/ft_strjoin.c.o
 
 lib/ft_strjoin.i: lib/ft_strjoin.c.i
@@ -1461,7 +1461,7 @@ lib/ft_strjoin.i: lib/ft_strjoin.c.i
 
 # target to preprocess a source file
 lib/ft_strjoin.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strjoin.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strjoin.c.i
 .PHONY : lib/ft_strjoin.c.i
 
 lib/ft_strjoin.s: lib/ft_strjoin.c.s
@@ -1470,7 +1470,7 @@ lib/ft_strjoin.s: lib/ft_strjoin.c.s
 
 # target to generate assembly for a file
 lib/ft_strjoin.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strjoin.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strjoin.c.s
 .PHONY : lib/ft_strjoin.c.s
 
 lib/ft_strlcat.o: lib/ft_strlcat.c.o
@@ -1479,7 +1479,7 @@ lib/ft_strlcat.o: lib/ft_strlcat.c.o
 
 # target to build an object file
 lib/ft_strlcat.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strlcat.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strlcat.c.o
 .PHONY : lib/ft_strlcat.c.o
 
 lib/ft_strlcat.i: lib/ft_strlcat.c.i
@@ -1488,7 +1488,7 @@ lib/ft_strlcat.i: lib/ft_strlcat.c.i
 
 # target to preprocess a source file
 lib/ft_strlcat.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strlcat.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strlcat.c.i
 .PHONY : lib/ft_strlcat.c.i
 
 lib/ft_strlcat.s: lib/ft_strlcat.c.s
@@ -1497,7 +1497,7 @@ lib/ft_strlcat.s: lib/ft_strlcat.c.s
 
 # target to generate assembly for a file
 lib/ft_strlcat.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strlcat.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strlcat.c.s
 .PHONY : lib/ft_strlcat.c.s
 
 lib/ft_strlen.o: lib/ft_strlen.c.o
@@ -1506,7 +1506,7 @@ lib/ft_strlen.o: lib/ft_strlen.c.o
 
 # target to build an object file
 lib/ft_strlen.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strlen.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strlen.c.o
 .PHONY : lib/ft_strlen.c.o
 
 lib/ft_strlen.i: lib/ft_strlen.c.i
@@ -1515,7 +1515,7 @@ lib/ft_strlen.i: lib/ft_strlen.c.i
 
 # target to preprocess a source file
 lib/ft_strlen.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strlen.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strlen.c.i
 .PHONY : lib/ft_strlen.c.i
 
 lib/ft_strlen.s: lib/ft_strlen.c.s
@@ -1524,7 +1524,7 @@ lib/ft_strlen.s: lib/ft_strlen.c.s
 
 # target to generate assembly for a file
 lib/ft_strlen.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strlen.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strlen.c.s
 .PHONY : lib/ft_strlen.c.s
 
 lib/ft_strmap.o: lib/ft_strmap.c.o
@@ -1533,7 +1533,7 @@ lib/ft_strmap.o: lib/ft_strmap.c.o
 
 # target to build an object file
 lib/ft_strmap.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strmap.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strmap.c.o
 .PHONY : lib/ft_strmap.c.o
 
 lib/ft_strmap.i: lib/ft_strmap.c.i
@@ -1542,7 +1542,7 @@ lib/ft_strmap.i: lib/ft_strmap.c.i
 
 # target to preprocess a source file
 lib/ft_strmap.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strmap.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strmap.c.i
 .PHONY : lib/ft_strmap.c.i
 
 lib/ft_strmap.s: lib/ft_strmap.c.s
@@ -1551,7 +1551,7 @@ lib/ft_strmap.s: lib/ft_strmap.c.s
 
 # target to generate assembly for a file
 lib/ft_strmap.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strmap.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strmap.c.s
 .PHONY : lib/ft_strmap.c.s
 
 lib/ft_strmapi.o: lib/ft_strmapi.c.o
@@ -1560,7 +1560,7 @@ lib/ft_strmapi.o: lib/ft_strmapi.c.o
 
 # target to build an object file
 lib/ft_strmapi.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strmapi.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strmapi.c.o
 .PHONY : lib/ft_strmapi.c.o
 
 lib/ft_strmapi.i: lib/ft_strmapi.c.i
@@ -1569,7 +1569,7 @@ lib/ft_strmapi.i: lib/ft_strmapi.c.i
 
 # target to preprocess a source file
 lib/ft_strmapi.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strmapi.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strmapi.c.i
 .PHONY : lib/ft_strmapi.c.i
 
 lib/ft_strmapi.s: lib/ft_strmapi.c.s
@@ -1578,7 +1578,7 @@ lib/ft_strmapi.s: lib/ft_strmapi.c.s
 
 # target to generate assembly for a file
 lib/ft_strmapi.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strmapi.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strmapi.c.s
 .PHONY : lib/ft_strmapi.c.s
 
 lib/ft_strncat.o: lib/ft_strncat.c.o
@@ -1587,7 +1587,7 @@ lib/ft_strncat.o: lib/ft_strncat.c.o
 
 # target to build an object file
 lib/ft_strncat.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strncat.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strncat.c.o
 .PHONY : lib/ft_strncat.c.o
 
 lib/ft_strncat.i: lib/ft_strncat.c.i
@@ -1596,7 +1596,7 @@ lib/ft_strncat.i: lib/ft_strncat.c.i
 
 # target to preprocess a source file
 lib/ft_strncat.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strncat.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strncat.c.i
 .PHONY : lib/ft_strncat.c.i
 
 lib/ft_strncat.s: lib/ft_strncat.c.s
@@ -1605,7 +1605,7 @@ lib/ft_strncat.s: lib/ft_strncat.c.s
 
 # target to generate assembly for a file
 lib/ft_strncat.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strncat.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strncat.c.s
 .PHONY : lib/ft_strncat.c.s
 
 lib/ft_strncmp.o: lib/ft_strncmp.c.o
@@ -1614,7 +1614,7 @@ lib/ft_strncmp.o: lib/ft_strncmp.c.o
 
 # target to build an object file
 lib/ft_strncmp.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strncmp.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strncmp.c.o
 .PHONY : lib/ft_strncmp.c.o
 
 lib/ft_strncmp.i: lib/ft_strncmp.c.i
@@ -1623,7 +1623,7 @@ lib/ft_strncmp.i: lib/ft_strncmp.c.i
 
 # target to preprocess a source file
 lib/ft_strncmp.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strncmp.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strncmp.c.i
 .PHONY : lib/ft_strncmp.c.i
 
 lib/ft_strncmp.s: lib/ft_strncmp.c.s
@@ -1632,7 +1632,7 @@ lib/ft_strncmp.s: lib/ft_strncmp.c.s
 
 # target to generate assembly for a file
 lib/ft_strncmp.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strncmp.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strncmp.c.s
 .PHONY : lib/ft_strncmp.c.s
 
 lib/ft_strncpy.o: lib/ft_strncpy.c.o
@@ -1641,7 +1641,7 @@ lib/ft_strncpy.o: lib/ft_strncpy.c.o
 
 # target to build an object file
 lib/ft_strncpy.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strncpy.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strncpy.c.o
 .PHONY : lib/ft_strncpy.c.o
 
 lib/ft_strncpy.i: lib/ft_strncpy.c.i
@@ -1650,7 +1650,7 @@ lib/ft_strncpy.i: lib/ft_strncpy.c.i
 
 # target to preprocess a source file
 lib/ft_strncpy.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strncpy.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strncpy.c.i
 .PHONY : lib/ft_strncpy.c.i
 
 lib/ft_strncpy.s: lib/ft_strncpy.c.s
@@ -1659,7 +1659,7 @@ lib/ft_strncpy.s: lib/ft_strncpy.c.s
 
 # target to generate assembly for a file
 lib/ft_strncpy.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strncpy.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strncpy.c.s
 .PHONY : lib/ft_strncpy.c.s
 
 lib/ft_strnequ.o: lib/ft_strnequ.c.o
@@ -1668,7 +1668,7 @@ lib/ft_strnequ.o: lib/ft_strnequ.c.o
 
 # target to build an object file
 lib/ft_strnequ.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strnequ.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strnequ.c.o
 .PHONY : lib/ft_strnequ.c.o
 
 lib/ft_strnequ.i: lib/ft_strnequ.c.i
@@ -1677,7 +1677,7 @@ lib/ft_strnequ.i: lib/ft_strnequ.c.i
 
 # target to preprocess a source file
 lib/ft_strnequ.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strnequ.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strnequ.c.i
 .PHONY : lib/ft_strnequ.c.i
 
 lib/ft_strnequ.s: lib/ft_strnequ.c.s
@@ -1686,7 +1686,7 @@ lib/ft_strnequ.s: lib/ft_strnequ.c.s
 
 # target to generate assembly for a file
 lib/ft_strnequ.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strnequ.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strnequ.c.s
 .PHONY : lib/ft_strnequ.c.s
 
 lib/ft_strnew.o: lib/ft_strnew.c.o
@@ -1695,7 +1695,7 @@ lib/ft_strnew.o: lib/ft_strnew.c.o
 
 # target to build an object file
 lib/ft_strnew.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strnew.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strnew.c.o
 .PHONY : lib/ft_strnew.c.o
 
 lib/ft_strnew.i: lib/ft_strnew.c.i
@@ -1704,7 +1704,7 @@ lib/ft_strnew.i: lib/ft_strnew.c.i
 
 # target to preprocess a source file
 lib/ft_strnew.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strnew.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strnew.c.i
 .PHONY : lib/ft_strnew.c.i
 
 lib/ft_strnew.s: lib/ft_strnew.c.s
@@ -1713,7 +1713,7 @@ lib/ft_strnew.s: lib/ft_strnew.c.s
 
 # target to generate assembly for a file
 lib/ft_strnew.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strnew.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strnew.c.s
 .PHONY : lib/ft_strnew.c.s
 
 lib/ft_strnstr.o: lib/ft_strnstr.c.o
@@ -1722,7 +1722,7 @@ lib/ft_strnstr.o: lib/ft_strnstr.c.o
 
 # target to build an object file
 lib/ft_strnstr.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strnstr.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strnstr.c.o
 .PHONY : lib/ft_strnstr.c.o
 
 lib/ft_strnstr.i: lib/ft_strnstr.c.i
@@ -1731,7 +1731,7 @@ lib/ft_strnstr.i: lib/ft_strnstr.c.i
 
 # target to preprocess a source file
 lib/ft_strnstr.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strnstr.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strnstr.c.i
 .PHONY : lib/ft_strnstr.c.i
 
 lib/ft_strnstr.s: lib/ft_strnstr.c.s
@@ -1740,7 +1740,7 @@ lib/ft_strnstr.s: lib/ft_strnstr.c.s
 
 # target to generate assembly for a file
 lib/ft_strnstr.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strnstr.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strnstr.c.s
 .PHONY : lib/ft_strnstr.c.s
 
 lib/ft_strrchr.o: lib/ft_strrchr.c.o
@@ -1749,7 +1749,7 @@ lib/ft_strrchr.o: lib/ft_strrchr.c.o
 
 # target to build an object file
 lib/ft_strrchr.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strrchr.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strrchr.c.o
 .PHONY : lib/ft_strrchr.c.o
 
 lib/ft_strrchr.i: lib/ft_strrchr.c.i
@@ -1758,7 +1758,7 @@ lib/ft_strrchr.i: lib/ft_strrchr.c.i
 
 # target to preprocess a source file
 lib/ft_strrchr.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strrchr.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strrchr.c.i
 .PHONY : lib/ft_strrchr.c.i
 
 lib/ft_strrchr.s: lib/ft_strrchr.c.s
@@ -1767,7 +1767,7 @@ lib/ft_strrchr.s: lib/ft_strrchr.c.s
 
 # target to generate assembly for a file
 lib/ft_strrchr.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strrchr.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strrchr.c.s
 .PHONY : lib/ft_strrchr.c.s
 
 lib/ft_strsplit.o: lib/ft_strsplit.c.o
@@ -1776,7 +1776,7 @@ lib/ft_strsplit.o: lib/ft_strsplit.c.o
 
 # target to build an object file
 lib/ft_strsplit.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strsplit.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strsplit.c.o
 .PHONY : lib/ft_strsplit.c.o
 
 lib/ft_strsplit.i: lib/ft_strsplit.c.i
@@ -1785,7 +1785,7 @@ lib/ft_strsplit.i: lib/ft_strsplit.c.i
 
 # target to preprocess a source file
 lib/ft_strsplit.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strsplit.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strsplit.c.i
 .PHONY : lib/ft_strsplit.c.i
 
 lib/ft_strsplit.s: lib/ft_strsplit.c.s
@@ -1794,7 +1794,7 @@ lib/ft_strsplit.s: lib/ft_strsplit.c.s
 
 # target to generate assembly for a file
 lib/ft_strsplit.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strsplit.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strsplit.c.s
 .PHONY : lib/ft_strsplit.c.s
 
 lib/ft_strstr.o: lib/ft_strstr.c.o
@@ -1803,7 +1803,7 @@ lib/ft_strstr.o: lib/ft_strstr.c.o
 
 # target to build an object file
 lib/ft_strstr.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strstr.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strstr.c.o
 .PHONY : lib/ft_strstr.c.o
 
 lib/ft_strstr.i: lib/ft_strstr.c.i
@@ -1812,7 +1812,7 @@ lib/ft_strstr.i: lib/ft_strstr.c.i
 
 # target to preprocess a source file
 lib/ft_strstr.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strstr.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strstr.c.i
 .PHONY : lib/ft_strstr.c.i
 
 lib/ft_strstr.s: lib/ft_strstr.c.s
@@ -1821,7 +1821,7 @@ lib/ft_strstr.s: lib/ft_strstr.c.s
 
 # target to generate assembly for a file
 lib/ft_strstr.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strstr.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strstr.c.s
 .PHONY : lib/ft_strstr.c.s
 
 lib/ft_strsub.o: lib/ft_strsub.c.o
@@ -1830,7 +1830,7 @@ lib/ft_strsub.o: lib/ft_strsub.c.o
 
 # target to build an object file
 lib/ft_strsub.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strsub.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strsub.c.o
 .PHONY : lib/ft_strsub.c.o
 
 lib/ft_strsub.i: lib/ft_strsub.c.i
@@ -1839,7 +1839,7 @@ lib/ft_strsub.i: lib/ft_strsub.c.i
 
 # target to preprocess a source file
 lib/ft_strsub.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strsub.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strsub.c.i
 .PHONY : lib/ft_strsub.c.i
 
 lib/ft_strsub.s: lib/ft_strsub.c.s
@@ -1848,7 +1848,7 @@ lib/ft_strsub.s: lib/ft_strsub.c.s
 
 # target to generate assembly for a file
 lib/ft_strsub.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strsub.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strsub.c.s
 .PHONY : lib/ft_strsub.c.s
 
 lib/ft_strtrim.o: lib/ft_strtrim.c.o
@@ -1857,7 +1857,7 @@ lib/ft_strtrim.o: lib/ft_strtrim.c.o
 
 # target to build an object file
 lib/ft_strtrim.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strtrim.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strtrim.c.o
 .PHONY : lib/ft_strtrim.c.o
 
 lib/ft_strtrim.i: lib/ft_strtrim.c.i
@@ -1866,7 +1866,7 @@ lib/ft_strtrim.i: lib/ft_strtrim.c.i
 
 # target to preprocess a source file
 lib/ft_strtrim.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strtrim.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strtrim.c.i
 .PHONY : lib/ft_strtrim.c.i
 
 lib/ft_strtrim.s: lib/ft_strtrim.c.s
@@ -1875,7 +1875,7 @@ lib/ft_strtrim.s: lib/ft_strtrim.c.s
 
 # target to generate assembly for a file
 lib/ft_strtrim.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_strtrim.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strtrim.c.s
 .PHONY : lib/ft_strtrim.c.s
 
 lib/ft_tolower.o: lib/ft_tolower.c.o
@@ -1884,7 +1884,7 @@ lib/ft_tolower.o: lib/ft_tolower.c.o
 
 # target to build an object file
 lib/ft_tolower.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_tolower.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_tolower.c.o
 .PHONY : lib/ft_tolower.c.o
 
 lib/ft_tolower.i: lib/ft_tolower.c.i
@@ -1893,7 +1893,7 @@ lib/ft_tolower.i: lib/ft_tolower.c.i
 
 # target to preprocess a source file
 lib/ft_tolower.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_tolower.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_tolower.c.i
 .PHONY : lib/ft_tolower.c.i
 
 lib/ft_tolower.s: lib/ft_tolower.c.s
@@ -1902,7 +1902,7 @@ lib/ft_tolower.s: lib/ft_tolower.c.s
 
 # target to generate assembly for a file
 lib/ft_tolower.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_tolower.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_tolower.c.s
 .PHONY : lib/ft_tolower.c.s
 
 lib/ft_toupper.o: lib/ft_toupper.c.o
@@ -1911,7 +1911,7 @@ lib/ft_toupper.o: lib/ft_toupper.c.o
 
 # target to build an object file
 lib/ft_toupper.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_toupper.c.o
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_toupper.c.o
 .PHONY : lib/ft_toupper.c.o
 
 lib/ft_toupper.i: lib/ft_toupper.c.i
@@ -1920,7 +1920,7 @@ lib/ft_toupper.i: lib/ft_toupper.c.i
 
 # target to preprocess a source file
 lib/ft_toupper.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_toupper.c.i
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_toupper.c.i
 .PHONY : lib/ft_toupper.c.i
 
 lib/ft_toupper.s: lib/ft_toupper.c.s
@@ -1929,89 +1929,89 @@ lib/ft_toupper.s: lib/ft_toupper.c.s
 
 # target to generate assembly for a file
 lib/ft_toupper.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/lib/ft_toupper.c.s
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_toupper.c.s
 .PHONY : lib/ft_toupper.c.s
 
-list_functions.o: list_functions.c.o
+src/list_functions.o: src/list_functions.c.o
 
-.PHONY : list_functions.o
-
-# target to build an object file
-list_functions.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/list_functions.c.o
-.PHONY : list_functions.c.o
-
-list_functions.i: list_functions.c.i
-
-.PHONY : list_functions.i
-
-# target to preprocess a source file
-list_functions.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/list_functions.c.i
-.PHONY : list_functions.c.i
-
-list_functions.s: list_functions.c.s
-
-.PHONY : list_functions.s
-
-# target to generate assembly for a file
-list_functions.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/list_functions.c.s
-.PHONY : list_functions.c.s
-
-main.o: main.c.o
-
-.PHONY : main.o
+.PHONY : src/list_functions.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/main.c.o
-.PHONY : main.c.o
+src/list_functions.c.o:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/list_functions.c.o
+.PHONY : src/list_functions.c.o
 
-main.i: main.c.i
+src/list_functions.i: src/list_functions.c.i
 
-.PHONY : main.i
+.PHONY : src/list_functions.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/main.c.i
-.PHONY : main.c.i
+src/list_functions.c.i:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/list_functions.c.i
+.PHONY : src/list_functions.c.i
 
-main.s: main.c.s
+src/list_functions.s: src/list_functions.c.s
 
-.PHONY : main.s
+.PHONY : src/list_functions.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/main.c.s
-.PHONY : main.c.s
+src/list_functions.c.s:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/list_functions.c.s
+.PHONY : src/list_functions.c.s
 
-test.o: test.c.o
+src/main.o: src/main.c.o
 
-.PHONY : test.o
+.PHONY : src/main.o
 
 # target to build an object file
-test.c.o:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/test.c.o
-.PHONY : test.c.o
+src/main.c.o:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/main.c.o
+.PHONY : src/main.c.o
 
-test.i: test.c.i
+src/main.i: src/main.c.i
 
-.PHONY : test.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-test.c.i:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/test.c.i
-.PHONY : test.c.i
+src/main.c.i:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/main.c.i
+.PHONY : src/main.c.i
 
-test.s: test.c.s
+src/main.s: src/main.c.s
 
-.PHONY : test.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-test.c.s:
-	$(MAKE) -f CMakeFiles/fork_test.dir/build.make CMakeFiles/fork_test.dir/test.c.s
-.PHONY : test.c.s
+src/main.c.s:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/main.c.s
+.PHONY : src/main.c.s
+
+src/test.o: src/test.c.o
+
+.PHONY : src/test.o
+
+# target to build an object file
+src/test.c.o:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/test.c.o
+.PHONY : src/test.c.o
+
+src/test.i: src/test.c.i
+
+.PHONY : src/test.i
+
+# target to preprocess a source file
+src/test.c.i:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/test.c.i
+.PHONY : src/test.c.i
+
+src/test.s: src/test.c.s
+
+.PHONY : src/test.s
+
+# target to generate assembly for a file
+src/test.c.s:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/test.c.s
+.PHONY : src/test.c.s
 
 # Help Target
 help:
@@ -2021,7 +2021,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... fork_test"
+	@echo "... minishell"
 	@echo "... lib/ft_atoi.o"
 	@echo "... lib/ft_atoi.i"
 	@echo "... lib/ft_atoi.s"
@@ -2223,15 +2223,15 @@ help:
 	@echo "... lib/ft_toupper.o"
 	@echo "... lib/ft_toupper.i"
 	@echo "... lib/ft_toupper.s"
-	@echo "... list_functions.o"
-	@echo "... list_functions.i"
-	@echo "... list_functions.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... test.o"
-	@echo "... test.i"
-	@echo "... test.s"
+	@echo "... src/list_functions.o"
+	@echo "... src/list_functions.i"
+	@echo "... src/list_functions.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/test.o"
+	@echo "... src/test.i"
+	@echo "... src/test.s"
 .PHONY : help
 
 

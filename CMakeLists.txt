@@ -1,11 +1,13 @@
 cmake_minimum_required(VERSION 3.15)
-project(fork_test C)
+project(minishell C)
 
 set(CMAKE_C_STANDARD 11)
 
+include_directories(includes)
 include_directories(lib)
 
-add_executable(fork_test
+add_executable(minishell
+        includes/minishell.h
         lib/ft_atoi.c
         lib/ft_bzero.c
         lib/ft_isalnum.c
@@ -74,5 +76,6 @@ add_executable(fork_test
         lib/ft_tolower.c
         lib/ft_toupper.c
         lib/libft.h
-        main.c
-        test.c minishell.h list_functions.c)
+        src/list_functions.c
+        src/main.c
+        src/test.c)
