@@ -288,6 +288,9 @@
 		<Unit filename="/Users/wanton/minishell/src/main.c">
 			<Option target="minishell"/>
 		</Unit>
+		<Unit filename="/Users/wanton/minishell/src/pwd_script.c">
+			<Option target="minishell"/>
+		</Unit>
 		<Unit filename="/Users/wanton/minishell/src/run_command.c">
 			<Option target="minishell"/>
 		</Unit>

@@ -1905,6 +1905,33 @@ src/main.c.s:
 	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+src/pwd_script.o: src/pwd_script.c.o
+
+.PHONY : src/pwd_script.o
+
+# target to build an object file
+src/pwd_script.c.o:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/pwd_script.c.o
+.PHONY : src/pwd_script.c.o
+
+src/pwd_script.i: src/pwd_script.c.i
+
+.PHONY : src/pwd_script.i
+
+# target to preprocess a source file
+src/pwd_script.c.i:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/pwd_script.c.i
+.PHONY : src/pwd_script.c.i
+
+src/pwd_script.s: src/pwd_script.c.s
+
+.PHONY : src/pwd_script.s
+
+# target to generate assembly for a file
+src/pwd_script.c.s:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/pwd_script.c.s
+.PHONY : src/pwd_script.c.s
+
 src/run_command.o: src/run_command.c.o
 
 .PHONY : src/run_command.o
@@ -2139,6 +2166,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/pwd_script.o"
+	@echo "... src/pwd_script.i"
+	@echo "... src/pwd_script.s"
 	@echo "... src/run_command.o"
 	@echo "... src/run_command.i"
 	@echo "... src/run_command.s"

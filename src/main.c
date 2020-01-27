@@ -6,7 +6,7 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 15:17:39 by wanton            #+#    #+#             */
-/*   Updated: 2020/01/27 10:44:47 by wanton           ###   ########.fr       */
+/*   Updated: 2020/01/27 13:11:44 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,10 +73,10 @@ int		main(/*int ac, char **av*/)
 	char	*arg;
 	char 	**s_arg;
 
-	flag = 1;
-	while (flag)
+	flag = 0;
+	while (flag == 0)
     {
-        write(1, "$> ", 2);
+        write(1, "$> ", 3);
         arg = read_arg();
         s_arg = ft_strsplit(arg, ' ');
         /*i = 0;

@@ -6,6 +6,7 @@
 # include <unistd.h>
 # include <sys/types.h>
 # include <sys/wait.h>
+# include <sys/param.h> // MAXPATHLEN
 
 # include "libft.h"
 
@@ -36,5 +37,6 @@ t_arg				*ft_create_elem(void);
 */
 
 int                 run_command(char **s_arg);
+int					pwd_script(void);
 
 #endif

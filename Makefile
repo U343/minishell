@@ -17,7 +17,7 @@ LIB_PATH = ./lib/
 OBJ_PATH = ./obj/
 INC_PATH = ./includes/ $(LIB_PATH)
 
-SRC_FILES = main.c list_functions.c run_command.c
+SRC_FILES = pwd_script.c main.c list_functions.c run_command.c
 OBJ_FILES = $(SRC_FILES:.c=.o)
 
 FLAGS = -Wall -Wextra -Werror

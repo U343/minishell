@@ -70,6 +70,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/wanton/minishell/lib/ft_toupper.c" "/Users/wanton/minishell/cmake-build-debug/CMakeFiles/minishell.dir/lib/ft_toupper.c.o"
   "/Users/wanton/minishell/src/list_functions.c" "/Users/wanton/minishell/cmake-build-debug/CMakeFiles/minishell.dir/src/list_functions.c.o"
   "/Users/wanton/minishell/src/main.c" "/Users/wanton/minishell/cmake-build-debug/CMakeFiles/minishell.dir/src/main.c.o"
+  "/Users/wanton/minishell/src/pwd_script.c" "/Users/wanton/minishell/cmake-build-debug/CMakeFiles/minishell.dir/src/pwd_script.c.o"
   "/Users/wanton/minishell/src/run_command.c" "/Users/wanton/minishell/cmake-build-debug/CMakeFiles/minishell.dir/src/run_command.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")

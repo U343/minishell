@@ -16,7 +16,7 @@ void	ft_lstaddn(t_list **lst, t_list *new, size_t n)
 {
 	t_list	*tmp;
 
-	if (n - 1 >= ft_lstsize(*lst))
+	if ((n - 1) >= ft_lstsize(*lst))
 		ft_lstaddend(lst, new);
 	else
 	{

@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+void	ft_del(void *content, size_t size)
+{
+	(void)size;
+	free(content);
+}
+
 t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
 	t_list	*head;
