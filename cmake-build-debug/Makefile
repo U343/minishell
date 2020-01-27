@@ -177,6 +177,33 @@ lib/ft_bzero.c.s:
 	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_bzero.c.s
 .PHONY : lib/ft_bzero.c.s
 
+lib/ft_del.o: lib/ft_del.c.o
+
+.PHONY : lib/ft_del.o
+
+# target to build an object file
+lib/ft_del.c.o:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_del.c.o
+.PHONY : lib/ft_del.c.o
+
+lib/ft_del.i: lib/ft_del.c.i
+
+.PHONY : lib/ft_del.i
+
+# target to preprocess a source file
+lib/ft_del.c.i:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_del.c.i
+.PHONY : lib/ft_del.c.i
+
+lib/ft_del.s: lib/ft_del.c.s
+
+.PHONY : lib/ft_del.s
+
+# target to generate assembly for a file
+lib/ft_del.c.s:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_del.c.s
+.PHONY : lib/ft_del.c.s
+
 lib/ft_isalnum.o: lib/ft_isalnum.c.o
 
 .PHONY : lib/ft_isalnum.o
@@ -312,6 +339,33 @@ lib/ft_isprint.c.s:
 	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_isprint.c.s
 .PHONY : lib/ft_isprint.c.s
 
+lib/ft_isspace.o: lib/ft_isspace.c.o
+
+.PHONY : lib/ft_isspace.o
+
+# target to build an object file
+lib/ft_isspace.c.o:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_isspace.c.o
+.PHONY : lib/ft_isspace.c.o
+
+lib/ft_isspace.i: lib/ft_isspace.c.i
+
+.PHONY : lib/ft_isspace.i
+
+# target to preprocess a source file
+lib/ft_isspace.c.i:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_isspace.c.i
+.PHONY : lib/ft_isspace.c.i
+
+lib/ft_isspace.s: lib/ft_isspace.c.s
+
+.PHONY : lib/ft_isspace.s
+
+# target to generate assembly for a file
+lib/ft_isspace.c.s:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_isspace.c.s
+.PHONY : lib/ft_isspace.c.s
+
 lib/ft_itoa.o: lib/ft_itoa.c.o
 
 .PHONY : lib/ft_itoa.o
@@ -338,87 +392,6 @@ lib/ft_itoa.s: lib/ft_itoa.c.s
 lib/ft_itoa.c.s:
 	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_itoa.c.s
 .PHONY : lib/ft_itoa.c.s
-
-lib/ft_lennumber.o: lib/ft_lennumber.c.o
-
-.PHONY : lib/ft_lennumber.o
-
-# target to build an object file
-lib/ft_lennumber.c.o:
-	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lennumber.c.o
-.PHONY : lib/ft_lennumber.c.o
-
-lib/ft_lennumber.i: lib/ft_lennumber.c.i
-
-.PHONY : lib/ft_lennumber.i
-
-# target to preprocess a source file
-lib/ft_lennumber.c.i:
-	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lennumber.c.i
-.PHONY : lib/ft_lennumber.c.i
-
-lib/ft_lennumber.s: lib/ft_lennumber.c.s
-
-.PHONY : lib/ft_lennumber.s
-
-# target to generate assembly for a file
-lib/ft_lennumber.c.s:
-	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lennumber.c.s
-.PHONY : lib/ft_lennumber.c.s
-
-lib/ft_llatoi.o: lib/ft_llatoi.c.o
-
-.PHONY : lib/ft_llatoi.o
-
-# target to build an object file
-lib/ft_llatoi.c.o:
-	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_llatoi.c.o
-.PHONY : lib/ft_llatoi.c.o
-
-lib/ft_llatoi.i: lib/ft_llatoi.c.i
-
-.PHONY : lib/ft_llatoi.i
-
-# target to preprocess a source file
-lib/ft_llatoi.c.i:
-	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_llatoi.c.i
-.PHONY : lib/ft_llatoi.c.i
-
-lib/ft_llatoi.s: lib/ft_llatoi.c.s
-
-.PHONY : lib/ft_llatoi.s
-
-# target to generate assembly for a file
-lib/ft_llatoi.c.s:
-	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_llatoi.c.s
-.PHONY : lib/ft_llatoi.c.s
-
-lib/ft_lst_n.o: lib/ft_lst_n.c.o
-
-.PHONY : lib/ft_lst_n.o
-
-# target to build an object file
-lib/ft_lst_n.c.o:
-	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lst_n.c.o
-.PHONY : lib/ft_lst_n.c.o
-
-lib/ft_lst_n.i: lib/ft_lst_n.c.i
-
-.PHONY : lib/ft_lst_n.i
-
-# target to preprocess a source file
-lib/ft_lst_n.c.i:
-	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lst_n.c.i
-.PHONY : lib/ft_lst_n.c.i
-
-lib/ft_lst_n.s: lib/ft_lst_n.c.s
-
-.PHONY : lib/ft_lst_n.s
-
-# target to generate assembly for a file
-lib/ft_lst_n.c.s:
-	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lst_n.c.s
-.PHONY : lib/ft_lst_n.c.s
 
 lib/ft_lstadd.o: lib/ft_lstadd.c.o
 
@@ -447,60 +420,6 @@ lib/ft_lstadd.c.s:
 	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstadd.c.s
 .PHONY : lib/ft_lstadd.c.s
 
-lib/ft_lstaddend.o: lib/ft_lstaddend.c.o
-
-.PHONY : lib/ft_lstaddend.o
-
-# target to build an object file
-lib/ft_lstaddend.c.o:
-	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstaddend.c.o
-.PHONY : lib/ft_lstaddend.c.o
-
-lib/ft_lstaddend.i: lib/ft_lstaddend.c.i
-
-.PHONY : lib/ft_lstaddend.i
-
-# target to preprocess a source file
-lib/ft_lstaddend.c.i:
-	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstaddend.c.i
-.PHONY : lib/ft_lstaddend.c.i
-
-lib/ft_lstaddend.s: lib/ft_lstaddend.c.s
-
-.PHONY : lib/ft_lstaddend.s
-
-# target to generate assembly for a file
-lib/ft_lstaddend.c.s:
-	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstaddend.c.s
-.PHONY : lib/ft_lstaddend.c.s
-
-lib/ft_lstaddn.o: lib/ft_lstaddn.c.o
-
-.PHONY : lib/ft_lstaddn.o
-
-# target to build an object file
-lib/ft_lstaddn.c.o:
-	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstaddn.c.o
-.PHONY : lib/ft_lstaddn.c.o
-
-lib/ft_lstaddn.i: lib/ft_lstaddn.c.i
-
-.PHONY : lib/ft_lstaddn.i
-
-# target to preprocess a source file
-lib/ft_lstaddn.c.i:
-	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstaddn.c.i
-.PHONY : lib/ft_lstaddn.c.i
-
-lib/ft_lstaddn.s: lib/ft_lstaddn.c.s
-
-.PHONY : lib/ft_lstaddn.s
-
-# target to generate assembly for a file
-lib/ft_lstaddn.c.s:
-	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstaddn.c.s
-.PHONY : lib/ft_lstaddn.c.s
-
 lib/ft_lstdel.o: lib/ft_lstdel.c.o
 
 .PHONY : lib/ft_lstdel.o
@@ -527,33 +446,6 @@ lib/ft_lstdel.s: lib/ft_lstdel.c.s
 lib/ft_lstdel.c.s:
 	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstdel.c.s
 .PHONY : lib/ft_lstdel.c.s
-
-lib/ft_lstdelh.o: lib/ft_lstdelh.c.o
-
-.PHONY : lib/ft_lstdelh.o
-
-# target to build an object file
-lib/ft_lstdelh.c.o:
-	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstdelh.c.o
-.PHONY : lib/ft_lstdelh.c.o
-
-lib/ft_lstdelh.i: lib/ft_lstdelh.c.i
-
-.PHONY : lib/ft_lstdelh.i
-
-# target to preprocess a source file
-lib/ft_lstdelh.c.i:
-	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstdelh.c.i
-.PHONY : lib/ft_lstdelh.c.i
-
-lib/ft_lstdelh.s: lib/ft_lstdelh.c.s
-
-.PHONY : lib/ft_lstdelh.s
-
-# target to generate assembly for a file
-lib/ft_lstdelh.c.s:
-	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstdelh.c.s
-.PHONY : lib/ft_lstdelh.c.s
 
 lib/ft_lstdelone.o: lib/ft_lstdelone.c.o
 
@@ -663,59 +555,32 @@ lib/ft_lstnew.c.s:
 	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstnew.c.s
 .PHONY : lib/ft_lstnew.c.s
 
-lib/ft_lstsize.o: lib/ft_lstsize.c.o
+lib/ft_max.o: lib/ft_max.c.o
 
-.PHONY : lib/ft_lstsize.o
-
-# target to build an object file
-lib/ft_lstsize.c.o:
-	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstsize.c.o
-.PHONY : lib/ft_lstsize.c.o
-
-lib/ft_lstsize.i: lib/ft_lstsize.c.i
-
-.PHONY : lib/ft_lstsize.i
-
-# target to preprocess a source file
-lib/ft_lstsize.c.i:
-	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstsize.c.i
-.PHONY : lib/ft_lstsize.c.i
-
-lib/ft_lstsize.s: lib/ft_lstsize.c.s
-
-.PHONY : lib/ft_lstsize.s
-
-# target to generate assembly for a file
-lib/ft_lstsize.c.s:
-	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstsize.c.s
-.PHONY : lib/ft_lstsize.c.s
-
-lib/ft_lstswap.o: lib/ft_lstswap.c.o
-
-.PHONY : lib/ft_lstswap.o
+.PHONY : lib/ft_max.o
 
 # target to build an object file
-lib/ft_lstswap.c.o:
-	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstswap.c.o
-.PHONY : lib/ft_lstswap.c.o
+lib/ft_max.c.o:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_max.c.o
+.PHONY : lib/ft_max.c.o
 
-lib/ft_lstswap.i: lib/ft_lstswap.c.i
+lib/ft_max.i: lib/ft_max.c.i
 
-.PHONY : lib/ft_lstswap.i
+.PHONY : lib/ft_max.i
 
 # target to preprocess a source file
-lib/ft_lstswap.c.i:
-	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstswap.c.i
-.PHONY : lib/ft_lstswap.c.i
+lib/ft_max.c.i:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_max.c.i
+.PHONY : lib/ft_max.c.i
 
-lib/ft_lstswap.s: lib/ft_lstswap.c.s
+lib/ft_max.s: lib/ft_max.c.s
 
-.PHONY : lib/ft_lstswap.s
+.PHONY : lib/ft_max.s
 
 # target to generate assembly for a file
-lib/ft_lstswap.c.s:
-	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_lstswap.c.s
-.PHONY : lib/ft_lstswap.c.s
+lib/ft_max.c.s:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_max.c.s
+.PHONY : lib/ft_max.c.s
 
 lib/ft_memalloc.o: lib/ft_memalloc.c.o
 
@@ -933,6 +798,33 @@ lib/ft_memset.c.s:
 	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_memset.c.s
 .PHONY : lib/ft_memset.c.s
 
+lib/ft_min.o: lib/ft_min.c.o
+
+.PHONY : lib/ft_min.o
+
+# target to build an object file
+lib/ft_min.c.o:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_min.c.o
+.PHONY : lib/ft_min.c.o
+
+lib/ft_min.i: lib/ft_min.c.i
+
+.PHONY : lib/ft_min.i
+
+# target to preprocess a source file
+lib/ft_min.c.i:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_min.c.i
+.PHONY : lib/ft_min.c.i
+
+lib/ft_min.s: lib/ft_min.c.s
+
+.PHONY : lib/ft_min.s
+
+# target to generate assembly for a file
+lib/ft_min.c.s:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_min.c.s
+.PHONY : lib/ft_min.c.s
+
 lib/ft_putchar.o: lib/ft_putchar.c.o
 
 .PHONY : lib/ft_putchar.o
@@ -1095,33 +987,6 @@ lib/ft_putnbr_fd.c.s:
 	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_putnbr_fd.c.s
 .PHONY : lib/ft_putnbr_fd.c.s
 
-lib/ft_putspace.o: lib/ft_putspace.c.o
-
-.PHONY : lib/ft_putspace.o
-
-# target to build an object file
-lib/ft_putspace.c.o:
-	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_putspace.c.o
-.PHONY : lib/ft_putspace.c.o
-
-lib/ft_putspace.i: lib/ft_putspace.c.i
-
-.PHONY : lib/ft_putspace.i
-
-# target to preprocess a source file
-lib/ft_putspace.c.i:
-	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_putspace.c.i
-.PHONY : lib/ft_putspace.c.i
-
-lib/ft_putspace.s: lib/ft_putspace.c.s
-
-.PHONY : lib/ft_putspace.s
-
-# target to generate assembly for a file
-lib/ft_putspace.c.s:
-	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_putspace.c.s
-.PHONY : lib/ft_putspace.c.s
-
 lib/ft_putstr.o: lib/ft_putstr.c.o
 
 .PHONY : lib/ft_putstr.o
@@ -1175,6 +1040,33 @@ lib/ft_putstr_fd.s: lib/ft_putstr_fd.c.s
 lib/ft_putstr_fd.c.s:
 	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_putstr_fd.c.s
 .PHONY : lib/ft_putstr_fd.c.s
+
+lib/ft_sort_int.o: lib/ft_sort_int.c.o
+
+.PHONY : lib/ft_sort_int.o
+
+# target to build an object file
+lib/ft_sort_int.c.o:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_sort_int.c.o
+.PHONY : lib/ft_sort_int.c.o
+
+lib/ft_sort_int.i: lib/ft_sort_int.c.i
+
+.PHONY : lib/ft_sort_int.i
+
+# target to preprocess a source file
+lib/ft_sort_int.c.i:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_sort_int.c.i
+.PHONY : lib/ft_sort_int.c.i
+
+lib/ft_sort_int.s: lib/ft_sort_int.c.s
+
+.PHONY : lib/ft_sort_int.s
+
+# target to generate assembly for a file
+lib/ft_sort_int.c.s:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_sort_int.c.s
+.PHONY : lib/ft_sort_int.c.s
 
 lib/ft_strcat.o: lib/ft_strcat.c.o
 
@@ -1499,6 +1391,33 @@ lib/ft_strlcat.s: lib/ft_strlcat.c.s
 lib/ft_strlcat.c.s:
 	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strlcat.c.s
 .PHONY : lib/ft_strlcat.c.s
+
+lib/ft_strldub.o: lib/ft_strldub.c.o
+
+.PHONY : lib/ft_strldub.o
+
+# target to build an object file
+lib/ft_strldub.c.o:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strldub.c.o
+.PHONY : lib/ft_strldub.c.o
+
+lib/ft_strldub.i: lib/ft_strldub.c.i
+
+.PHONY : lib/ft_strldub.i
+
+# target to preprocess a source file
+lib/ft_strldub.c.i:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strldub.c.i
+.PHONY : lib/ft_strldub.c.i
+
+lib/ft_strldub.s: lib/ft_strldub.c.s
+
+.PHONY : lib/ft_strldub.s
+
+# target to generate assembly for a file
+lib/ft_strldub.c.s:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_strldub.c.s
+.PHONY : lib/ft_strldub.c.s
 
 lib/ft_strlen.o: lib/ft_strlen.c.o
 
@@ -1986,32 +1905,32 @@ src/main.c.s:
 	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/main.c.s
 .PHONY : src/main.c.s
 
-src/test.o: src/test.c.o
+src/run_command.o: src/run_command.c.o
 
-.PHONY : src/test.o
+.PHONY : src/run_command.o
 
 # target to build an object file
-src/test.c.o:
-	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/test.c.o
-.PHONY : src/test.c.o
+src/run_command.c.o:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/run_command.c.o
+.PHONY : src/run_command.c.o
 
-src/test.i: src/test.c.i
+src/run_command.i: src/run_command.c.i
 
-.PHONY : src/test.i
+.PHONY : src/run_command.i
 
 # target to preprocess a source file
-src/test.c.i:
-	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/test.c.i
-.PHONY : src/test.c.i
+src/run_command.c.i:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/run_command.c.i
+.PHONY : src/run_command.c.i
 
-src/test.s: src/test.c.s
+src/run_command.s: src/run_command.c.s
 
-.PHONY : src/test.s
+.PHONY : src/run_command.s
 
 # target to generate assembly for a file
-src/test.c.s:
-	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/test.c.s
-.PHONY : src/test.c.s
+src/run_command.c.s:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/run_command.c.s
+.PHONY : src/run_command.c.s
 
 # Help Target
 help:
@@ -2028,6 +1947,9 @@ help:
 	@echo "... lib/ft_bzero.o"
 	@echo "... lib/ft_bzero.i"
 	@echo "... lib/ft_bzero.s"
+	@echo "... lib/ft_del.o"
+	@echo "... lib/ft_del.i"
+	@echo "... lib/ft_del.s"
 	@echo "... lib/ft_isalnum.o"
 	@echo "... lib/ft_isalnum.i"
 	@echo "... lib/ft_isalnum.s"
@@ -2043,33 +1965,18 @@ help:
 	@echo "... lib/ft_isprint.o"
 	@echo "... lib/ft_isprint.i"
 	@echo "... lib/ft_isprint.s"
+	@echo "... lib/ft_isspace.o"
+	@echo "... lib/ft_isspace.i"
+	@echo "... lib/ft_isspace.s"
 	@echo "... lib/ft_itoa.o"
 	@echo "... lib/ft_itoa.i"
 	@echo "... lib/ft_itoa.s"
-	@echo "... lib/ft_lennumber.o"
-	@echo "... lib/ft_lennumber.i"
-	@echo "... lib/ft_lennumber.s"
-	@echo "... lib/ft_llatoi.o"
-	@echo "... lib/ft_llatoi.i"
-	@echo "... lib/ft_llatoi.s"
-	@echo "... lib/ft_lst_n.o"
-	@echo "... lib/ft_lst_n.i"
-	@echo "... lib/ft_lst_n.s"
 	@echo "... lib/ft_lstadd.o"
 	@echo "... lib/ft_lstadd.i"
 	@echo "... lib/ft_lstadd.s"
-	@echo "... lib/ft_lstaddend.o"
-	@echo "... lib/ft_lstaddend.i"
-	@echo "... lib/ft_lstaddend.s"
-	@echo "... lib/ft_lstaddn.o"
-	@echo "... lib/ft_lstaddn.i"
-	@echo "... lib/ft_lstaddn.s"
 	@echo "... lib/ft_lstdel.o"
 	@echo "... lib/ft_lstdel.i"
 	@echo "... lib/ft_lstdel.s"
-	@echo "... lib/ft_lstdelh.o"
-	@echo "... lib/ft_lstdelh.i"
-	@echo "... lib/ft_lstdelh.s"
 	@echo "... lib/ft_lstdelone.o"
 	@echo "... lib/ft_lstdelone.i"
 	@echo "... lib/ft_lstdelone.s"
@@ -2082,12 +1989,9 @@ help:
 	@echo "... lib/ft_lstnew.o"
 	@echo "... lib/ft_lstnew.i"
 	@echo "... lib/ft_lstnew.s"
-	@echo "... lib/ft_lstsize.o"
-	@echo "... lib/ft_lstsize.i"
-	@echo "... lib/ft_lstsize.s"
-	@echo "... lib/ft_lstswap.o"
-	@echo "... lib/ft_lstswap.i"
-	@echo "... lib/ft_lstswap.s"
+	@echo "... lib/ft_max.o"
+	@echo "... lib/ft_max.i"
+	@echo "... lib/ft_max.s"
 	@echo "... lib/ft_memalloc.o"
 	@echo "... lib/ft_memalloc.i"
 	@echo "... lib/ft_memalloc.s"
@@ -2112,6 +2016,9 @@ help:
 	@echo "... lib/ft_memset.o"
 	@echo "... lib/ft_memset.i"
 	@echo "... lib/ft_memset.s"
+	@echo "... lib/ft_min.o"
+	@echo "... lib/ft_min.i"
+	@echo "... lib/ft_min.s"
 	@echo "... lib/ft_putchar.o"
 	@echo "... lib/ft_putchar.i"
 	@echo "... lib/ft_putchar.s"
@@ -2130,15 +2037,15 @@ help:
 	@echo "... lib/ft_putnbr_fd.o"
 	@echo "... lib/ft_putnbr_fd.i"
 	@echo "... lib/ft_putnbr_fd.s"
-	@echo "... lib/ft_putspace.o"
-	@echo "... lib/ft_putspace.i"
-	@echo "... lib/ft_putspace.s"
 	@echo "... lib/ft_putstr.o"
 	@echo "... lib/ft_putstr.i"
 	@echo "... lib/ft_putstr.s"
 	@echo "... lib/ft_putstr_fd.o"
 	@echo "... lib/ft_putstr_fd.i"
 	@echo "... lib/ft_putstr_fd.s"
+	@echo "... lib/ft_sort_int.o"
+	@echo "... lib/ft_sort_int.i"
+	@echo "... lib/ft_sort_int.s"
 	@echo "... lib/ft_strcat.o"
 	@echo "... lib/ft_strcat.i"
 	@echo "... lib/ft_strcat.s"
@@ -2175,6 +2082,9 @@ help:
 	@echo "... lib/ft_strlcat.o"
 	@echo "... lib/ft_strlcat.i"
 	@echo "... lib/ft_strlcat.s"
+	@echo "... lib/ft_strldub.o"
+	@echo "... lib/ft_strldub.i"
+	@echo "... lib/ft_strldub.s"
 	@echo "... lib/ft_strlen.o"
 	@echo "... lib/ft_strlen.i"
 	@echo "... lib/ft_strlen.s"
@@ -2229,9 +2139,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/test.o"
-	@echo "... src/test.i"
-	@echo "... src/test.s"
+	@echo "... src/run_command.o"
+	@echo "... src/run_command.i"
+	@echo "... src/run_command.s"
 .PHONY : help
 
 

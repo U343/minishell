@@ -16,20 +16,13 @@ add_executable(minishell
         lib/ft_isdigit.c
         lib/ft_isprint.c
         lib/ft_itoa.c
-        lib/ft_lennumber.c
-        lib/ft_llatoi.c
-        lib/ft_lst_n.c
         lib/ft_lstadd.c
-        lib/ft_lstaddend.c
-        lib/ft_lstaddn.c
         lib/ft_lstdel.c
-        lib/ft_lstdelh.c
         lib/ft_lstdelone.c
         lib/ft_lstiter.c
         lib/ft_lstmap.c
         lib/ft_lstnew.c
-        lib/ft_lstsize.c
-        lib/ft_lstswap.c
+        lib/ft_max.c
         lib/ft_memalloc.c
         lib/ft_memccpy.c
         lib/ft_memchr.c
@@ -38,15 +31,16 @@ add_executable(minishell
         lib/ft_memdel.c
         lib/ft_memmove.c
         lib/ft_memset.c
+        lib/ft_min.c
         lib/ft_putchar.c
         lib/ft_putchar_fd.c
         lib/ft_putendl.c
         lib/ft_putendl_fd.c
         lib/ft_putnbr.c
         lib/ft_putnbr_fd.c
-        lib/ft_putspace.c
         lib/ft_putstr.c
         lib/ft_putstr_fd.c
+        lib/ft_sort_int.c
         lib/ft_strcat.c
         lib/ft_strchr.c
         lib/ft_strclr.c
@@ -59,6 +53,7 @@ add_executable(minishell
         lib/ft_striteri.c
         lib/ft_strjoin.c
         lib/ft_strlcat.c
+        lib/ft_strldub.c
         lib/ft_strlen.c
         lib/ft_strmap.c
         lib/ft_strmapi.c
@@ -75,7 +70,9 @@ add_executable(minishell
         lib/ft_strtrim.c
         lib/ft_tolower.c
         lib/ft_toupper.c
+        lib/ft_del.c
+        lib/ft_isspace.c
         lib/libft.h
         src/list_functions.c
         src/main.c
-        src/test.c)
+        src/run_command.c)

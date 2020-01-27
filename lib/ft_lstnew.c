@@ -3,38 +3,35 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mjoss <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: wanton <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/14 22:47:01 by mjoss             #+#    #+#             */
-/*   Updated: 2020/01/16 10:40:36 by wanton           ###   ########.fr       */
+/*   Created: 2019/09/15 20:54:22 by wanton            #+#    #+#             */
+/*   Updated: 2020/01/27 11:25:40 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-t_list	*ft_lstnew(void const *content, size_t content_size)
+t_list		*ft_lstnew(void	const *con, size_t con_size)
 {
-	t_list	*node;
+	t_list	*res;
 
-	if (!(node = (t_list*)malloc(sizeof(t_list))))
-		return (NULL);
-	if (content)
+	if (!(res = (t_list *)malloc(sizeof(t_list))))
+		return ((t_list *)NULL);
+	if (!con || !con_size)
 	{
-		if (!(node->content = malloc(content_size)))
-		{
-			free(node);
-			return (NULL);
-		}
-		ft_memcpy(node->content, content, content_size);
-		node->content_size = content_size;
-		node->next = NULL;
+		res->content = NULL;
+		res->content_size = 0;
+		res->next = NULL;
+		return (res);
 	}
-	else
+	if (!(res->content = (void *)malloc(con_size)))
 	{
-		node->content = NULL;
-		node->content_size = 0;
-		node->next = NULL;
+		free(res);
+		return ((t_list *)NULL);
 	}
-	return (node);
+	res->content = ft_memcpy(res->content, con, con_size);
+	res->content_size = con_size;
+	res->next = NULL;
+	return (res);
 }

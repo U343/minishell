@@ -6,13 +6,13 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 15:22:12 by wanton            #+#    #+#             */
-/*   Updated: 2020/01/22 16:31:47 by wanton           ###   ########.fr       */
+/*   Updated: 2020/01/24 13:10:04 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-t_arg      *ft_create_elem(void)
+t_arg		*ft_create_elem(void)
 {
 	t_arg *tmp;
 
@@ -30,7 +30,7 @@ void		print_list(t_arg *arg)
 	p = arg;
 	while (p)
 	{
-		write(1, &p->symbol,1);
+		write(1, &p->symbol, 1);
 		ft_putchar(' ');
 		p = p->next;
 	}
@@ -42,7 +42,7 @@ void		free_args(t_arg **arg)
 	t_arg	*p;
 	t_arg	*tmp;
 
-	if (*arg)
+	if (arg && *arg)
 	{
 		p = *arg;
 		while (p)

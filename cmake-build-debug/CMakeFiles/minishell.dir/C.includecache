@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../includes/minishell.h
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+sys/types.h
+-
+sys/wait.h
+-
+libft.h
+../includes/libft.h
+
+../lib/libft.h
+string.h
+-
+stdlib.h
+-
+unistd.h
+-
+
+/Users/wanton/minishell/src/list_functions.c
+minishell.h
+/Users/wanton/minishell/src/minishell.h
+
+/Users/wanton/minishell/src/main.c
+minishell.h
+/Users/wanton/minishell/src/minishell.h
+

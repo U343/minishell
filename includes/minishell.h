@@ -31,4 +31,10 @@ void				free_args(t_arg **arg);
 void				print_list(t_arg *arg);
 t_arg				*ft_create_elem(void);
 
+/*
+**Functions for run args
+*/
+
+int                 run_command(char **s_arg);
+
 #endif

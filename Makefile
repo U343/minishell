@@ -6,7 +6,7 @@
 #    By: wanton <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/23 13:15:24 by wanton            #+#    #+#              #
-#    Updated: 2020/01/23 14:43:48 by wanton           ###   ########.fr        #
+#    Updated: 2020/01/24 11:00:07 by wanton           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ LIB_PATH = ./lib/
 OBJ_PATH = ./obj/
 INC_PATH = ./includes/ $(LIB_PATH)
 
-SRC_FILES = main.c list_functions.c
+SRC_FILES = main.c list_functions.c run_command.c
 OBJ_FILES = $(SRC_FILES:.c=.o)
 
 FLAGS = -Wall -Wextra -Werror

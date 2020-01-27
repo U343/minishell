@@ -3,26 +3,39 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mjoss <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: wanton <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/15 22:55:16 by mjoss             #+#    #+#             */
-/*   Updated: 2020/01/16 10:40:36 by wanton           ###   ########.fr       */
+/*   Created: 2019/09/16 10:58:10 by wanton            #+#    #+#             */
+/*   Updated: 2020/01/27 11:25:40 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	t_list	*new_list;
+	t_list	*head;
+	t_list	*new;
+	t_list	*new_head;
 
-	if (!lst || !f)
-		return (0);
-	if (!(new_list = ft_lstnew(lst->content, lst->content_size)))
-		return (NULL);
-	new_list = f(new_list);
-	if (lst->next)
-		new_list->next = ft_lstmap(lst->next, f);
-	return (new_list);
+	new_head = (t_list *)NULL;
+	if (lst && f)
+	{
+		head = lst;
+		if (!(new = f(head)))
+			return ((t_list *)NULL);
+		new_head = new;
+		head = head->next;
+		while (head)
+		{
+			if (!(new->next = f(head)))
+			{
+				ft_lstdel(&new_head, &ft_del);
+				return ((t_list *)NULL);
+			}
+			new = new->next;
+			head = head->next;
+		}
+	}
+	return (new_head);
 }

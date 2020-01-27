@@ -3,87 +3,103 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mjoss <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: wanton <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/11 15:20:00 by mjoss             #+#    #+#             */
-/*   Updated: 2020/01/16 10:40:36 by wanton           ###   ########.fr       */
+/*   Created: 2019/09/11 18:59:28 by wanton            #+#    #+#             */
+/*   Updated: 2020/01/27 11:25:40 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
-static size_t	wordcnt(char const *s, char c)
+static int		words(char const *s, char c)
 {
-	size_t	count;
-	size_t	i;
+	int i;
+	int	word;
 
-	count = 0;
 	i = 0;
-	while (s[i])
+	word = 0;
+	while (s[i] == c && s[i])
 	{
-		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
-			count++;
 		i++;
 	}
-	return (count);
-}
-
-static char		*word(char const *s, char c)
-{
-	char	*word;
-	size_t	len;
-
-	len = 0;
-	while (s[len] != c && s[len] != '\0')
-		len++;
-	if (!(word = (char*)malloc((len * sizeof(char) + 1))))
-		return (NULL);
-	word[len] = '\0';
-	while (len)
+	if (s[i])
+		word++;
+	while (s[++i])
 	{
-		word[len - 1] = s[len - 1];
-		len--;
+		if (s[i] != c && s[i - 1] == c)
+			word++;
 	}
 	return (word);
 }
 
-static void		ft_free(char ***split, size_t i)
+static	int		let(char const *s, char c, int i)
 {
-	while (i)
+	int let;
+
+	let = 0;
+	while (s[i] && s[i] != c)
 	{
-		free((*split)[i - 1]);
-		(*split)[i - 1] = NULL;
-		i--;
+		i++;
+		let++;
 	}
-	free(*split);
-	*split = NULL;
+	return (let);
+}
+
+static	void	clear_mass(char **mass, size_t m_i)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < m_i)
+	{
+		free(mass[i++]);
+	}
+	free(mass);
+}
+
+static	int		mass_filler(char **m, const char *s, char c, size_t i)
+{
+	size_t	m_i;
+	size_t	m_j;
+
+	m_i = 0;
+	while (s[i])
+	{
+		if (s[i] != c)
+		{
+			m_j = 0;
+			if (!(m[m_i] = (char *)malloc(sizeof(char) * (let(s, c, i) + 1))))
+			{
+				clear_mass(m, m_i);
+				return (0);
+			}
+			while (s[i] && s[i] != c)
+			{
+				m[m_i][m_j++] = s[i++];
+			}
+			m[m_i++][m_j] = '\0';
+		}
+		else
+			i++;
+	}
+	m[m_i] = NULL;
+	return (1);
 }
 
 char			**ft_strsplit(char const *s, char c)
 {
-	size_t		i;
-	char		**st;
+	char	**mass;
+	size_t	i;
 
 	i = 0;
-	if (!s)
-		return (NULL);
-	if (!(st = (char**)malloc((wordcnt(s, c) + 1) * sizeof(char*))))
-		return (NULL);
-	while (*s)
-		if (*s != c)
-		{
-			if (!word(s, c))
-			{
-				ft_free(&st, i);
-				return (NULL);
-			}
-			st[i++] = word(s, c);
-			while (*s != c && *s != '\0')
-				s++;
-		}
-		else
-			s++;
-	st[i] = 0;
-	return (st);
+	if (s)
+	{
+		if (!(mass = (char **)malloc(sizeof(char *) * (words(s, c) + 1))))
+			return ((char **)NULL);
+		if (mass_filler(mass, s, c, i) == 0)
+			return ((char **)NULL);
+		return (mass);
+	}
+	return ((char **)NULL);
 }
