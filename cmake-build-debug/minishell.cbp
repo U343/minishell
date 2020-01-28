@@ -282,6 +282,12 @@
 		<Unit filename="/Users/wanton/minishell/lib/libft.h">
 			<Option target="minishell"/>
 		</Unit>
+		<Unit filename="/Users/wanton/minishell/src/cd_script.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/Users/wanton/minishell/src/env_function.c">
+			<Option target="minishell"/>
+		</Unit>
 		<Unit filename="/Users/wanton/minishell/src/list_functions.c">
 			<Option target="minishell"/>
 		</Unit>

@@ -63,6 +63,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/minishell.dir/lib/ft_strtrim.c.o"
   "CMakeFiles/minishell.dir/lib/ft_tolower.c.o"
   "CMakeFiles/minishell.dir/lib/ft_toupper.c.o"
+  "CMakeFiles/minishell.dir/src/cd_script.c.o"
+  "CMakeFiles/minishell.dir/src/env_function.c.o"
   "CMakeFiles/minishell.dir/src/list_functions.c.o"
   "CMakeFiles/minishell.dir/src/main.c.o"
   "CMakeFiles/minishell.dir/src/pwd_script.c.o"

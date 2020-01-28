@@ -1,31 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pwd_script.c                                       :+:      :+:    :+:   */
+/*   cd_script.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/27 12:57:44 by wanton            #+#    #+#             */
-/*   Updated: 2020/01/27 13:22:01 by wanton           ###   ########.fr       */
+/*   Created: 2020/01/27 13:30:04 by wanton            #+#    #+#             */
+/*   Updated: 2020/01/27 13:31:06 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-int 	pwd_script(char **s_arg)
+int 	len_arg(char **s_arg)
 {
-	char *buf;
-	char *res;
+	int	i;
 
-	buf = NULL;
-	if (s_arg[1] != NULL)
+	i = 0;
+	while (s_arg[i] != NULL)
 	{
-		ft_putstr("pwd: too many arguments\n");
-		return (0);
+		i++;
 	}
-	if (!(res = getcwd(buf, MAXPATHLEN)))
-		return (-1);
-	ft_putstr(res);
-	ft_putchar('\n');
-	return (0);
+	return (i);
+}
+
+void 	cd_script(char **s_arg)
+{
+	int	len;
+
+	len = len_arg(s_arg);
+	if (len > 2) // TODO стандартный ls поддерживает 2 аргумента
+		ft_putstr("cd: too many arguments");
+	else if (len == 2)
+	{
+		if (chdir(s_arg[1]) == -1)
+		{
+			ft_putstr("cd: no such file or directory: ");
+			ft_putstr(s_arg[1]);
+		}
+	}
 }

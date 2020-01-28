@@ -68,6 +68,8 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/wanton/minishell/lib/ft_strtrim.c" "/Users/wanton/minishell/cmake-build-debug/CMakeFiles/minishell.dir/lib/ft_strtrim.c.o"
   "/Users/wanton/minishell/lib/ft_tolower.c" "/Users/wanton/minishell/cmake-build-debug/CMakeFiles/minishell.dir/lib/ft_tolower.c.o"
   "/Users/wanton/minishell/lib/ft_toupper.c" "/Users/wanton/minishell/cmake-build-debug/CMakeFiles/minishell.dir/lib/ft_toupper.c.o"
+  "/Users/wanton/minishell/src/cd_script.c" "/Users/wanton/minishell/cmake-build-debug/CMakeFiles/minishell.dir/src/cd_script.c.o"
+  "/Users/wanton/minishell/src/env_function.c" "/Users/wanton/minishell/cmake-build-debug/CMakeFiles/minishell.dir/src/env_function.c.o"
   "/Users/wanton/minishell/src/list_functions.c" "/Users/wanton/minishell/cmake-build-debug/CMakeFiles/minishell.dir/src/list_functions.c.o"
   "/Users/wanton/minishell/src/main.c" "/Users/wanton/minishell/cmake-build-debug/CMakeFiles/minishell.dir/src/main.c.o"
   "/Users/wanton/minishell/src/pwd_script.c" "/Users/wanton/minishell/cmake-build-debug/CMakeFiles/minishell.dir/src/pwd_script.c.o"

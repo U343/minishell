@@ -1851,6 +1851,60 @@ lib/ft_toupper.c.s:
 	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_toupper.c.s
 .PHONY : lib/ft_toupper.c.s
 
+src/cd_script.o: src/cd_script.c.o
+
+.PHONY : src/cd_script.o
+
+# target to build an object file
+src/cd_script.c.o:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/cd_script.c.o
+.PHONY : src/cd_script.c.o
+
+src/cd_script.i: src/cd_script.c.i
+
+.PHONY : src/cd_script.i
+
+# target to preprocess a source file
+src/cd_script.c.i:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/cd_script.c.i
+.PHONY : src/cd_script.c.i
+
+src/cd_script.s: src/cd_script.c.s
+
+.PHONY : src/cd_script.s
+
+# target to generate assembly for a file
+src/cd_script.c.s:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/cd_script.c.s
+.PHONY : src/cd_script.c.s
+
+src/env_function.o: src/env_function.c.o
+
+.PHONY : src/env_function.o
+
+# target to build an object file
+src/env_function.c.o:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/env_function.c.o
+.PHONY : src/env_function.c.o
+
+src/env_function.i: src/env_function.c.i
+
+.PHONY : src/env_function.i
+
+# target to preprocess a source file
+src/env_function.c.i:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/env_function.c.i
+.PHONY : src/env_function.c.i
+
+src/env_function.s: src/env_function.c.s
+
+.PHONY : src/env_function.s
+
+# target to generate assembly for a file
+src/env_function.c.s:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/env_function.c.s
+.PHONY : src/env_function.c.s
+
 src/list_functions.o: src/list_functions.c.o
 
 .PHONY : src/list_functions.o
@@ -2160,6 +2214,12 @@ help:
 	@echo "... lib/ft_toupper.o"
 	@echo "... lib/ft_toupper.i"
 	@echo "... lib/ft_toupper.s"
+	@echo "... src/cd_script.o"
+	@echo "... src/cd_script.i"
+	@echo "... src/cd_script.s"
+	@echo "... src/env_function.o"
+	@echo "... src/env_function.i"
+	@echo "... src/env_function.s"
 	@echo "... src/list_functions.o"
 	@echo "... src/list_functions.i"
 	@echo "... src/list_functions.s"

@@ -75,4 +75,4 @@ add_executable(minishell
         lib/libft.h
         src/list_functions.c
         src/main.c
-        src/run_command.c src/pwd_script.c)
+        src/run_command.c src/pwd_script.c src/cd_script.c src/env_function.c)
