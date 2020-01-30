@@ -6,21 +6,11 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/24 11:03:09 by wanton            #+#    #+#             */
-/*   Updated: 2020/01/30 08:36:03 by wanton           ###   ########.fr       */
+/*   Updated: 2020/01/30 08:53:45 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
-
-void	take_elem(char **s_arg, char **env)
-{
-	char 	*tmp;
-
-	tmp = take_env_elem(s_arg[1], env);
-	ft_putstr(tmp);
-	ft_putchar('\n');
-	free(tmp);
-}
 
 int     run_command(char **s_arg, char **env)
 {
@@ -39,8 +29,6 @@ int     run_command(char **s_arg, char **env)
 		add_elem(s_arg[1], env);
 	else if ((ft_strcmp(s_arg[0], "unsetenv")) == 0)
 		delete_elem(s_arg[1], env);
-	else if ((ft_strcmp(s_arg[0], "take")) == 0)
-		take_elem(s_arg, env);
 	else
 	{
 		ft_putstr("zsh: command not found: ");

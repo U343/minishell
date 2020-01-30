@@ -6,7 +6,7 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 15:22:12 by wanton            #+#    #+#             */
-/*   Updated: 2020/01/24 13:10:04 by wanton           ###   ########.fr       */
+/*   Updated: 2020/01/30 11:51:18 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_arg		*ft_create_elem(void)
 {
 	t_arg *tmp;
 
-	if (!(tmp = malloc(sizeof(t_list))))
+	if (!(tmp = malloc(sizeof(t_arg))))
 		return (NULL);
 	tmp->symbol = 0;
 	tmp->next = NULL;
@@ -51,6 +51,5 @@ void		free_args(t_arg **arg)
 			free(p);
 			p = tmp;
 		}
-		free(arg);
 	}
 }

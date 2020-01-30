@@ -6,7 +6,7 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/27 12:57:44 by wanton            #+#    #+#             */
-/*   Updated: 2020/01/27 13:22:01 by wanton           ###   ########.fr       */
+/*   Updated: 2020/01/30 11:54:54 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,7 @@ int 	pwd_script(char **s_arg)
 		return (-1);
 	ft_putstr(res);
 	ft_putchar('\n');
+	free(buf);
+	free(res);
 	return (0);
 }

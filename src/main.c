@@ -6,7 +6,7 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 15:17:39 by wanton            #+#    #+#             */
-/*   Updated: 2020/01/28 13:40:18 by wanton           ###   ########.fr       */
+/*   Updated: 2020/01/30 11:45:20 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ char    *read_arg()
     }
 	count = (count == 1 ? count : (count - 1));
 	str[count] = '\0';
-    //free_args(&head);
+    free_args(&head);
 	return (str);
 }
 
