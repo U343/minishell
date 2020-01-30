@@ -93,9 +93,6 @@
 		<Unit filename="/Users/wanton/minishell/lib/ft_bzero.c">
 			<Option target="minishell"/>
 		</Unit>
-		<Unit filename="/Users/wanton/minishell/lib/ft_del.c">
-			<Option target="minishell"/>
-		</Unit>
 		<Unit filename="/Users/wanton/minishell/lib/ft_isalnum.c">
 			<Option target="minishell"/>
 		</Unit>
@@ -283,6 +280,9 @@
 			<Option target="minishell"/>
 		</Unit>
 		<Unit filename="/Users/wanton/minishell/src/cd_script.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/Users/wanton/minishell/src/env_assist.c">
 			<Option target="minishell"/>
 		</Unit>
 		<Unit filename="/Users/wanton/minishell/src/env_function.c">

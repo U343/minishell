@@ -85,8 +85,13 @@ int		main(int ac, char **av, char** env)
 	while (flag == 0)
     {
         write(1, "$> ", 3);
-        arg = read_arg();
-        s_arg = ft_strsplit(arg, ' ');
+        if (!(arg = read_arg()))
+			return (-1);
+        if (!(s_arg = ft_strsplit(arg, ' ')))
+		{
+        	free(arg);
+        	return (-1);
+		}
         flag = run_command(s_arg, env);
         clear_mass(s_arg);
         free(arg);

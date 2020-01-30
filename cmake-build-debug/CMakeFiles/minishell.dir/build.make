@@ -863,22 +863,9 @@ CMakeFiles/minishell.dir/lib/ft_toupper.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell.dir/lib/ft_toupper.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/wanton/minishell/lib/ft_toupper.c -o CMakeFiles/minishell.dir/lib/ft_toupper.c.s
 
-CMakeFiles/minishell.dir/lib/ft_del.c.o: CMakeFiles/minishell.dir/flags.make
-CMakeFiles/minishell.dir/lib/ft_del.c.o: ../lib/ft_del.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wanton/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/minishell.dir/lib/ft_del.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minishell.dir/lib/ft_del.c.o   -c /Users/wanton/minishell/lib/ft_del.c
-
-CMakeFiles/minishell.dir/lib/ft_del.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/minishell.dir/lib/ft_del.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/wanton/minishell/lib/ft_del.c > CMakeFiles/minishell.dir/lib/ft_del.c.i
-
-CMakeFiles/minishell.dir/lib/ft_del.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell.dir/lib/ft_del.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/wanton/minishell/lib/ft_del.c -o CMakeFiles/minishell.dir/lib/ft_del.c.s
-
 CMakeFiles/minishell.dir/lib/ft_isspace.c.o: CMakeFiles/minishell.dir/flags.make
 CMakeFiles/minishell.dir/lib/ft_isspace.c.o: ../lib/ft_isspace.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wanton/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/minishell.dir/lib/ft_isspace.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wanton/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/minishell.dir/lib/ft_isspace.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minishell.dir/lib/ft_isspace.c.o   -c /Users/wanton/minishell/lib/ft_isspace.c
 
 CMakeFiles/minishell.dir/lib/ft_isspace.c.i: cmake_force
@@ -891,7 +878,7 @@ CMakeFiles/minishell.dir/lib/ft_isspace.c.s: cmake_force
 
 CMakeFiles/minishell.dir/src/list_functions.c.o: CMakeFiles/minishell.dir/flags.make
 CMakeFiles/minishell.dir/src/list_functions.c.o: ../src/list_functions.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wanton/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/minishell.dir/src/list_functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wanton/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/minishell.dir/src/list_functions.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minishell.dir/src/list_functions.c.o   -c /Users/wanton/minishell/src/list_functions.c
 
 CMakeFiles/minishell.dir/src/list_functions.c.i: cmake_force
@@ -904,7 +891,7 @@ CMakeFiles/minishell.dir/src/list_functions.c.s: cmake_force
 
 CMakeFiles/minishell.dir/src/main.c.o: CMakeFiles/minishell.dir/flags.make
 CMakeFiles/minishell.dir/src/main.c.o: ../src/main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wanton/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/minishell.dir/src/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wanton/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/minishell.dir/src/main.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minishell.dir/src/main.c.o   -c /Users/wanton/minishell/src/main.c
 
 CMakeFiles/minishell.dir/src/main.c.i: cmake_force
@@ -917,7 +904,7 @@ CMakeFiles/minishell.dir/src/main.c.s: cmake_force
 
 CMakeFiles/minishell.dir/src/run_command.c.o: CMakeFiles/minishell.dir/flags.make
 CMakeFiles/minishell.dir/src/run_command.c.o: ../src/run_command.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wanton/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/minishell.dir/src/run_command.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wanton/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/minishell.dir/src/run_command.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minishell.dir/src/run_command.c.o   -c /Users/wanton/minishell/src/run_command.c
 
 CMakeFiles/minishell.dir/src/run_command.c.i: cmake_force
@@ -930,7 +917,7 @@ CMakeFiles/minishell.dir/src/run_command.c.s: cmake_force
 
 CMakeFiles/minishell.dir/src/pwd_script.c.o: CMakeFiles/minishell.dir/flags.make
 CMakeFiles/minishell.dir/src/pwd_script.c.o: ../src/pwd_script.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wanton/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/minishell.dir/src/pwd_script.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wanton/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/minishell.dir/src/pwd_script.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minishell.dir/src/pwd_script.c.o   -c /Users/wanton/minishell/src/pwd_script.c
 
 CMakeFiles/minishell.dir/src/pwd_script.c.i: cmake_force
@@ -943,7 +930,7 @@ CMakeFiles/minishell.dir/src/pwd_script.c.s: cmake_force
 
 CMakeFiles/minishell.dir/src/cd_script.c.o: CMakeFiles/minishell.dir/flags.make
 CMakeFiles/minishell.dir/src/cd_script.c.o: ../src/cd_script.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wanton/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/minishell.dir/src/cd_script.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wanton/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/minishell.dir/src/cd_script.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minishell.dir/src/cd_script.c.o   -c /Users/wanton/minishell/src/cd_script.c
 
 CMakeFiles/minishell.dir/src/cd_script.c.i: cmake_force
@@ -956,7 +943,7 @@ CMakeFiles/minishell.dir/src/cd_script.c.s: cmake_force
 
 CMakeFiles/minishell.dir/src/env_function.c.o: CMakeFiles/minishell.dir/flags.make
 CMakeFiles/minishell.dir/src/env_function.c.o: ../src/env_function.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wanton/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/minishell.dir/src/env_function.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wanton/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/minishell.dir/src/env_function.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minishell.dir/src/env_function.c.o   -c /Users/wanton/minishell/src/env_function.c
 
 CMakeFiles/minishell.dir/src/env_function.c.i: cmake_force
@@ -966,6 +953,19 @@ CMakeFiles/minishell.dir/src/env_function.c.i: cmake_force
 CMakeFiles/minishell.dir/src/env_function.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell.dir/src/env_function.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/wanton/minishell/src/env_function.c -o CMakeFiles/minishell.dir/src/env_function.c.s
+
+CMakeFiles/minishell.dir/src/env_assist.c.o: CMakeFiles/minishell.dir/flags.make
+CMakeFiles/minishell.dir/src/env_assist.c.o: ../src/env_assist.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wanton/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/minishell.dir/src/env_assist.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minishell.dir/src/env_assist.c.o   -c /Users/wanton/minishell/src/env_assist.c
+
+CMakeFiles/minishell.dir/src/env_assist.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/minishell.dir/src/env_assist.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/wanton/minishell/src/env_assist.c > CMakeFiles/minishell.dir/src/env_assist.c.i
+
+CMakeFiles/minishell.dir/src/env_assist.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minishell.dir/src/env_assist.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/wanton/minishell/src/env_assist.c -o CMakeFiles/minishell.dir/src/env_assist.c.s
 
 # Object files for target minishell
 minishell_OBJECTS = \
@@ -1031,14 +1031,14 @@ minishell_OBJECTS = \
 "CMakeFiles/minishell.dir/lib/ft_strtrim.c.o" \
 "CMakeFiles/minishell.dir/lib/ft_tolower.c.o" \
 "CMakeFiles/minishell.dir/lib/ft_toupper.c.o" \
-"CMakeFiles/minishell.dir/lib/ft_del.c.o" \
 "CMakeFiles/minishell.dir/lib/ft_isspace.c.o" \
 "CMakeFiles/minishell.dir/src/list_functions.c.o" \
 "CMakeFiles/minishell.dir/src/main.c.o" \
 "CMakeFiles/minishell.dir/src/run_command.c.o" \
 "CMakeFiles/minishell.dir/src/pwd_script.c.o" \
 "CMakeFiles/minishell.dir/src/cd_script.c.o" \
-"CMakeFiles/minishell.dir/src/env_function.c.o"
+"CMakeFiles/minishell.dir/src/env_function.c.o" \
+"CMakeFiles/minishell.dir/src/env_assist.c.o"
 
 # External object files for target minishell
 minishell_EXTERNAL_OBJECTS =
@@ -1105,7 +1105,6 @@ minishell: CMakeFiles/minishell.dir/lib/ft_strsub.c.o
 minishell: CMakeFiles/minishell.dir/lib/ft_strtrim.c.o
 minishell: CMakeFiles/minishell.dir/lib/ft_tolower.c.o
 minishell: CMakeFiles/minishell.dir/lib/ft_toupper.c.o
-minishell: CMakeFiles/minishell.dir/lib/ft_del.c.o
 minishell: CMakeFiles/minishell.dir/lib/ft_isspace.c.o
 minishell: CMakeFiles/minishell.dir/src/list_functions.c.o
 minishell: CMakeFiles/minishell.dir/src/main.c.o
@@ -1113,6 +1112,7 @@ minishell: CMakeFiles/minishell.dir/src/run_command.c.o
 minishell: CMakeFiles/minishell.dir/src/pwd_script.c.o
 minishell: CMakeFiles/minishell.dir/src/cd_script.c.o
 minishell: CMakeFiles/minishell.dir/src/env_function.c.o
+minishell: CMakeFiles/minishell.dir/src/env_assist.c.o
 minishell: CMakeFiles/minishell.dir/build.make
 minishell: CMakeFiles/minishell.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/wanton/minishell/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Linking C executable minishell"

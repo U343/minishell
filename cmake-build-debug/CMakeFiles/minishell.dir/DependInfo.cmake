@@ -6,7 +6,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/wanton/minishell/lib/ft_atoi.c" "/Users/wanton/minishell/cmake-build-debug/CMakeFiles/minishell.dir/lib/ft_atoi.c.o"
   "/Users/wanton/minishell/lib/ft_bzero.c" "/Users/wanton/minishell/cmake-build-debug/CMakeFiles/minishell.dir/lib/ft_bzero.c.o"
-  "/Users/wanton/minishell/lib/ft_del.c" "/Users/wanton/minishell/cmake-build-debug/CMakeFiles/minishell.dir/lib/ft_del.c.o"
   "/Users/wanton/minishell/lib/ft_isalnum.c" "/Users/wanton/minishell/cmake-build-debug/CMakeFiles/minishell.dir/lib/ft_isalnum.c.o"
   "/Users/wanton/minishell/lib/ft_isalpha.c" "/Users/wanton/minishell/cmake-build-debug/CMakeFiles/minishell.dir/lib/ft_isalpha.c.o"
   "/Users/wanton/minishell/lib/ft_isascii.c" "/Users/wanton/minishell/cmake-build-debug/CMakeFiles/minishell.dir/lib/ft_isascii.c.o"
@@ -69,6 +68,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/wanton/minishell/lib/ft_tolower.c" "/Users/wanton/minishell/cmake-build-debug/CMakeFiles/minishell.dir/lib/ft_tolower.c.o"
   "/Users/wanton/minishell/lib/ft_toupper.c" "/Users/wanton/minishell/cmake-build-debug/CMakeFiles/minishell.dir/lib/ft_toupper.c.o"
   "/Users/wanton/minishell/src/cd_script.c" "/Users/wanton/minishell/cmake-build-debug/CMakeFiles/minishell.dir/src/cd_script.c.o"
+  "/Users/wanton/minishell/src/env_assist.c" "/Users/wanton/minishell/cmake-build-debug/CMakeFiles/minishell.dir/src/env_assist.c.o"
   "/Users/wanton/minishell/src/env_function.c" "/Users/wanton/minishell/cmake-build-debug/CMakeFiles/minishell.dir/src/env_function.c.o"
   "/Users/wanton/minishell/src/list_functions.c" "/Users/wanton/minishell/cmake-build-debug/CMakeFiles/minishell.dir/src/list_functions.c.o"
   "/Users/wanton/minishell/src/main.c" "/Users/wanton/minishell/cmake-build-debug/CMakeFiles/minishell.dir/src/main.c.o"

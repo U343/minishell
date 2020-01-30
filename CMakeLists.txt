@@ -70,9 +70,8 @@ add_executable(minishell
         lib/ft_strtrim.c
         lib/ft_tolower.c
         lib/ft_toupper.c
-        lib/ft_del.c
         lib/ft_isspace.c
         lib/libft.h
         src/list_functions.c
         src/main.c
-        src/run_command.c src/pwd_script.c src/cd_script.c src/env_function.c)
+        src/run_command.c src/pwd_script.c src/cd_script.c src/env_function.c src/env_assist.c)

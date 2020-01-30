@@ -1,7 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/minishell.dir/lib/ft_atoi.c.o"
   "CMakeFiles/minishell.dir/lib/ft_bzero.c.o"
-  "CMakeFiles/minishell.dir/lib/ft_del.c.o"
   "CMakeFiles/minishell.dir/lib/ft_isalnum.c.o"
   "CMakeFiles/minishell.dir/lib/ft_isalpha.c.o"
   "CMakeFiles/minishell.dir/lib/ft_isascii.c.o"
@@ -64,6 +63,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/minishell.dir/lib/ft_tolower.c.o"
   "CMakeFiles/minishell.dir/lib/ft_toupper.c.o"
   "CMakeFiles/minishell.dir/src/cd_script.c.o"
+  "CMakeFiles/minishell.dir/src/env_assist.c.o"
   "CMakeFiles/minishell.dir/src/env_function.c.o"
   "CMakeFiles/minishell.dir/src/list_functions.c.o"
   "CMakeFiles/minishell.dir/src/main.c.o"

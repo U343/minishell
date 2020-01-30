@@ -177,33 +177,6 @@ lib/ft_bzero.c.s:
 	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_bzero.c.s
 .PHONY : lib/ft_bzero.c.s
 
-lib/ft_del.o: lib/ft_del.c.o
-
-.PHONY : lib/ft_del.o
-
-# target to build an object file
-lib/ft_del.c.o:
-	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_del.c.o
-.PHONY : lib/ft_del.c.o
-
-lib/ft_del.i: lib/ft_del.c.i
-
-.PHONY : lib/ft_del.i
-
-# target to preprocess a source file
-lib/ft_del.c.i:
-	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_del.c.i
-.PHONY : lib/ft_del.c.i
-
-lib/ft_del.s: lib/ft_del.c.s
-
-.PHONY : lib/ft_del.s
-
-# target to generate assembly for a file
-lib/ft_del.c.s:
-	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/lib/ft_del.c.s
-.PHONY : lib/ft_del.c.s
-
 lib/ft_isalnum.o: lib/ft_isalnum.c.o
 
 .PHONY : lib/ft_isalnum.o
@@ -1878,6 +1851,33 @@ src/cd_script.c.s:
 	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/cd_script.c.s
 .PHONY : src/cd_script.c.s
 
+src/env_assist.o: src/env_assist.c.o
+
+.PHONY : src/env_assist.o
+
+# target to build an object file
+src/env_assist.c.o:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/env_assist.c.o
+.PHONY : src/env_assist.c.o
+
+src/env_assist.i: src/env_assist.c.i
+
+.PHONY : src/env_assist.i
+
+# target to preprocess a source file
+src/env_assist.c.i:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/env_assist.c.i
+.PHONY : src/env_assist.c.i
+
+src/env_assist.s: src/env_assist.c.s
+
+.PHONY : src/env_assist.s
+
+# target to generate assembly for a file
+src/env_assist.c.s:
+	$(MAKE) -f CMakeFiles/minishell.dir/build.make CMakeFiles/minishell.dir/src/env_assist.c.s
+.PHONY : src/env_assist.c.s
+
 src/env_function.o: src/env_function.c.o
 
 .PHONY : src/env_function.o
@@ -2028,9 +2028,6 @@ help:
 	@echo "... lib/ft_bzero.o"
 	@echo "... lib/ft_bzero.i"
 	@echo "... lib/ft_bzero.s"
-	@echo "... lib/ft_del.o"
-	@echo "... lib/ft_del.i"
-	@echo "... lib/ft_del.s"
 	@echo "... lib/ft_isalnum.o"
 	@echo "... lib/ft_isalnum.i"
 	@echo "... lib/ft_isalnum.s"
@@ -2217,6 +2214,9 @@ help:
 	@echo "... src/cd_script.o"
 	@echo "... src/cd_script.i"
 	@echo "... src/cd_script.s"
+	@echo "... src/env_assist.o"
+	@echo "... src/env_assist.i"
+	@echo "... src/env_assist.s"
 	@echo "... src/env_function.o"
 	@echo "... src/env_function.i"
 	@echo "... src/env_function.s"
