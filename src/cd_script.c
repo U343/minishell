@@ -24,7 +24,7 @@ int 	len_arg(char **s_arg)
 	return (i);
 }
 
-void 	cd_script(char **s_arg, char **env)
+int 	cd_script(char **s_arg, char **env)
 {
 	int	len;
 
@@ -41,4 +41,5 @@ void 	cd_script(char **s_arg, char **env)
 			ft_putstr(s_arg[1]);
 		}
 	}
+	return (0);
 }

@@ -1,34 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pwd_script.c                                       :+:      :+:    :+:   */
+/*   echo.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/27 12:57:44 by wanton            #+#    #+#             */
-/*   Updated: 2020/01/30 11:54:54 by wanton           ###   ########.fr       */
+/*   Created: 2020/01/31 10:18:40 by wanton            #+#    #+#             */
+/*   Updated: 2020/01/31 11:15:23 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+# include "minishell.h"
 
-int 	pwd_script(char **s_arg, char **env)
+static int	parse_flag(char **arg)
 {
-	char *buf;
-	char *res;
+	int i;
+	int j;
+
+	i = 1;
+	if (arg[i] == NULL)
+		return (1);
+	while (arg[i])
+	{
+		j = 1;
+		while (arg[i][j])
+		{
+			if (arg[i][j] != 'n')
+				return (i);
+			j++;
+		}
+		i++;
+	}
+	return (i);
+}
+
+int		echo_script(char **arg, char **env)
+{
+	int i;
+	int flag;
 
 	(void)env;
-	buf = NULL;
-	if (s_arg[1] != NULL)
-	{
-		ft_putstr("pwd: too many arguments\n");
+	if ((i = parse_flag(arg)) == -1)
 		return (0);
+	flag = (i > 1 ? 1 : 0);
+	while (arg[i])
+	{
+		ft_putstr(arg[i++]);
+		ft_putchar(' ');
 	}
-	if (!(res = getcwd(buf, MAXPATHLEN)))
-		return (-1);
-	ft_putstr(res);
 	ft_putchar('\n');
-	free(buf);
-	free(res);
 	return (0);
 }

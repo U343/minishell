@@ -6,11 +6,31 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/28 13:31:27 by wanton            #+#    #+#             */
-/*   Updated: 2020/01/30 07:57:34 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/03 11:13:05 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
+
+int 	scan_env(char **arg, char **env)
+{
+	int 	i;
+	char 	*tmp;
+
+	i = 0;
+	while (arg[i])
+	{
+		if (arg[i][0] == '$')
+		{
+			tmp = arg[i];
+			if ((arg[i] = take_env_elem(++arg[i], env)) == NULL)
+				return (-1);
+			free(tmp);
+		}
+		i++;
+	}
+	return (0);
+}
 
 char 	*take_env_elem(char *name, char **env)
 {
@@ -34,57 +54,34 @@ char 	*take_env_elem(char *name, char **env)
 		i++;
 	}
 	free(tmp);
-	return (NULL);
+	return ("");
 }
 
-int 	find_elem(char *elem, char **env)
+int 	env_script(char **arg, char **env)
 {
-	int		i;
-	char	*res;
-
-	i = 0;
-	if (!(*elem))
-		return (-1);
-	if (!(res = (char *)malloc(sizeof(char) * ft_strlen(elem) + 2)))
-		return (-1);
-	res = ft_strcpy(res, elem);
-	res = ft_strcat(res, "=");
-	while (env[i])
-	{
-		if (ft_strncmp(res, env[i], ft_strlen(res)) == 0)
-		{
-			free(res);
-			return (i);
-		}
-		i++;
-	}
-	free(res);
-	return (-1);
-}
-
-int		delete_elem(char *elem, char **env)
-{
-	int i;
-
-	if ((i = find_elem(elem, env)) == -1)
-		return (-1);
-	while (env[i])
-	{
-		env[i] = env[i + 1];
-		i++;
-	}
+	(void)arg;
+	print_env(env);
 	return (0);
 }
-// TODO по идее синал нужно будет размещать тут
-int		add_elem(char *elem, char **env)
+//TODO add elem use malloc
+int 	setenv_script(char **arg, char **env)
 {
-	int		len;
-	char	*res;
+	if (!arg[1])
+		ft_putstr("usage: setenv VAR [VALUE]\n");
+	else if (arg[2])
+		ft_putstr("setenv: too many arguments\n");
+	else
+		add_elem(arg[1], env);
+	return (0);
+}
 
-	len  = len_env(env);
-	if (!(res = ft_strdup(elem)))
-		return (-1);
-	env[len++] = res;
-	env[len] = NULL;
+int 	unsetenv_script(char **arg, char **env)
+{
+	if (!arg[1])
+		ft_putstr("usage: unsetenv [NAME]\n");
+	else if (arg[2])
+		ft_putstr("unsetenv: too many arguments\n");
+	else
+		delete_elem(arg[1], env);
 	return (0);
 }

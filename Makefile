@@ -6,7 +6,7 @@
 #    By: wanton <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/23 13:15:24 by wanton            #+#    #+#              #
-#    Updated: 2020/01/24 11:00:07 by wanton           ###   ########.fr        #
+#    Updated: 2020/01/30 13:11:31 by wanton           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ LIB_PATH = ./lib/
 OBJ_PATH = ./obj/
 INC_PATH = ./includes/ $(LIB_PATH)
 
-SRC_FILES = env_assist.c env_function.c cd_script.c pwd_script.c main.c list_functions.c run_command.c
+SRC_FILES = echo_script.c env_assist.c env_function.c cd_script.c pwd_script.c main.c list_functions.c run_command.c
 OBJ_FILES = $(SRC_FILES:.c=.o)
 
 FLAGS = -Wall -Wextra -Werror
@@ -34,16 +34,16 @@ $(NAME): $(OBJ)
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c
 		mkdir -p $(OBJ_PATH)
-		gcc $(FLAGS)  $(INC) -c $< -o $@ 
+		gcc $(FLAGS)  $(INC) -c $< -o $@
 
 clean:
 		make -C $(LIB_PATH)/ clean
-		/bin/rm -rf $(OBJ_PATH) 
+		/bin/rm -rf $(OBJ_PATH)
 
 fclean: clean
 		make -C $(LIB_PATH)/ fclean
 		/bin/rm -f $(NAME)
 
-re: fclean all 
+re: fclean all
 
 .PHONY: all clean fclean re $(NAME)
