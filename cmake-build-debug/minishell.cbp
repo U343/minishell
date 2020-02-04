@@ -93,6 +93,9 @@
 		<Unit filename="/Users/wanton/minishell/lib/ft_bzero.c">
 			<Option target="minishell"/>
 		</Unit>
+		<Unit filename="/Users/wanton/minishell/lib/ft_del.c">
+			<Option target="minishell"/>
+		</Unit>
 		<Unit filename="/Users/wanton/minishell/lib/ft_isalnum.c">
 			<Option target="minishell"/>
 		</Unit>
@@ -114,10 +117,28 @@
 		<Unit filename="/Users/wanton/minishell/lib/ft_itoa.c">
 			<Option target="minishell"/>
 		</Unit>
+		<Unit filename="/Users/wanton/minishell/lib/ft_lennumber.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/Users/wanton/minishell/lib/ft_llatoi.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/Users/wanton/minishell/lib/ft_lst_n.c">
+			<Option target="minishell"/>
+		</Unit>
 		<Unit filename="/Users/wanton/minishell/lib/ft_lstadd.c">
 			<Option target="minishell"/>
 		</Unit>
+		<Unit filename="/Users/wanton/minishell/lib/ft_lstaddend.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/Users/wanton/minishell/lib/ft_lstaddn.c">
+			<Option target="minishell"/>
+		</Unit>
 		<Unit filename="/Users/wanton/minishell/lib/ft_lstdel.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/Users/wanton/minishell/lib/ft_lstdelh.c">
 			<Option target="minishell"/>
 		</Unit>
 		<Unit filename="/Users/wanton/minishell/lib/ft_lstdelone.c">
@@ -130,6 +151,12 @@
 			<Option target="minishell"/>
 		</Unit>
 		<Unit filename="/Users/wanton/minishell/lib/ft_lstnew.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/Users/wanton/minishell/lib/ft_lstsize.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/Users/wanton/minishell/lib/ft_lstswap.c">
 			<Option target="minishell"/>
 		</Unit>
 		<Unit filename="/Users/wanton/minishell/lib/ft_max.c">
@@ -178,6 +205,9 @@
 			<Option target="minishell"/>
 		</Unit>
 		<Unit filename="/Users/wanton/minishell/lib/ft_putnbr_fd.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/Users/wanton/minishell/lib/ft_putspace.c">
 			<Option target="minishell"/>
 		</Unit>
 		<Unit filename="/Users/wanton/minishell/lib/ft_putstr.c">
@@ -282,6 +312,12 @@
 		<Unit filename="/Users/wanton/minishell/src/cd_script.c">
 			<Option target="minishell"/>
 		</Unit>
+		<Unit filename="/Users/wanton/minishell/src/check_bin.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/Users/wanton/minishell/src/echo_script.c">
+			<Option target="minishell"/>
+		</Unit>
 		<Unit filename="/Users/wanton/minishell/src/env_assist.c">
 			<Option target="minishell"/>
 		</Unit>
@@ -298,6 +334,9 @@
 			<Option target="minishell"/>
 		</Unit>
 		<Unit filename="/Users/wanton/minishell/src/run_command.c">
+			<Option target="minishell"/>
+		</Unit>
+		<Unit filename="/Users/wanton/minishell/src/test.c">
 			<Option target="minishell"/>
 		</Unit>
 		<Unit filename="/Users/wanton/minishell/CMakeLists.txt">

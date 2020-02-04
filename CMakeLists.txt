@@ -10,18 +10,28 @@ add_executable(minishell
         includes/minishell.h
         lib/ft_atoi.c
         lib/ft_bzero.c
+        lib/ft_del.c
         lib/ft_isalnum.c
         lib/ft_isalpha.c
         lib/ft_isascii.c
         lib/ft_isdigit.c
         lib/ft_isprint.c
+        lib/ft_isspace.c
         lib/ft_itoa.c
+        lib/ft_lennumber.c
+        lib/ft_llatoi.c
+        lib/ft_lst_n.c
         lib/ft_lstadd.c
+        lib/ft_lstaddend.c
+        lib/ft_lstaddn.c
         lib/ft_lstdel.c
+        lib/ft_lstdelh.c
         lib/ft_lstdelone.c
         lib/ft_lstiter.c
         lib/ft_lstmap.c
         lib/ft_lstnew.c
+        lib/ft_lstsize.c
+        lib/ft_lstswap.c
         lib/ft_max.c
         lib/ft_memalloc.c
         lib/ft_memccpy.c
@@ -38,6 +48,7 @@ add_executable(minishell
         lib/ft_putendl_fd.c
         lib/ft_putnbr.c
         lib/ft_putnbr_fd.c
+        lib/ft_putspace.c
         lib/ft_putstr.c
         lib/ft_putstr_fd.c
         lib/ft_sort_int.c
@@ -70,8 +81,13 @@ add_executable(minishell
         lib/ft_strtrim.c
         lib/ft_tolower.c
         lib/ft_toupper.c
-        lib/ft_isspace.c
         lib/libft.h
+        src/cd_script.c
+        src/echo_script.c
+        src/env_assist.c
+        src/env_function.c
         src/list_functions.c
         src/main.c
-        src/run_command.c src/pwd_script.c src/cd_script.c src/env_function.c src/env_assist.c)
+        src/pwd_script.c
+        src/run_command.c
+        src/test.c src/check_bin.c)

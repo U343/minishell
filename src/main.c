@@ -6,7 +6,7 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 15:17:39 by wanton            #+#    #+#             */
-/*   Updated: 2020/01/31 13:08:08 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/04 14:21:18 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,6 @@ void    clear_mass(char **mass)
     free(mass);
 }
 
-/*char    *list_filler(t_arg *head, int count)
-{
-    int     i;
-    char    *str;
-}*/
-
 char    *read_arg()
 {
 	t_arg   *p;
@@ -41,7 +35,7 @@ char    *read_arg()
 	head = ft_create_elem();
 	p = head;
 	count = 0;
-	while (read(1, &p->symbol, sizeof(char)) > 0)
+	while (read(0, &p->symbol, sizeof(char)) > 0)
 	{
 		count++;
 		res = (int)(p->symbol);
