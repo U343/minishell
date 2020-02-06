@@ -6,7 +6,7 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/04 12:21:31 by wanton            #+#    #+#             */
-/*   Updated: 2020/02/04 14:23:16 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/06 11:41:01 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,13 +46,11 @@ int 	exe_command(char *path, char **arg, char **env)
 	else if (pid < 0)
 	{
 		//free(path);
-		ft_putstr("Error: failed to complete ");
+		ft_putstr("msh: failed to complete: ");
 		ft_putendl(path);
-		free(path);
 		return (-1);
 	}
 	wait(&pid);
-	free(path);
 	return (1);
 }
 
@@ -80,9 +78,15 @@ int 	check_bin(char **arg, char **env)
 			adr = get_full_path(arg[0], pth[i++]);
 			if (lstat(adr, &buf) == 0)
 			{
-				exe_command(adr, arg, env);
-				clear_mass(pth);
-				return (0);
+				if ((S_ISREG(buf.st_mode) && (buf.st_mode & S_IXUSR)))
+				{
+					exe_command(adr, arg, env);
+					free(adr);
+					clear_mass(pth);
+					return (0);
+				}
+				ft_putstr("msh: permission denied: ");
+				ft_putendl(adr);
 			}
 			free(adr);
 		}
@@ -93,11 +97,24 @@ int 	check_bin(char **arg, char **env)
 	{
 		if ((lstat(arg[0], &buf) != -1))
 		{
-			exe_command(arg[0], arg, env);
+			if ((S_ISREG(buf.st_mode) && (buf.st_mode & S_IXUSR)))
+			{
+				if (access(arg[0], F_OK) == 0)
+					exe_command(arg[0], arg, env);
+				else
+				{
+					ft_putstr("msh: exec format error: ");
+					ft_putendl(arg[0]);
+				}
+				return (0);
+			}
+			ft_putstr("msh: permission denied: ");
+			ft_putendl(arg[0]);
 			return (0);
 		}
 	}
-	ft_putstr("command not found\n");
+	ft_putstr("msh: command not found: ");
+	ft_putendl(arg[0]);
 	return (0);
 }
 
