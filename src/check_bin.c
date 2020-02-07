@@ -6,7 +6,7 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/04 12:21:31 by wanton            #+#    #+#             */
-/*   Updated: 2020/02/06 11:41:01 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/07 10:52:39 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,16 @@ int 	exe_command(char *path, char **arg, char **env)
 
 	pid = fork();
 	if (pid == 0)
-		execve(path, arg, env);
+	{
+		if (execve(path, arg, env) == -1)
+		{
+			ft_putstr("msh: exec format error: ");
+			ft_putendl(path);
+			exit(1);
+		}
+	}
 	else if (pid < 0)
 	{
-		//free(path);
 		ft_putstr("msh: failed to complete: ");
 		ft_putendl(path);
 		return (-1);

@@ -6,7 +6,7 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/30 08:00:50 by wanton            #+#    #+#             */
-/*   Updated: 2020/02/07 12:25:13 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/07 13:41:37 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,17 +61,18 @@ int 	find_elem(char *elem, char **env)
 
 int		delete_elem(char *elem, char **env)
 {
-	int i;
+	int		i;
+	char	*tmp;
 
 	if ((i = find_elem(elem, env)) == -1)
 		return (-1);
-	free(env[i]);
-	env[i] = NULL;
+	tmp = env[i];
 	while (env[i])
 	{
 		env[i] = env[i + 1];
 		i++;
 	}
+	free(tmp);
 	return (0);
 }
 // TODO по идее синал нужно будет размещать тут

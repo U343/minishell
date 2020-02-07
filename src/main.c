@@ -6,7 +6,7 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 15:17:39 by wanton            #+#    #+#             */
-/*   Updated: 2020/02/04 14:21:18 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/07 13:52:36 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ void    clear_mass(char **mass)
 
     i = 0;
     while (mass[i])
-    {
         free(mass[i++]);
-    }
     free(mass);
 }
 
@@ -54,10 +52,31 @@ char    *read_arg()
         str[count++] = p->symbol;
         p = p->next;
     }
-	count = (count == 1 ? count : (count - 1));
+	/*count = (count == 1 ? count : (count - 1));*/
+	count = count - 1;
 	str[count] = '\0';
     free_args(&head);
 	return (str);
+}
+
+char 	**new_env(char **arg)
+{
+	int len;
+	int i;
+	char **res;
+
+	i = 0;
+	len = 0;
+	while (arg[len])
+		len++;
+	res = (char **)malloc(sizeof(char *) * (len + 1));
+	while (i < len)
+	{
+		res[i] = ft_strdup(arg[i]);
+		i++;
+	}
+	res[i] = NULL;
+	return (res);
 }
 
 int		main(int ac, char **av, char** env)
@@ -69,6 +88,8 @@ int		main(int ac, char **av, char** env)
 	flag = 0;
 	(void)av;
 	(void)ac;
+	env = new_env(env);
+	/*print_env(env);*/
 	while (flag == 0)
     {
         write(1, "$> ", 3);

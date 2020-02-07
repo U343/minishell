@@ -6,7 +6,7 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/28 13:31:27 by wanton            #+#    #+#             */
-/*   Updated: 2020/02/07 12:31:12 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/07 12:33:27 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ int 	env_script(char **arg, char **env)
 	return (0);
 }
 //TODO add elem use malloc
+//TODO check duplicate 
 int 	setenv_script(char **arg, char **env)
 {
 	if (!arg[1])
