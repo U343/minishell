@@ -6,7 +6,7 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/28 13:31:27 by wanton            #+#    #+#             */
-/*   Updated: 2020/02/03 11:13:05 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/07 12:31:12 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,10 +68,12 @@ int 	setenv_script(char **arg, char **env)
 {
 	if (!arg[1])
 		ft_putstr("usage: setenv VAR [VALUE]\n");
-	else if (arg[2])
+	else if (!arg[2])
+		ft_putstr("usage: setenv VAR [VALUE]\n");
+	else if (arg[3])
 		ft_putstr("setenv: too many arguments\n");
 	else
-		add_elem(arg[1], env);
+		add_elem(arg[1], arg[2], env);
 	return (0);
 }
 
@@ -82,6 +84,12 @@ int 	unsetenv_script(char **arg, char **env)
 	else if (arg[2])
 		ft_putstr("unsetenv: too many arguments\n");
 	else
-		delete_elem(arg[1], env);
+	{
+		if (delete_elem(arg[1], env) == -1)
+		{
+			ft_putstr("setenv: name not defined: ");
+			ft_putendl(arg[1]);
+		}
+	}
 	return (0);
 }

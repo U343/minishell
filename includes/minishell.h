@@ -74,7 +74,7 @@ int					exit_script(char **arg, char **env);
 **Env functions
 */
 
-int					add_elem(char *elem, char **env);
+int					add_elem(char *name, char *value, char **env);
 int					scan_env(char **arg, char **env);
 int					delete_elem(char *elem, char **env);
 int					len_env(char **env);
