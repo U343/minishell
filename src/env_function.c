@@ -6,7 +6,7 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/28 13:31:27 by wanton            #+#    #+#             */
-/*   Updated: 2020/02/07 12:33:27 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/10 12:03:06 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,15 +57,14 @@ char 	*take_env_elem(char *name, char **env)
 	return ("");
 }
 
-int 	env_script(char **arg, char **env)
+int 	env_script(char **arg, char ***env)
 {
 	(void)arg;
-	print_env(env);
+	print_env(*env);
 	return (0);
 }
-//TODO add elem use malloc
-//TODO check duplicate 
-int 	setenv_script(char **arg, char **env)
+
+int 	setenv_script(char **arg, char ***env)
 {
 	if (!arg[1])
 		ft_putstr("usage: setenv VAR [VALUE]\n");
@@ -74,11 +73,19 @@ int 	setenv_script(char **arg, char **env)
 	else if (arg[3])
 		ft_putstr("setenv: too many arguments\n");
 	else
-		add_elem(arg[1], arg[2], env);
+	{
+		if (find_elem(arg[1], *env) != -1)
+		{
+			ft_putstr("setenv: item already exists: ");
+			ft_putendl(arg[1]);
+		}
+		else if (add_elem(arg[1], arg[2], env) == -1)
+			return (-1);
+	}
 	return (0);
 }
 
-int 	unsetenv_script(char **arg, char **env)
+int 	unsetenv_script(char **arg, char ***env)
 {
 	if (!arg[1])
 		ft_putstr("usage: unsetenv [NAME]\n");
@@ -86,7 +93,7 @@ int 	unsetenv_script(char **arg, char **env)
 		ft_putstr("unsetenv: too many arguments\n");
 	else
 	{
-		if (delete_elem(arg[1], env) == -1)
+		if (delete_elem(arg[1], *env) == -1)
 		{
 			ft_putstr("setenv: name not defined: ");
 			ft_putendl(arg[1]);

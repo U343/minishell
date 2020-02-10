@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+  /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   cd_script.c                                        :+:      :+:    :+:   */
@@ -22,18 +22,18 @@ int 	len_arg(char **s_arg)
 	return (i);
 }
 
-int 	change_env(char *pth, char **env, int st) // TODO add elem use malloc
+int 	change_env(char *pth, char ***env, int st) // TODO add elem use malloc
 {
 	char	*tmp;
 	char 	*foo;
 
 	if (st == 1)
 	{
-		if (!(tmp = take_env_elem("PWD", env)))
+		if (!(tmp = take_env_elem("PWD", *env)))
 			return (-1);
 		ft_putendl(tmp);
-		delete_elem("OLDPWD", env);
-		delete_elem("PWD", env);
+		delete_elem("OLDPWD", *env);
+		delete_elem("PWD", *env);
 		add_elem("OLDPWD", tmp, env);
 		add_elem("PWD", pth, env);
 		free(tmp);
@@ -53,10 +53,10 @@ int 	change_env(char *pth, char **env, int st) // TODO add elem use malloc
 	}*/
 	else if (st == 2)
 	{
-		if (!(tmp = take_env_elem("PWD", env)))
+		if (!(tmp = take_env_elem("PWD", *env)))
 			return (-1);
-		delete_elem("OLDPWD", env);
-		delete_elem("PWD", env);
+		delete_elem("OLDPWD", *env);
+		delete_elem("PWD", *env);
 		add_elem("OLDPWD", tmp, env);
 		free(tmp);
 		if (!(foo = getcwd(tmp, MAXPATHLEN)))
@@ -68,7 +68,7 @@ int 	change_env(char *pth, char **env, int st) // TODO add elem use malloc
 	return (0);
 }
 
-int 	cd_script(char **s_arg, char **env)
+int 	cd_script(char **s_arg, char ***env)
 {
 	int		len;
 	char	*pth;
@@ -78,7 +78,7 @@ int 	cd_script(char **s_arg, char **env)
 		ft_putstr("cd: too many arguments\n");
 	else if (len == 1) // OLDPWD == PWD ? OLDPWD : PWD;  PWD = HOME
 	{
-		pth = take_env_elem("HOME", env);
+		pth = take_env_elem("HOME", *env);
 		chdir(pth);
 		if (change_env(pth, env, 1) != 0)
 			return (-1);
@@ -88,7 +88,7 @@ int 	cd_script(char **s_arg, char **env)
 	{
 		if (ft_strcmp(s_arg[1], "-") == 0)
 		{ // d = PWD; PWD = OLDPWD; OLDPWD = d
-			pth = take_env_elem("OLDPWD", env);
+			pth = take_env_elem("OLDPWD", *env);
 			if (change_env(pth, env, 1) != 0)
 				return (-1);
 			chdir(pth);

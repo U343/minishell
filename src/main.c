@@ -6,7 +6,7 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 15:17:39 by wanton            #+#    #+#             */
-/*   Updated: 2020/02/07 13:52:36 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/10 10:49:13 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ char    *read_arg()
 	return (str);
 }
 
-char 	**new_env(char **arg)
+char 	**init_env(char **arg)
 {
 	int len;
 	int i;
@@ -69,7 +69,8 @@ char 	**new_env(char **arg)
 	len = 0;
 	while (arg[len])
 		len++;
-	res = (char **)malloc(sizeof(char *) * (len + 1));
+	if (!(res = (char **)malloc(sizeof(char *) * (len + 1))))
+		return (NULL);
 	while (i < len)
 	{
 		res[i] = ft_strdup(arg[i]);
@@ -88,7 +89,8 @@ int		main(int ac, char **av, char** env)
 	flag = 0;
 	(void)av;
 	(void)ac;
-	env = new_env(env);
+	if (!(env = init_env(env)))
+		return (-1);
 	/*print_env(env);*/
 	while (flag == 0)
     {
@@ -97,7 +99,7 @@ int		main(int ac, char **av, char** env)
 			return (-1);
 		s_arg = ft_strsplit(arg, ' ');
 		scan_env(s_arg, env);
-        flag = run_command(s_arg, env);
+        flag = run_command(s_arg, &env);
         clear_mass(s_arg);
         free(arg);
     }

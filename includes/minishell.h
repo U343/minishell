@@ -6,7 +6,7 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/28 13:23:49 by wanton            #+#    #+#             */
-/*   Updated: 2020/02/04 14:21:18 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/10 12:40:09 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,27 +58,33 @@ void				print_list(t_arg *arg);
 t_arg				*ft_create_elem(void);
 
 /*
+**Main functions for run commands
+*/
+
+int					run_command(char **s_arg, char ***env);
+
+/*
 **Built-in shell commands
 */
 
-int                 run_command(char **s_arg, char **env);
-int					pwd_script(char **s_arg, char **env);
-int					cd_script(char **s_arg, char **env);
-int					echo_script(char **arg, char **env);
-int					env_script(char **arg, char **env);
-int					setenv_script(char **arg, char **env);
-int					unsetenv_script(char **arg, char **env);
-int					exit_script(char **arg, char **env);
+int					pwd_script(char **s_arg, char ***env);
+int					cd_script(char **s_arg, char ***env);
+int					echo_script(char **arg, char ***env);
+int					env_script(char **arg, char ***env);
+int					setenv_script(char **arg, char ***env);
+int					unsetenv_script(char **arg, char ***env);
+int					exit_script(char **arg, char ***env);
 
 /*
 **Env functions
 */
 
-int					add_elem(char *name, char *value, char **env);
 int					scan_env(char **arg, char **env);
 int					delete_elem(char *elem, char **env);
 int					len_env(char **env);
+int					find_elem(char *elem, char **env);
 char				*take_env_elem(char *name, char **env);
+int 				add_elem(char *name, char *value, char ***env);
 void				print_env(char **env);
 
 #endif

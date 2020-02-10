@@ -12,7 +12,7 @@
 
 #include "minishell.h"
 
-int 	pwd_script(char **s_arg, char **env)
+int 	pwd_script(char **s_arg, char ***env)
 {
 	char *buf;
 	char *res;

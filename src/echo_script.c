@@ -36,7 +36,7 @@ static int	parse_flag(char **arg)
 	return (i);
 }
 
-int		echo_script(char **arg, char **env)
+int		echo_script(char **arg, char ***env)
 {
 	int i;
 

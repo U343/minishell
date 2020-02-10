@@ -12,7 +12,7 @@
 
 #include "minishell.h"
 
-int 	exit_script(char **arg, char **env)
+int 	exit_script(char **arg, char ***env)
 {
 	(void)arg;
 	(void)env;
@@ -32,10 +32,10 @@ void	get_commands(char *tmp[9])
 	tmp[8] = NULL;
 }
 
-int		std_shell_command(char **s_arg, char **env)
+int		std_shell_command(char **s_arg, char ***env)
 {
 	int 	i;
-	int		(*builtin_func[8]) (char **, char **);
+	int		(*builtin_func[8]) (char **, char ***);
 	char 	*commands[9];
 
 	i = 0;
@@ -54,10 +54,10 @@ int		std_shell_command(char **s_arg, char **env)
 			return ((*builtin_func[i])(s_arg, env));
 		i++;
 	}
-	return (check_bin(s_arg, env));
+	return (check_bin(s_arg, *env));
 }
 
-int     run_command(char **s_arg, char **env)
+int     run_command(char **s_arg, char ***env)
 {
 	if (s_arg[0])
 		return (std_shell_command(s_arg, env));
