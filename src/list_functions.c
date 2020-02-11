@@ -6,7 +6,7 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 15:22:12 by wanton            #+#    #+#             */
-/*   Updated: 2020/01/30 11:51:18 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/11 11:48:22 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,17 @@ void		print_list(t_arg *arg)
 	ft_putchar('\n');
 }
 
-void		free_args(t_arg **arg)
+void    clear_mass(char **mass)
+{
+	size_t i;
+
+	i = 0;
+	while (mass[i])
+		free(mass[i++]);
+	free(mass);
+}
+
+char		*free_args(t_arg **arg)
 {
 	t_arg	*p;
 	t_arg	*tmp;
@@ -52,4 +62,5 @@ void		free_args(t_arg **arg)
 			p = tmp;
 		}
 	}
+	return (NULL);
 }

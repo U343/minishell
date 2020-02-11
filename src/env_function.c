@@ -6,11 +6,17 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/28 13:31:27 by wanton            #+#    #+#             */
-/*   Updated: 2020/02/10 12:03:06 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/11 12:46:15 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
+
+/*
+**Function to replace $NAME with env variable value
+**       0 is returned if successful
+**       -1 is returned if an error with allocated memory
+*/
 
 int 	scan_env(char **arg, char **env)
 {

@@ -6,7 +6,7 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/28 13:23:49 by wanton            #+#    #+#             */
-/*   Updated: 2020/02/10 12:40:09 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/11 12:21:00 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int					check_bin(char **arg, char **env);
 **Functions for list t_arg
 */
 
-void				free_args(t_arg **arg);
+char				*free_args(t_arg **arg);
 void				print_list(t_arg *arg);
 t_arg				*ft_create_elem(void);
 

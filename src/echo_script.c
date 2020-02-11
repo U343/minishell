@@ -6,11 +6,16 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 10:18:40 by wanton            #+#    #+#             */
-/*   Updated: 2020/02/03 11:40:48 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/11 13:40:56 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "minishell.h"
+
+/*
+**Function for check flag -n
+**       index is returned
+*/
 
 static int	parse_flag(char **arg)
 {
@@ -25,18 +30,24 @@ static int	parse_flag(char **arg)
 		j = 1;
 		if (arg[i][0] != '-')
 			break ;
+		if (arg[i][j] == '\0')
+			return (++i);
 		while (arg[i][j])
 		{
-			if (arg[i][j] != 'n')
+			if (arg[i][j++] != 'n')
 				return (i);
-			j++;
 		}
 		i++;
 	}
 	return (i);
 }
 
-int		echo_script(char **arg, char ***env)
+/*
+**My echo ignored flag -n
+**       0 is returned always (for list functions in run_command)
+*/
+
+int			echo_script(char **arg, char ***env)
 {
 	int i;
 

@@ -6,13 +6,13 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/24 11:03:09 by wanton            #+#    #+#             */
-/*   Updated: 2020/02/07 11:07:43 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/11 13:31:13 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-int 	exit_script(char **arg, char ***env)
+int		exit_script(char **arg, char ***env)
 {
 	(void)arg;
 	(void)env;
@@ -34,9 +34,9 @@ void	get_commands(char *tmp[9])
 
 int		std_shell_command(char **s_arg, char ***env)
 {
-	int 	i;
+	int		i;
 	int		(*builtin_func[8]) (char **, char ***);
-	char 	*commands[9];
+	char	*commands[9];
 
 	i = 0;
 	builtin_func[0] = &cd_script;
@@ -57,7 +57,7 @@ int		std_shell_command(char **s_arg, char ***env)
 	return (check_bin(s_arg, *env));
 }
 
-int     run_command(char **s_arg, char ***env)
+int		run_command(char **s_arg, char ***env)
 {
 	if (s_arg[0])
 		return (std_shell_command(s_arg, env));
