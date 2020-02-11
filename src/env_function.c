@@ -6,37 +6,11 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/28 13:31:27 by wanton            #+#    #+#             */
-/*   Updated: 2020/02/11 12:46:15 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/11 14:23:10 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
-
-/*
-**Function to replace $NAME with env variable value
-**       0 is returned if successful
-**       -1 is returned if an error with allocated memory
-*/
-
-int 	scan_env(char **arg, char **env)
-{
-	int 	i;
-	char 	*tmp;
-
-	i = 0;
-	while (arg[i])
-	{
-		if (arg[i][0] == '$')
-		{
-			tmp = arg[i];
-			if ((arg[i] = take_env_elem(++arg[i], env)) == NULL)
-				return (-1);
-			free(tmp);
-		}
-		i++;
-	}
-	return (0);
-}
 
 char 	*take_env_elem(char *name, char **env)
 {
