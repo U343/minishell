@@ -6,7 +6,7 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 14:22:06 by wanton            #+#    #+#             */
-/*   Updated: 2020/02/11 15:42:29 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/12 12:05:04 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ static char *get_name(char *arg, int len)
 	int 	i;
 	char	*name;
 
-	i = 1;
+	i = 0;
 	if (!(name = (char *)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	while (i < len)
@@ -128,9 +128,20 @@ int 	scan_env(char **arg, char **env)
 					return (-1);
 				tmp = arg[j];
 				arg[j] = create_new_arg(index, arg[j], res);
-				/*free(tmp);
+				free(tmp);
 				free(name);
-				free(res);*/
+				free(res);
+			}
+			else
+			{
+				tmp = arg[j];
+				index = j;
+				while (arg[index])
+				{
+					arg[index] = arg[index + 1];
+					index++;
+				}
+				free(tmp);
 			}
 		}
 		j++;
