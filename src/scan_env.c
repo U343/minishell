@@ -6,7 +6,7 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 14:22:06 by wanton            #+#    #+#             */
-/*   Updated: 2020/02/12 12:05:04 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/12 13:30:34 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ static int	check_overlap(char *s, char **env)
 	{
 		i = 1;
 		flag = 1;
-		while (s[i] && env[j][i - 1] != '=')
+		while (env[j][i - 1] != '=')
 		{
-			if (s[i] != env[j][i - 1])
+			if (s[i] == '\0' || s[i] != env[j][i - 1])
 			{
 				flag = 0;
 				break ;
@@ -45,15 +45,17 @@ static int	check_overlap(char *s, char **env)
 }
 
 /*
-**Function gets the name out of the arg
+**Function gets the value out of the env with name arg
 ** len - len of the name in arg
+** name - part of a arg which overlapping with env
 **       Returned: name if successful or NULL if error with allocated memory
 */
 
-static char *get_name(char *arg, int len)
+static char	*get_value(char **env, char *arg, int len)
 {
-	int 	i;
+	int		i;
 	char	*name;
+	char	*res;
 
 	i = 0;
 	if (!(name = (char *)malloc(sizeof(char) * (len + 1))))
@@ -64,40 +66,68 @@ static char *get_name(char *arg, int len)
 		i++;
 	}
 	name[i] = '\0';
-	return (name);
+	if (!(res = take_env_elem(name, env)))
+	{
+		free(name);
+		return (NULL);
+	}
+	free(name);
+	return (res);
 }
 
 /*
 **Function created new arg with env value
-** count - len of the str which overlaping with env variable
+** count - len of the str which overlapping with env variable
 ** res - value of the env variable
 **       Returned: arg if successful or NULL if error with allocated memory
 */
 
 static char	*create_new_arg(int count, char *arg, char *res)
 {
-	int 	len;
-	int 	flag;
-	char 	*tmp;
+	int		len;
+	int		flag;
+	char	*tmp;
 
 	flag = 0;
 	len = ft_strlen(res);
 	if (arg[count])
 	{
-		if (!ft_isdigit(arg[count]) && !ft_isalpha(arg[count]))
-		{
-			len += (int)ft_strlen(arg) - count;
-			flag = 0;
-			while (flag++ <= count)
-				arg++;
-		}
+		len += (int)ft_strlen(arg) - count;
+		flag = 0;
+		while (flag++ <= count)
+			arg++;
 	}
 	if (!(tmp = ft_strnew(len + 1)))
 		return (NULL);
 	tmp = ft_strcpy(tmp, res);
 	if (flag > 0)
-		tmp = ft_strcat(tmp, arg);
+		tmp = ft_strcat(tmp, --arg);
 	return (tmp);
+}
+
+/*
+**Function change arg list, arg[j] to be replace on env value or empty line
+**       0 is returned if successful
+**       -1 is returned if an error with allocated memory
+*/
+
+static int	change_arg(char **env, int index, char **arg, int j)
+{
+	char	*res;
+	char	*tmp;
+
+	if (!(res = get_value(env, arg[j], index - 1)))
+		return (-1);
+	tmp = arg[j];
+	if (!(arg[j] = create_new_arg(index, arg[j], res)))
+	{
+		free(tmp);
+		free(res);
+		return (-1);
+	}
+	free(tmp);
+	free(res);
+	return (0);
 }
 
 /*
@@ -106,45 +136,31 @@ static char	*create_new_arg(int count, char *arg, char *res)
 **       -1 is returned if an error with allocated memory
 */
 
-int 	scan_env(char **arg, char **env)
+int			scan_env(char **arg, char **env)
 {
-	int 	j;
-	int 	index;
-	char 	*res;
-	char 	*tmp;
-	char 	*name;
+	int		j;
+	int		index;
+	char	*tmp;
 
-
-	j = 0;
-	while (arg[j])
+	j = -1;
+	while (arg[++j])
 	{
 		if (arg[j][0] == '$')
 		{
 			if ((index = check_overlap(arg[j], env)) != 0)
 			{
-				if (!(name = get_name(arg[j], index - 1)))
+				if (change_arg(env, index, arg, j) == -1)
 					return (-1);
-				if (!(res = take_env_elem(name, env)))
-					return (-1);
-				tmp = arg[j];
-				arg[j] = create_new_arg(index, arg[j], res);
-				free(tmp);
-				free(name);
-				free(res);
 			}
 			else
 			{
-				tmp = arg[j];
+				tmp = arg[j--];
 				index = j;
-				while (arg[index])
-				{
+				while (arg[++index])
 					arg[index] = arg[index + 1];
-					index++;
-				}
 				free(tmp);
 			}
 		}
-		j++;
 	}
 	return (0);
 }
