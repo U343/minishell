@@ -6,37 +6,40 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/04 12:21:31 by wanton            #+#    #+#             */
-/*   Updated: 2020/02/07 10:52:39 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/17 12:02:36 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-char 	*get_full_path(char *name, char *path)
+/*
+**Split of the PATH on list names,
+**            NULL is returned, if error with allocated memory
+**			  char ** is returned, if successful
+*/
+
+static char	**split_path(char **env)
 {
-	char 	*adr;
+	char	*tmp;
+	char	**pth;
 
-	adr = (char *)malloc(sizeof(char) * (ft_strlen(name) + ft_strlen(path) + 2));
-	adr = ft_strcpy(adr, path);
-	adr = ft_strcat(adr, "/");
-	adr = ft_strcat(adr, name);
-	return (adr);
-}
-
-int 	find_slash(char const *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i])
+	tmp = take_env_elem("PATH", env);
+	if (!(pth = ft_strsplit(tmp, ':')))
 	{
-		if (str[i++] == '/')
-			return (1);
+		free(tmp);
+		return (NULL);
 	}
-	return (0);
+	free(tmp);
+	return (pth);
 }
 
-int 	exe_command(char *path, char **arg, char **env)
+/*
+**Fork function create new process and execve run binary file,
+**            1 is returned, if successful
+**			  -1 is returned, otherwise
+*/
+
+static int	exe_command(char *path, char **arg, char **env)
 {
 	pid_t	pid;
 
@@ -60,67 +63,90 @@ int 	exe_command(char *path, char **arg, char **env)
 	return (1);
 }
 
-int 	check_bin(char **arg, char **env)
+/*
+**Function search bin file in the PATH and run it, if file is valid,
+**            1 is returned, if file valid
+**			  0 is returned, otherwise
+*/
+
+static int	check_in_path(char **arg, char **env, int i)
 {
 	struct stat	buf;
 	char		**pth;
-	char 		*adr;
-	char 		*tmp;
-	int			i;
+	char		*adr;
 
-	if (find_slash(arg[0]) == 0)
+	if (!(pth = split_path(env)))
+		return (-1);
+	while (pth[i])
 	{
-		//ft_putstr("ok\n");
-		i = 0;
-		tmp = take_env_elem("PATH", env);
-		if (!(pth = ft_strsplit(tmp,':')))
-		{
-			free(tmp);
-			return (-1);
-		}
-		free(tmp);
-		while (pth[i])
-		{
-			adr = get_full_path(arg[0], pth[i++]);
-			if (lstat(adr, &buf) == 0)
-			{
-				if ((S_ISREG(buf.st_mode) && (buf.st_mode & S_IXUSR)))
-				{
-					exe_command(adr, arg, env);
-					free(adr);
-					clear_mass(pth);
-					return (0);
-				}
-				ft_putstr("msh: permission denied: ");
-				ft_putendl(adr);
-			}
-			free(adr);
-		}
-		clear_mass(pth);
-
-	}
-	else
-	{
-		if ((lstat(arg[0], &buf) != -1))
+		adr = get_full_path(arg[0], pth[i++]);
+		if (lstat(adr, &buf) == 0)
 		{
 			if ((S_ISREG(buf.st_mode) && (buf.st_mode & S_IXUSR)))
 			{
-				if (access(arg[0], F_OK) == 0)
-					exe_command(arg[0], arg, env);
-				else
-				{
-					ft_putstr("msh: exec format error: ");
-					ft_putendl(arg[0]);
-				}
-				return (0);
+				exe_command(adr, arg, env);
+				free(adr);
+				clear_mass(pth);
+				return (1);
 			}
 			ft_putstr("msh: permission denied: ");
-			ft_putendl(arg[0]);
+			ft_putendl(adr);
+		}
+		free(adr);
+	}
+	clear_mass(pth);
+	return (0);
+}
+
+/*
+**Function check bin file's address and run it, if file is valid,
+**            0 is returned, if file valid
+**			  1 is returned, otherwise
+*/
+
+static int	check_adr(char **arg, char **env)
+{
+	struct stat	buf;
+
+	if ((lstat(arg[0], &buf) != -1))
+	{
+		if ((S_ISREG(buf.st_mode) && (buf.st_mode & S_IXUSR)))
+		{
+			if (access(arg[0], F_OK) == 0)
+				exe_command(arg[0], arg, env);
+			else
+			{
+				ft_putstr("msh: exec format error: ");
+				ft_putendl(arg[0]);
+			}
 			return (0);
 		}
+		ft_putstr("msh: permission denied: ");
+		ft_putendl(arg[0]);
+		return (0);
+	}
+	return (1);
+}
+
+int			check_bin(char **arg, char **env)
+{
+	int			res;
+
+	if (find_slash(arg[0]) == 0)
+	{
+		res = check_in_path(arg, env, 0);
+		if (res == -1)
+			return (-1);
+		else if (res == 1)
+			return (0);
+	}
+	else
+	{
+		res = check_adr(arg, env);
+		if (res == 0)
+			return (0);
 	}
 	ft_putstr("msh: command not found: ");
 	ft_putendl(arg[0]);
 	return (0);
 }
-

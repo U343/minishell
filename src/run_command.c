@@ -6,7 +6,7 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/24 11:03:09 by wanton            #+#    #+#             */
-/*   Updated: 2020/02/11 13:31:13 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/17 10:52:23 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,12 @@ int		std_shell_command(char **s_arg, char ***env)
 	}
 	return (check_bin(s_arg, *env));
 }
+
+/*
+**Function check arg,
+**            0 is returned, if arg exists
+**			  otherwise, return value of std_shell_commands()
+*/
 
 int		run_command(char **s_arg, char ***env)
 {

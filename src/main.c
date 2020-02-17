@@ -6,7 +6,7 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 15:17:39 by wanton            #+#    #+#             */
-/*   Updated: 2020/02/11 13:00:12 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/17 10:48:09 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ static char	*read_arg(void)
 **            NULL is returned if an error with allocated memory
 */
 
-static char	**init_env(char **arg)
+static char	**init_env(char **arg, int ac, char **av)
 {
 	int		len;
 	int		i;
@@ -99,6 +99,8 @@ static char	**init_env(char **arg)
 
 	i = 0;
 	len = 0;
+	(void)av;
+	(void)ac;
 	while (arg[len])
 		len++;
 	if (!(res = (char **)malloc(sizeof(char *) * (len + 1))))
@@ -119,9 +121,7 @@ int			main(int ac, char **av, char **env)
 	char	**s_arg;
 
 	flag = 0;
-	(void)av;
-	(void)ac;
-	if (!(env = init_env(env)))
+	if (!(env = init_env(env, ac, av)))
 		return (print_error("init_env"));
 	while (flag == 0)
 	{

@@ -48,6 +48,8 @@ void				clear_mass(char **mass);
 */
 
 int					check_bin(char **arg, char **env);
+int					find_slash(char const *str);
+char				*get_full_path(char *name, char *path);
 
 /*
 **Functions for list t_arg
