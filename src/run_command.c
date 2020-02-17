@@ -6,11 +6,15 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/24 11:03:09 by wanton            #+#    #+#             */
-/*   Updated: 2020/02/17 10:52:23 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/17 13:47:21 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
+
+/*
+**Function to exit the minishell
+*/
 
 int		exit_script(char **arg, char ***env)
 {
@@ -18,6 +22,10 @@ int		exit_script(char **arg, char ***env)
 	(void)env;
 	return (-1);
 }
+
+/*
+**Function add names of the standard commands in array tmp
+*/
 
 void	get_commands(char *tmp[9])
 {
@@ -31,6 +39,15 @@ void	get_commands(char *tmp[9])
 	tmp[7] = "test";
 	tmp[8] = NULL;
 }
+
+/*
+**Function check arg,
+**if arg[0] is standard command, then run him
+**otherwise run check_bin()
+**            0 is returned, if successful
+**            -1 is returned, if error with one of the builtin_func or if run
+**                            exit_script()
+*/
 
 int		std_shell_command(char **s_arg, char ***env)
 {

@@ -6,16 +6,23 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/28 13:31:27 by wanton            #+#    #+#             */
-/*   Updated: 2020/02/11 14:23:10 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/17 13:38:42 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-char 	*take_env_elem(char *name, char **env)
+/*
+**Function search environment variable and then returned him
+**            variable value is returned, if successful
+**            NULL is returned, if error with allocate memory
+**            empty string returned, if variable is not defined
+*/
+
+char	*take_env_elem(char *name, char **env)
 {
 	int		i;
-	char 	*tmp;
+	char	*tmp;
 	char	*res;
 
 	i = 0;
@@ -37,14 +44,25 @@ char 	*take_env_elem(char *name, char **env)
 	return ("");
 }
 
-int 	env_script(char **arg, char ***env)
+/*
+**Function print environment variables
+**            0 is returned, always
+*/
+
+int		env_script(char **arg, char ***env)
 {
 	(void)arg;
 	print_env(*env);
 	return (0);
 }
 
-int 	setenv_script(char **arg, char ***env)
+/*
+**Function create new environment variable
+**            0 is returned, if successful
+**            -1 is returned, if error with add_elem()
+*/
+
+int		setenv_script(char **arg, char ***env)
 {
 	if (!arg[1])
 		ft_putstr("usage: setenv VAR [VALUE]\n");
@@ -65,7 +83,12 @@ int 	setenv_script(char **arg, char ***env)
 	return (0);
 }
 
-int 	unsetenv_script(char **arg, char ***env)
+/*
+**Function delete environment variable
+**            0 is returned, always
+*/
+
+int		unsetenv_script(char **arg, char ***env)
 {
 	if (!arg[1])
 		ft_putstr("usage: unsetenv [NAME]\n");

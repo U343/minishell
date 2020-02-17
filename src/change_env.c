@@ -6,7 +6,7 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/10 11:15:50 by wanton            #+#    #+#             */
-/*   Updated: 2020/02/10 12:41:28 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/17 13:10:31 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,12 @@ void	error_free_env(char **env, int n)
 	free(env);
 }
 
+/*
+**Function delete env variable with name elem
+**            0 is returned, if successful
+**            -1 is returned, if elem is not defined
+*/
+
 int		delete_elem(char *elem, char **env)
 {
 	int		i;
@@ -42,26 +48,39 @@ int		delete_elem(char *elem, char **env)
 	return (0);
 }
 
+/*
+**Function add new variable in env list
+**            0 is returned, if successful
+**            -1 is returned, if error allocate memory
+*/
+
 int		new_elem(char *name, char *value, char **env, int len)
 {
 	char	*res;
 
 	if (!(res = ft_strnew(ft_strlen(name) +
-						  ft_strlen(value) + 2)))
+			ft_strlen(value) + 2)))
 		return (-1);
-	res = ft_strcat(res, name);
-	res = ft_strcat(res ,"=");
+	res = ft_strcpy(res, name);
+	res = ft_strcat(res, "=");
 	res = ft_strcat(res, value);
 	env[len++] = res;
 	env[len] = NULL;
+	res = NULL;
 	return (0);
 }
 
+/*
+**Function copy env list with new cell for new elem
+**            0 is returned, if successful
+**            -1 is returned, if error allocate memory
+*/
+
 int		add_elem(char *name, char *value, char ***env)
 {
-	int i;
-	int	len;
-	char **new_env;
+	int		i;
+	int		len;
+	char	**new_env;
 
 	i = 0;
 	len = len_env(*env);

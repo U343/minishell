@@ -6,7 +6,7 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/30 08:00:50 by wanton            #+#    #+#             */
-/*   Updated: 2020/02/10 11:05:53 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/17 12:48:14 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	print_env(char **env)
 	}
 }
 
-int 	len_env(char **env)
+int		len_env(char **env)
 {
 	int	i;
 
@@ -34,7 +34,13 @@ int 	len_env(char **env)
 	return (i);
 }
 
-int 	find_elem(char *elem, char **env)
+/*
+**Function search name of the variable in env list,
+**            index is returned, if the name is found
+**			  -1 is returned, otherwise
+*/
+
+int		find_elem(char *elem, char **env)
 {
 	int		i;
 	char	*res;
