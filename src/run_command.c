@@ -6,7 +6,7 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/24 11:03:09 by wanton            #+#    #+#             */
-/*   Updated: 2020/02/17 13:47:21 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/17 13:47:26 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 /*
 **Function to exit the minishell
+**Not static! because this function is builtin_func
 */
 
-int		exit_script(char **arg, char ***env)
+int			exit_script(char **arg, char ***env)
 {
 	(void)arg;
 	(void)env;
@@ -27,7 +28,7 @@ int		exit_script(char **arg, char ***env)
 **Function add names of the standard commands in array tmp
 */
 
-void	get_commands(char *tmp[9])
+static void	get_commands(char *tmp[9])
 {
 	tmp[0] = "cd";
 	tmp[1] = "echo";
@@ -49,7 +50,7 @@ void	get_commands(char *tmp[9])
 **                            exit_script()
 */
 
-int		std_shell_command(char **s_arg, char ***env)
+static int	std_shell_command(char **s_arg, char ***env)
 {
 	int		i;
 	int		(*builtin_func[8]) (char **, char ***);
@@ -80,7 +81,7 @@ int		std_shell_command(char **s_arg, char ***env)
 **			  otherwise, return value of std_shell_commands()
 */
 
-int		run_command(char **s_arg, char ***env)
+int			run_command(char **s_arg, char ***env)
 {
 	if (s_arg[0])
 		return (std_shell_command(s_arg, env));

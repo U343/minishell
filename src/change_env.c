@@ -6,13 +6,13 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/10 11:15:50 by wanton            #+#    #+#             */
-/*   Updated: 2020/02/17 13:10:31 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/17 13:12:16 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-void	error_free_env(char **env, int n)
+static void	error_free_env(char **env, int n)
 {
 	int i;
 
@@ -31,7 +31,7 @@ void	error_free_env(char **env, int n)
 **            -1 is returned, if elem is not defined
 */
 
-int		delete_elem(char *elem, char **env)
+int			delete_elem(char *elem, char **env)
 {
 	int		i;
 	char	*tmp;
@@ -54,7 +54,7 @@ int		delete_elem(char *elem, char **env)
 **            -1 is returned, if error allocate memory
 */
 
-int		new_elem(char *name, char *value, char **env, int len)
+static int	new_elem(char *name, char *value, char **env, int len)
 {
 	char	*res;
 
@@ -76,7 +76,7 @@ int		new_elem(char *name, char *value, char **env, int len)
 **            -1 is returned, if error allocate memory
 */
 
-int		add_elem(char *name, char *value, char ***env)
+int			add_elem(char *name, char *value, char ***env)
 {
 	int		i;
 	int		len;
