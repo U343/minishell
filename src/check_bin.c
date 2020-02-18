@@ -23,13 +23,16 @@ static char	**split_path(char **env)
 	char	*tmp;
 	char	**pth;
 
-	tmp = take_env_elem("PATH", env);
+	if (!(tmp = take_env_elem("PATH", env)))
+		return (NULL);
 	if (!(pth = ft_strsplit(tmp, ':')))
 	{
-		free(tmp);
+		if (tmp[0])
+			free(tmp);
 		return (NULL);
 	}
-	free(tmp);
+	if (tmp[0])
+		free(tmp);
 	return (pth);
 }
 

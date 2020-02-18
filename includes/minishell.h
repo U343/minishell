@@ -85,8 +85,9 @@ int					scan_env(char **arg, char **env);
 int					delete_elem(char *elem, char **env);
 int					len_env(char **env);
 int					find_elem(char *elem, char **env);
-char				*take_env_elem(char *name, char **env);
 int 				add_elem(char *name, char *value, char ***env);
+char				*take_env_elem(char *name, char **env);
+char				*full_env_var(char *name, char **env);
 void				print_env(char **env);
 
 #endif

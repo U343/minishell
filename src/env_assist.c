@@ -64,3 +64,17 @@ int		find_elem(char *elem, char **env)
 	free(res);
 	return (-1);
 }
+
+char	*full_env_var(char *name, char **env)
+{
+	int		i;
+	char	*res;
+
+	if ((i = find_elem(name, env)) == -1)
+		return ("");
+	else if (!i)
+		return (NULL);
+	if (!(res = ft_strdup(env[i])))
+		return (NULL);
+	return (res);
+}
