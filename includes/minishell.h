@@ -6,7 +6,7 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/28 13:23:49 by wanton            #+#    #+#             */
-/*   Updated: 2020/02/11 12:21:00 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/18 15:07:59 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,5 +89,11 @@ int 				add_elem(char *name, char *value, char ***env);
 char				*take_env_elem(char *name, char **env);
 char				*full_env_var(char *name, char **env);
 void				print_env(char **env);
+
+/*
+**Cd functions
+*/
+
+int					change_env_param(char *param, char ***env);
 
 #endif
