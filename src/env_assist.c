@@ -65,6 +65,15 @@ int		find_elem(char *elem, char **env)
 	return (-1);
 }
 
+/*
+**Function try variable in env
+** name - name of the variable
+**
+**              Return: env variable with value, if successful
+**                      "" is returned, if variable is not defined
+**                      NULL is returned, if error with allocate memory
+*/
+
 char	*full_env_var(char *name, char **env)
 {
 	int		i;

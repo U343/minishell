@@ -14,7 +14,7 @@
 
 int	change_env_param(char *param, char ***env)
 {
-	int 	i;
+	int		i;
 	char	*tmp;
 	char	*res;
 	char	*buf;
@@ -27,7 +27,7 @@ int	change_env_param(char *param, char ***env)
 	if (!(res = getcwd(buf, MAXPATHLEN)))
 		return (-1);
 	if (!(tmp = (char *)malloc(sizeof(char) * (ft_strlen(res) +
-											   ft_strlen(param) + 2))))
+			ft_strlen(param) + 2))))
 		return (-1);
 	tmp = ft_strcpy(tmp, param);
 	tmp = ft_strcat(tmp, "=");

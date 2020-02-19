@@ -6,7 +6,7 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/27 13:30:04 by wanton            #+#    #+#             */
-/*   Updated: 2020/02/18 15:57:13 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/19 17:00:47 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 /*
 **Function for print error message
 ** s - function's name which was the reason of error
+** flag - signal for format message: 0 - cd without args, 1 - with args
 */
 
 static void	print_error(char *s, int flag)
@@ -41,9 +42,16 @@ static void	print_error(char *s, int flag)
 	}
 }
 
+/*
+**Function for run chdir and for check PWD and OLDPWD
+** flag - variable for print_error()
+**                  0 is returned, if successful
+**                  -1 is returned, if error with allocate
+*/
+
 static int	start_move(char *pth, char ***env, int flag)
 {
-	int 	i;
+	int		i;
 	char	*tmp;
 
 	if (!(tmp = full_env_var("OLDPWD", *env)))
@@ -60,16 +68,20 @@ static int	start_move(char *pth, char ***env, int flag)
 		}
 		else
 			delete_elem("OLDPWD", *env);
+		return (0);
 	}
-	else
-	{
-		if (tmp[0])
-			free(tmp);
-		if (change_env_param("PWD", env) == -1)
-			return (-1);
-	}
+	if (tmp[0])
+		free(tmp);
+	if (change_env_param("PWD", env) == -1)
+		return (-1);
 	return (0);
 }
+
+/*
+**Function call start_move()
+**                  0 is returned, if successful
+**                  -1 is returned, if error in start_move()
+*/
 
 static int	move_dir(char *arg, char ***env)
 {
@@ -77,6 +89,12 @@ static int	move_dir(char *arg, char ***env)
 		return (-1);
 	return (0);
 }
+
+/*
+**Function for check argc of the cd
+**                  0 is returned, if successful
+**                  -1 is returned, if error with start_move()
+*/
 
 static int	cd_with_arg(char **s_arg, char ***env)
 {
