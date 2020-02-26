@@ -6,7 +6,7 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/26 14:40:18 by wanton            #+#    #+#             */
-/*   Updated: 2020/02/26 15:18:33 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/26 15:25:20 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,8 @@ char			**ft_split_shell(char const *s)
 	i = 0;
 	if (s)
 	{
-		if (!(mass = (char **)malloc(sizeof(char *) * (words(s, ' ', '\t') + 1))))
+		if (!(mass = (char **)malloc(sizeof(char *) *
+				(words(s, ' ', '\t') + 1))))
 			return ((char **)NULL);
 		if (mass_filler(mass, s, ' ', i) == 0)
 			return ((char **)NULL);

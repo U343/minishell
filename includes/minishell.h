@@ -6,7 +6,7 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/28 13:23:49 by wanton            #+#    #+#             */
-/*   Updated: 2020/02/26 13:26:36 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/26 15:35:25 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@
 
 typedef struct		s_arg
 {
-	char 			symbol;
+	char			symbol;
 	struct s_arg	*next;
 }					t_arg;
 
@@ -84,7 +84,7 @@ int					exit_script(char **arg, char ***env);
 int					delete_elem(char *elem, char **env);
 int					len_env(char **env);
 int					find_elem(char *elem, char **env);
-int 				add_elem(char *name, char *value, char ***env);
+int					add_elem(char *name, char *value, char ***env);
 char				*take_env_elem(char *name, char **env);
 char				*full_env_var(char *name, char **env);
 void				print_env(char **env);
@@ -102,7 +102,7 @@ int					change_env_param(char *param, char ***env);
 int					find_dollar(char *arg);
 int					find_not_ascii(int i, char *str);
 int					scan_env(char **arg, char **env, int j);
-int					scan_tilda(char **arg, char **env, int j);
+int					scan_tilda(char **arg, char **env, int jno);
 char				*get_value(int n, char **env, char *arg, int len);
 
 #endif
