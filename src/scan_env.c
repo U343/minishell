@@ -6,7 +6,7 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 14:22:06 by wanton            #+#    #+#             */
-/*   Updated: 2020/02/20 13:26:16 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/26 12:19:11 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@
 
 static int	check_overlap(char *s, char **env, int num)
 {
-	int j;
-	int i;
-	int n;
-	int flag;
+	int		j;
+	int		i;
+	int		n;
+	int		flag;
 
-	j = 0;
-	while (env[j])
+	j = -1;
+	while (env[++j])
 	{
 		i = 0;
 		n = num;
@@ -42,41 +42,14 @@ static int	check_overlap(char *s, char **env, int num)
 		}
 		if (flag == 1 && !ft_isalpha(s[n]) && !ft_isdigit(s[n]))
 			return (n);
-		j++;
 	}
 	return (0);
 }
 
 /*
-**Function gets the value out of the env with name arg
-** len - len of the name in arg
-** name - part of a arg which overlapping with env
-**       Returned: name if successful or NULL if error with allocated memory
-*/
-
-static char	*get_value(int n, char **env, char *arg, int len)
-{
-	int		i;
-	char	*name;
-	char	*res;
-
-	i = 0;
-	if (!(name = (char *)malloc(sizeof(char) * (len + 1))))
-		return (NULL);
-	while (i < len)
-		name[i++] = arg[n++];
-	name[i] = '\0';
-	if (!(res = take_env_elem(name, env)))
-	{
-		free(name);
-		return (NULL);
-	}
-	free(name);
-	return (res);
-}
-
-/*
 **Function created new arg with env value
+** n - start index of the str which overlapping with env variable
+**      (n + 1) because, n - symbol's index after $
 ** count - len of the str which overlapping with env variable
 ** res - value of the env variable
 **       Returned: arg if successful or NULL if error with allocated memory
@@ -113,7 +86,7 @@ static char	*create_new_arg(int n, int count, char *arg, char *res)
 **       -1 is returned, if an error with allocated memory
 */
 
-static int	change_arg(char **env,int i_start, int i_end, char **arg)
+static int	change_arg(char **env, int i_start, int i_end, char **arg)
 {
 	char	*res;
 	char	*tmp;
@@ -133,21 +106,13 @@ static int	change_arg(char **env,int i_start, int i_end, char **arg)
 }
 
 /*
-**Function to replace $NAME with env variable value
-**       0 is returned, if successful
-**       -1 is returned, if an error with allocated memory
+**Function delete invalid env name (delete symbol $ and symbols after $)
+** str - argument which need change
+** j - index of arg, before str (j always 1 or more)
+** n - index of symbol after $ (start of the env variable)
+**       	0 is returned,  if successful
+**          -1 is returned, if error in create_new_arg()
 */
-
-int 		find_not_ascii(int i, char *str)
-{
-	while (str[i])
-	{
-		if (!ft_isalpha(str[i]) && !ft_isdigit(str[i]))
-			return (i);
-		i++;
-	}
-	return (-1);
-}
 
 static int	invalid_elem(char **arg, int j, char *str, int n)
 {
@@ -155,34 +120,26 @@ static int	invalid_elem(char **arg, int j, char *str, int n)
 
 	if ((i_end = find_not_ascii(n, str)) == -1 && n == 1)
 	{
-		ft_putstr("ok2\n");
 		while (arg[++j])
 			arg[j] = arg[j + 1];
 		return (0);
 	}
-	if ((*arg = create_new_arg(n, i_end, *arg, "")) == NULL)
+	if ((arg[j + 1] = create_new_arg(n, i_end, str, "")) == NULL)
 		return (-1);
 	return (0);
 }
 
-int 		find_dollar(char *arg)
-{
-	int i;
+/*
+**Function checks arg for availability on env variables
+** j - index for arg
+**       0 is returned, if successful
+**       -1 is returned, if error
+*/
 
-	i = 0;
-	while (arg[i])
-	{
-		if (arg[i++] == '$')
-			return (i);
-	}
-	return (-1);
-}
-
-int			scan_env(char **arg, char **env)
+int			scan_env(char **arg, char **env, int j)
 {
-	int		j;
 	int		i_start;
-	int 	i_end;
+	int		i_end;
 	char	*tmp;
 
 	j = -1;
@@ -190,18 +147,13 @@ int			scan_env(char **arg, char **env)
 	{
 		if ((i_start = find_dollar(arg[j])) != -1)
 		{
-			/*ft_putnbr(i_start);
-			ft_putchar('\n');*/
 			if ((i_end = check_overlap(arg[j], env, i_start)) != 0)
 			{
-				/*ft_putnbr(i_end);
-				ft_putchar('\n');*/
 				if (change_arg(env, i_start, i_end, &arg[j]) == -1)
 					return (-1);
 			}
 			else
 			{
-				ft_putstr("ok\n");
 				tmp = arg[j];
 				if (invalid_elem(arg, j - 1, tmp, i_start) == -1)
 					return (-1);

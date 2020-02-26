@@ -133,7 +133,7 @@ int			main(int ac, char **av, char **env)
 			free(arg);
 			return (print_error("ft_strsplit"));
 		}
-		if (scan_env(s_arg, env) == -1)
+		if (scan_env(s_arg, env, 0) == -1)
 			return (print_error("scan_env"));
 		flag = run_command(s_arg, &env);
 		clear_mass(s_arg);
