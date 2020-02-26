@@ -6,7 +6,7 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/17 10:57:39 by wanton            #+#    #+#             */
-/*   Updated: 2020/02/17 11:21:24 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/26 15:46:34 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,13 +45,4 @@ int		find_slash(char const *str)
 			return (1);
 	}
 	return (0);
-}
-
-void	proc_signal(int signo)
-{
-	if (signo == SIGINT)
-	{
-		ft_putstr("\n");
-		signal(SIGINT, proc_signal);
-	}
 }

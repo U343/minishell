@@ -6,7 +6,7 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/04 12:21:31 by wanton            #+#    #+#             */
-/*   Updated: 2020/02/17 12:02:36 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/26 15:46:06 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ static int	exe_command(char *path, char **arg, char **env)
 	pid_t	pid;
 
 	pid = fork();
-	signal(SIGINT, proc_signal);
 	if (pid == 0)
 	{
 		if (execve(path, arg, env) == -1)
