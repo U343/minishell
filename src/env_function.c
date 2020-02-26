@@ -90,17 +90,15 @@ int		setenv_script(char **arg, char ***env)
 
 int		unsetenv_script(char **arg, char ***env)
 {
+	int	i;
+
 	if (!arg[1])
-		ft_putstr("usage: unsetenv [NAME]\n");
-	else if (arg[2])
-		ft_putstr("unsetenv: too many arguments\n");
+		ft_putstr("usage: unsetenv [NAME...]\n");
 	else
 	{
-		if (delete_elem(arg[1], *env) == -1)
-		{
-			ft_putstr("setenv: name not defined: ");
-			ft_putendl(arg[1]);
-		}
+		i = 1;
+		while (arg[i])
+			delete_elem(arg[i++], *env);
 	}
 	return (0);
 }
