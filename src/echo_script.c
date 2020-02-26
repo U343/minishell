@@ -43,6 +43,22 @@ static int	parse_flag(char **arg)
 }
 
 /*
+**The same as ft__putstr, but it is ignoring symbol "
+**       0 is returned always (for list functions in run_command)
+*/
+
+void		ft_putstr_echo(char *s)
+{
+	int i;
+
+	i = 0;
+	if (s[i] == '"')
+		i++;
+	while (s[i] && s[i] != '"')
+		ft_putchar(s[i++]);
+}
+
+/*
 **My echo ignored flag -n
 **       0 is returned always (for list functions in run_command)
 */
@@ -56,7 +72,7 @@ int			echo_script(char **arg, char ***env)
 		return (0);
 	while (arg[i])
 	{
-		ft_putstr(arg[i++]);
+		ft_putstr_echo(arg[i++]);
 		ft_putchar(' ');
 	}
 	ft_putchar('\n');

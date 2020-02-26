@@ -6,7 +6,7 @@
 #    By: wanton <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/23 13:15:24 by wanton            #+#    #+#              #
-#    Updated: 2020/01/30 13:11:31 by wanton           ###   ########.fr        #
+#    Updated: 2020/02/26 12:28:20 by wanton           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ LIB_PATH = ./lib/
 OBJ_PATH = ./obj/
 INC_PATH = ./includes/ $(LIB_PATH)
 
-SRC_FILES = scan_assist.c cd_assist.c check_bin_assist.c scan_env.c change_env.c check_bin.c echo_script.c env_assist.c env_function.c cd_script.c pwd_script.c main.c list_functions.c run_command.c
+SRC_FILES = scan_tilda.c scan_assist.c cd_assist.c check_bin_assist.c scan_env.c change_env.c check_bin.c echo_script.c env_assist.c env_function.c cd_script.c pwd_script.c main.c list_functions.c run_command.c
 OBJ_FILES = $(SRC_FILES:.c=.o)
 
 FLAGS = -Wall -Wextra -Werror

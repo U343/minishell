@@ -6,7 +6,7 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 15:17:39 by wanton            #+#    #+#             */
-/*   Updated: 2020/02/17 10:48:09 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/26 13:50:10 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,6 +135,8 @@ int			main(int ac, char **av, char **env)
 		}
 		if (scan_env(s_arg, env, 0) == -1)
 			return (print_error("scan_env"));
+		if (scan_tilda(s_arg, env, 0) == -1)
+			return (print_error("scan_tilda"));
 		flag = run_command(s_arg, &env);
 		clear_mass(s_arg);
 		free(arg);

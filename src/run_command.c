@@ -36,7 +36,7 @@ static void	get_commands(char *tmp[9])
 	tmp[3] = "env";
 	tmp[4] = "setenv";
 	tmp[5] = "unsetenv";
-	tmp[6] = "exit()";
+	tmp[6] = "exit";
 	tmp[7] = "test";
 	tmp[8] = NULL;
 }

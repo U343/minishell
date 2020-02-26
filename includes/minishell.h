@@ -6,7 +6,7 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/28 13:23:49 by wanton            #+#    #+#             */
-/*   Updated: 2020/02/26 12:05:55 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/26 13:26:36 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,6 @@ int					exit_script(char **arg, char ***env);
 **Env functions
 */
 
-int					scan_env(char **arg, char **env, int j);
 int					delete_elem(char *elem, char **env);
 int					len_env(char **env);
 int					find_elem(char *elem, char **env);
@@ -102,6 +101,8 @@ int					change_env_param(char *param, char ***env);
 
 int					find_dollar(char *arg);
 int					find_not_ascii(int i, char *str);
+int					scan_env(char **arg, char **env, int j);
+int					scan_tilda(char **arg, char **env, int j);
 char				*get_value(int n, char **env, char *arg, int len);
 
 #endif
