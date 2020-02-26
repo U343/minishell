@@ -91,5 +91,6 @@ void				ft_lstswap(t_list **head, t_list *lst1, t_list *lst2);
 void				ft_putspace(int n);
 int					ft_lennumber(int nb);
 long long			ft_llatoi(const char *str);
+char				**ft_split_shell(char const *s);
 
 #endif

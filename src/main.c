@@ -6,7 +6,7 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 15:17:39 by wanton            #+#    #+#             */
-/*   Updated: 2020/02/26 13:50:10 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/26 13:52:14 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,7 +128,7 @@ int			main(int ac, char **av, char **env)
 		write(1, "$> ", 3);
 		if (!(arg = read_arg()))
 			return (print_error("read_arg"));
-		if (!(s_arg = ft_strsplit(arg, ' ')))
+		if (!(s_arg = ft_split_shell(arg)))
 		{
 			free(arg);
 			return (print_error("ft_strsplit"));
