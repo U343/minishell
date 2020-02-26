@@ -46,3 +46,12 @@ int		find_slash(char const *str)
 	}
 	return (0);
 }
+
+void	proc_signal(int signo)
+{
+	if (signo == SIGINT)
+	{
+		ft_putstr("\n");
+		signal(SIGINT, proc_signal);
+	}
+}

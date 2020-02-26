@@ -47,6 +47,7 @@ static int	exe_command(char *path, char **arg, char **env)
 	pid_t	pid;
 
 	pid = fork();
+	signal(SIGINT, proc_signal);
 	if (pid == 0)
 	{
 		if (execve(path, arg, env) == -1)

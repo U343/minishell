@@ -6,7 +6,7 @@
 /*   By: wanton <wanton@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/28 13:23:49 by wanton            #+#    #+#             */
-/*   Updated: 2020/02/26 15:35:25 by wanton           ###   ########.fr       */
+/*   Updated: 2020/02/26 15:37:05 by wanton           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ t_arg				*ft_create_elem(void);
 */
 
 int					run_command(char **s_arg, char ***env);
+void				proc_signal(int signo);
 
 /*
 **Built-in shell commands
